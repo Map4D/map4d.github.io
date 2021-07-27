@@ -121,4 +121,4 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 ## 3. Code sample
 
 Dưới đây là ví dụ về decode polyline
-<iframe src="https://jsfiddle.net/thanhnghiacntt/3cgetn74/" style="min-width: 960px;" height="540px"></iframe>
+<iframe src="//jsfiddle.net/thanhnghiacntt/3cgetn74/embedded/" style="min-width: 960px;" height="540px"></iframe>
