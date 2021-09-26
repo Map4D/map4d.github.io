@@ -13,6 +13,7 @@
   - [Polygon](guides/polygon.md)
   - [POI](guides/poi.md)
   - [Building](guides/building.md)
+  - [Directions Renderer](guides/directions-renderer.md)
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
@@ -34,6 +35,7 @@
     - [Polygon](reference/polygon.md)
     - [POI](reference/poi.md)
     - [Building](reference/building.md)
+    - [Directions Renderer](reference/directions-renderer.md)
   - Layers
     - [Tile Overlay](reference/tile-overlay.md)
     - [Ground Overlay](reference/ground-overlay.md)

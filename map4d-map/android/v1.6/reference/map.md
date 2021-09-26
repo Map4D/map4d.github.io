@@ -8,8 +8,8 @@ Các phương thức:
 |-------------------------|------------------|--------------|----------------------------------------------------------------------------------------|
 | **getMyLocation**       | boolean          | `none`       | Lấy vị trí hiện tại của My Location marker                                             |
 | **getCameraPosition**   |`none`|[MFCameraPosition](/reference/map?id=mfcameraposition)| Get thông số Camera Postion của Map                        |
-| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=latlng), int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
-| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=latlng), int, int, int, int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
+| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=mfcoordinatebounds), int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
+| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=mfcoordinatebounds), int, int, int, int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
 | **getProjection**       | `none`|[MFProjection](/guides/projection?id=projection)| Get thuộc tính MFProjection của Map                             |
 | **getUiSettings**       | `none`|[MFUiSettings](/reference/map?id=mfuisettings)| Get thuộc tính cài đặt giao diện của Map                          |
 | **addMarker**           |[MFMarkerOptions](/reference/marker?id=marker-options)|[MFMarker](/reference/marker?id=mfmarker-class)| Add một marker vào Map|

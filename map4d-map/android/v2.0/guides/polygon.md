@@ -15,8 +15,8 @@ public class MFPolygonOptions {
     private int strokeColor; // màu của đương viền
     private float strokeWidth; // độ rộng của đường viền
     private boolean touchable; // có thể touch polygon hay ko, mặc đinh la true, có thể touch
-    
-    public MFPolygonOptions(); // khởi tạo 
+
+    public MFPolygonOptions(); // khởi tạo
     public MFPolygonOptions add(MFLocationCoordinate... points); //add danh sách các tọa độ cần vẽ
     public MFPolygonOptions add(MFLocationCoordinate point); // add 1 point vào danh sách tọa độ
     public MFPolygonOptions addHole(MFLocationCoordinate... points); // add danh sách tọa độ holes
@@ -54,9 +54,9 @@ public class MFPolygon extends Annotation {
     public boolean isTouchable(); // kiểm tra touch được hay không của polygon
     public void setFillColor(@NonNull String color); @Deprecate, set màu sắc
     @ColorInt
-    public void setFillColor(@ColorInt int color); , set màu sắc
-    public void setStrokeColor(@ColorInt int color); , set màu sắc của đường viền
-    public void setStrokeWidth(float color); , set độ rộng của đường viền
+    public void setFillColor(@ColorInt int color); // set màu sắc
+    public void setStrokeColor(@ColorInt int color); // set màu sắc của đường viền
+    public void setStrokeWidth(float color); // set độ rộng của đường viền
     public void setFillAlpha(float alpha); // @Deprecate, set độ trong suốt
     public void setVisible(boolean visible); // cho phép ẩn hiện
     public void setTouchable(boolean touchable); // cho phép touch hay ko
@@ -68,8 +68,8 @@ public class MFPolygon extends Annotation {
 
 Các thuộc tính của **MFPolygonOptions** :
 
-- **points** : truyền vào một danh sách chứa các mảng tọa độ **MFLocationCoordinate** để tạo Polygon. 
-- **holes** : truyền vào một list chứa các danh sách tọa độ **MFLocationCoordinate** để tạo Holes. 
+- **points** : truyền vào một danh sách chứa các mảng tọa độ **MFLocationCoordinate** để tạo Polygon.
+- **holes** : truyền vào một list chứa các danh sách tọa độ **MFLocationCoordinate** để tạo Holes.
 - **fillColor** : chỉ định màu tô phía trong của Polygon theo kiểu **ColorInt** . Giá trị mặc định
 là **Color.RED**
 - **visible** : xác định Polygon có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.
@@ -216,9 +216,9 @@ addPolygonToMap()
 
   ***Chú ý:***
 > Điểm đầu điểm cuối danh sách các điểm cần vẽ phải giống nhau
-  
+
   Xem demo ở ví dụ sau đây:
-  
+
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
@@ -334,7 +334,7 @@ addPolygonToMap()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red))
 	        .zIndex(10.f));
-	        
+
 	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.blue))
@@ -389,7 +389,7 @@ addPolygonToMap()
 	MFPolygon polygonA = map4D.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red)));
-	        
+
 	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.green)));

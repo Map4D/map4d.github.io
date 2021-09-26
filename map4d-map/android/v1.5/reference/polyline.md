@@ -44,7 +44,7 @@
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **setPath**                  | List<[MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)>| Set mảng các điểm tọa độ của polyline                             |
+| **setPath**                  | List<[MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)>|`none`| Set mảng các điểm tọa độ của polyline                             |
 | **getPoints**                | None |List<[MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)>| Get list các điểm tọa độ của polyline                       |
 | **setWidth**                 | float                                   | `none`       | Set độ rộng cho polyline                                                               |
 | **getWidth**                 | `none`                                  | float        | Get độ rộng của polyline                                                               |
