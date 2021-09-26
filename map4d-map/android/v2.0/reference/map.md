@@ -8,8 +8,9 @@ Các phương thức:
 |-------------------------|------------------|--------------|----------------------------------------------------------------------------------------|
 | **getMyLocation**       | boolean          | `none`       | Lấy vị trí hiện tại của My Location marker                                             |
 | **getCameraPosition**   |`none`|[MFCameraPosition](/reference/map?id=mfcameraposition)| Get thông số Camera Postion của Map                        |
-| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=latlng), int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
-| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=latlng), int, int, int, int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
+| **getBounds**           |`none`|[MFCoordinateBounds](/reference/coordinates?id=mfcoordinatebounds)| Get vùng bounds của Map với các thông số Camera và màn hình hiện tại. |
+| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=mfcoordinatebounds), int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
+| **getCameraPositionForBounds**|[MFCoordinateBounds](/reference/coordinates?id=mfcoordinatebounds), int, int, int, int|[MFCameraPosition](/reference/map?id=mfcameraposition)| Tạo một Camera Position từ tham số bounds và padding|
 | **getProjection**       | `none`|[MFProjection](/guides/projection?id=projection)| Get thuộc tính MFProjection của Map                             |
 | **getUiSettings**       | `none`|[MFUiSettings](/reference/map?id=mfuisettings)| Get thuộc tính cài đặt giao diện của Map                          |
 | **addMarker**           |[MFMarkerOptions](/reference/marker?id=marker-options)|[MFMarker](/reference/marker?id=mfmarker-class)| Add một marker vào Map|
@@ -68,6 +69,8 @@ Các phương thức:
 | **setRotateGesturesEnabled**| boolean      | `none`       | Bật hoặc tắt cử chỉ xoay Map                                                           |
 | **setTiltGesturesEnabled**| boolean        | `none`       | Bật hoặc tắt cử chỉ nghiêng Map                                                        |
 | **setAllGesturesEnabled**| boolean         | `none`       | Bật hoặc tắt tất cả các cử chỉ tác động lên Map                                        |
+| **setMapType**          |[MFMapType](/reference/map?id=mfmaptype)| `none` | Set kiểu của tile cho Map (Raster hoặc Vector)                         |
+| **getMapType**          |`none`|[MFMapType](/reference/map?id=mfmaptype)  | Trả về kiểu hiện thị của tile Map hiện tại                             |
 | **clear**               | `none`           | `none`       | Xóa tất cả các Annotation ra khỏi Map                                                  |
 
 ## MFCameraPosition.Builder
@@ -152,3 +155,11 @@ Các phương thức:
 | **setRotateGesturesEnabled**    | boolean    | `none`       | Bật hoặc tắt việc xoay Map bằng cử chỉ                                          |
 | **setTiltGesturesEnabled**      | boolean    | `none`       | Bật hoặc tắt việc nghiêng Map bằng cử chỉ                                       |
 | **setAllGesturesEnabled**       | boolean    | `none`       | Bật hoặc tắt tất cả các cử chỉ để điều khiển Map                                |
+
+
+## MFMapType
+
+`MFMapType` dùng để định nghĩa kiểu của tile Map.
+
+* RASTER: Kiểu tile hiển thị trên Map là raster.
+* ROADMAP: Kiểu tile hiển thị trên Map là vector.

@@ -18,6 +18,7 @@
 | 6  | OnMyLocationButtonClickListener| Được gọi khi người dùng touch lên nút My Location                                                         |
 | 7  | OnMapClickListener          | Được gọi khi có sự kiện touch trên map                                                                       |
 | 8  | OnInfoWindowClickListener   | Được gọi khi có sự kiện touch trên info window của Marker                                                    |
+| 9  | OnPlaceClickListener        | Được gọi khi có sự kiện touch trên place text khi Map ở chế độ ROADMAP (vector)                              |
 
 ## Hướng dẫn chi tiết
 
@@ -34,7 +35,7 @@ private Map4D map4D;
 map4D.setOnCameraMoveStartedListener(new Map4D.OnCameraMoveStartedListener() {
     @Override
     public void onCameraMoveStarted(int reason) {
-        
+
     }
 });
 ```
@@ -46,7 +47,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnCameraMoveStartedListener(object : Map4D.OnCameraMoveStartedListener {
     override fun onCameraMoveStarted(reason: Int) {
-        
+
     }
 })
 ```
@@ -71,7 +72,7 @@ private Map4D map4D;
 map4D.setOnCameraMoveListener(new Map4D.OnCameraMoveListener() {
     @Override
     public void onCameraMove() {
-        
+
     }
 });
 ```
@@ -83,7 +84,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnCameraMoveListener(object : Map4D.OnCameraMoveListener {
     override fun onCameraMove() {
-        
+
     }
 })
 ```
@@ -102,7 +103,7 @@ private Map4D map4D;
 map4D.setOnCameraIdleListener(new Map4D.OnCameraIdleListener() {
     @Override
     public void onCameraIdle() {
-        
+
     }
 });
 ```
@@ -114,7 +115,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnCameraIdleListener(object : Map4D.OnCameraIdleListener {
     override fun onCameraIdle() {
-        
+
     }
 })
 ```
@@ -133,7 +134,7 @@ private Map4D map4D;
 map4D.setOnMapModeChange(new Map4D.OnMapModeChangeListener() {
     @Override
     public void onMapModeChange(boolean is3DMode) {
-        
+
     }
 });
 ```
@@ -145,7 +146,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnMapModeChange(object : Map4D.OnMapModeChangeListener {
     override fun onMapModeChange(is3DMode: Boolean) {
-        
+
     }
 })
 ```
@@ -166,7 +167,7 @@ private Map4D map4D;
 map4D.setOnMyLocationClickListener(new Map4D.OnMyLocationClickListener() {
     @Override
     public void onMyLocationClick(Location location) {
-        
+
     }
 });
 ```
@@ -178,7 +179,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnMyLocationClickListener(object: Map4D.OnMyLocationClickListener {
     override fun onMyLocationClick(location: Location) {
-        
+
     }
 })
 ```
@@ -233,7 +234,7 @@ private Map4D map4D;
 map4D.setOnMapClickListener(new Map4D.OnMapClickListener() {
     @Override
     public void onMapClick(MFLocationCoordinate latLng) {
-        
+
     }
 });
 ```
@@ -245,7 +246,7 @@ private lateinit var map4D: Map4D
 
 map4D.setOnMapClickListener(object: Map4D.OnMapClickListener {
     override fun onMapClick(latLng: MFLocationCoordinate) {
-        
+
     }
 })
 ```
@@ -266,7 +267,7 @@ private Map4D map4D;
 map4D.setOnInfoWindowClickListener(new Map4D.OnInfoWindowClickListener() {
     @Override
     public void onInfoWindowClick(@NonNull MFMarker marker) {
-        
+
     }
 });
 ```
@@ -278,10 +279,45 @@ private lateinit var map4D: Map4D
 
 map4D.setOnInfoWindowClickListener(object: Map4D.OnInfoWindowClickListener {
     override fun onInfoWindowClick(marker: MFMarker) {
-    
+
     }
 })
 ```
 <!-- tabs:end -->
 
 Tham số `MFMarker` sẽ trả về Marker có InfoWindow mà chúng ta touch.
+
+### OnPlaceClickListener
+
+Để lắng nghe sự kiện `OnPlaceClickListener` chúng ta làm như sau:
+
+<!-- tabs:start -->
+#### ** Java **
+
+```java
+private Map4D map4D;
+
+map4D.setOnPlaceClickListener(new Map4D.OnPlaceClickListener() {
+    @Override
+    public void onPlaceClick(@NonNull String name, @NonNull MFLocationCoordinate location) {
+
+    }
+});
+```
+
+#### ** Kotlin **
+
+```kotlin
+private lateinit var map4D: Map4D
+
+map4D.setOnPlaceClickListener(object: Map4D.OnPlaceClickListener {
+    override fun onPlaceClick(name: String, location: MFLocationCoordinate) {
+
+    }
+})
+```
+<!-- tabs:end -->
+
+Tham số `String` sẽ trả về tên của place.
+
+Tham số `MFLocationCoordinate` sẽ trả về tọa độ của place.

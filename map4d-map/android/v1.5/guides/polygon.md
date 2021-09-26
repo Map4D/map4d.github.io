@@ -54,9 +54,9 @@ public class MFPolygon extends Annotation {
     public boolean isTouchable(); // kiểm tra touch được hay không của polygon
     public void setFillColor(@NonNull String color); @Deprecate, set màu sắc
     @ColorInt
-    public void setFillColor(@ColorInt int color); , set màu sắc
-    public void setStrokeColor(@ColorInt int color); , set màu sắc của đường viền
-    public void setStrokeWidth(float color); , set độ rộng của đường viền
+    public void setFillColor(@ColorInt int color); // set màu sắc
+    public void setStrokeColor(@ColorInt int color); // set màu sắc của đường viền
+    public void setStrokeWidth(float color); // set độ rộng của đường viền
     public void setFillAlpha(float alpha); // @Deprecate, set độ trong suốt
     public void setVisible(boolean visible); // cho phép ẩn hiện
     public void setTouchable(boolean touchable); // cho phép touch hay ko
