@@ -40,6 +40,9 @@
       },
       plugins: [
         function(hook) {
+          var header  = [
+            '<p class="tip">You’re browsing the documentation for v1.6.x. For latest version, <a href="/map4d-map/android/">click here</a>.</p>',
+          ]
           var footer = [
             '<hr/>',
             '<footer>',
@@ -48,7 +51,7 @@
           ].join('');
 
           hook.afterEach(function(html) {
-            return html + footer;
+            return header + html + footer;
           });
         }
       ]
