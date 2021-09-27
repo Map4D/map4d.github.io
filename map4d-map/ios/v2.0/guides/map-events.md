@@ -121,7 +121,7 @@
 
 
   | No       | Event name                            | Description                                                                                                                |
-  |----------------------------|:-------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  |----------|:-------------------:|----------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**    | **didTapMarker**                      | Phát sinh khi người dùng touch vào **Marker** trên **map**                                                                 |
   | **2**    | **didBeginDraggingMarker**            | Phát sinh khi người dùng bắt đầu nhấn và giữ **Marker** trong một khoảng thời gian trên **map**                            |
   | **3**    | **didEndDraggingMarker**              | Phát sinh khi người dùng thả **Marker** ra sau khi nhấn và giữ **Marker** trong một khoảng thời gian trên **map**          |
@@ -170,4 +170,4 @@
   | **2** | **didTapBuildingWithBuildingID**       | Phát sinh khi người dùng touch vào **Building** trên **map**                                                              |
   | **3** | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **4** | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
-  | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map**                                                                 |
+  | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map** (đối với mapType là MFMapTypeRoadmap)                           |

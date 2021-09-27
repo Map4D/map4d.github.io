@@ -84,7 +84,7 @@ const MFMapView({
 | 17 | onModeChange | [MFModeChangedCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFModeChangedCallback.html) | Được gọi khi bản đồ chuyển từ 2D sang 3D và ngược lại. |
 | 18 | onPOITap | [MFMapPOICallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFMapPOICallback.html) | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation) |
 | 19 | onBuildingTap | [MFMapBuildingCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFMapBuildingCallback.html) | Được gọi khi người dùng tap vào đối tượng 3D trên bản đồ (không phải building annotation) |
-| 20 | onPlaceTap | [MFMapPlaceCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFMapPlaceCallback.html) | Được gọi khi người dùng tap vào place text trên bản đồ |
+| 20 | onPlaceTap | [MFMapPlaceCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFMapPlaceCallback.html) | Được gọi khi người dùng tap vào place text trên bản đồ (đối với mapType là roadmap) |
 | 21 | markers | [Set\<MFMarker\>](./guides/marker.md) | Những marker annotation sẽ được hiển thị trên bản đồ. |
 | 22 | circles | [Set\<MFCircle\>](./guides/circle.md) | Những circle annotation sẽ được hiển thị trên bản đồ. |
 | 23 | polylines | [Set\<MFPolyline\>](./guides/polyline.md) | Những polyline annotation sẽ được hiển thị trên bản đồ. |
