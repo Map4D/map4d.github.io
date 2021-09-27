@@ -13,8 +13,9 @@
 | 4 | getCameraPosition | [Future\<MFCameraPosition\>](//pub.dev/documentation/map4d_map/latest/map4d_map/MFCameraPosition-class.html) |  | Lấy giá trị camera hiện tại của bản đồ. |
 | 5 | cameraForBounds | [Future\<MFCameraPosition\>](//pub.dev/documentation/map4d_map/latest/map4d_map/MFCameraPosition-class.html) | [MFLatLngBounds](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLngBounds-class.html) `bounds`<br>{ double `padding` } | Lấy giá trị camera đối với `bounds` (và `padding`). |
 | 6 | fitBounds | Future\<void\> | [MFLatLngBounds](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLngBounds-class.html) `bounds`<br>{ double `padding` } | Di chuyển camera đến ví trí thích hợp với `bounds` (và `padding`). |
-| 7 | enable3DMode | Future\<void\> | bool `isEnable` | Set chế độ 2D, 3D cho bản đồ, `true` thì sẽ hiển thị bản đồ ở chế độ 3D. |
-| 8 | clearTileCache | Future\<void\> | [MFTileOverlayId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFTileOverlayId-class.html) `tileOverlayId` | Xóa cache của [tile overlay](./guides/tile-overlay.md). |
+| 7 | getBounds | [Future\<MFLatLngBounds\>](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLngBounds-class.html) |  | Lấy vùng hiển thị hiện tại của bản đồ. |
+| 8 | enable3DMode | Future\<void\> | bool `isEnable` | Set chế độ 2D, 3D cho bản đồ, `true` thì sẽ hiển thị bản đồ ở chế độ 3D. |
+| 9 | clearTileCache | Future\<void\> | [MFTileOverlayId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFTileOverlayId-class.html) `tileOverlayId` | Xóa cache của [tile overlay](./guides/tile-overlay.md). |
 
 ### API Reference
 

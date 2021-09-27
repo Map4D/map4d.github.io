@@ -10,23 +10,14 @@ Những thay đổi kể từ version 1.1.0
 - Render map dưới dạng vector
 - Thêm mới hàm `setMapType` cho **MFMapView** 
 - Thêm mới hàm `getBounds` cho **MFMapView**
-<!-- - Hỗ trợ render chỉ đường với `MFDirectionsRenderer` -->
+- Thêm sự kiện tap on Place
 
 #### Changed
 
 - Thay đổi hoạt động của hàm `animateCamera`, di chuyển lập tức đến vị trí camera mới nếu khoảng cách giữa vị trí hiện tại và vị trí mới quá xa nhau
-- Thay đổi color cho invalid view
 - Thay đổi việc hiển thị text
 
 <!-- #### Deprecated -->
-#### Removed
-
-- Remove `MFSwitchMode` enum và `switchMode` property trong **MFMapView** 
-- Remove `setSelectedPlace` và `getSelectedPlace` trong **MFMapView** 
-
-#### Fixed
-
-- Fix lỗi change map mode hoạt động không chính xác khi thu nhỏ mức zoom
-
-
+<!-- #### Removed -->
+<!-- #### Fixed -->
 <!-- #### Security -->

@@ -141,11 +141,13 @@ class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 
 | Name                       | Parameters                | Return value         | Description                                                                         |
 |----------------------------|:-------------------------:|:--------------------:|-------------------------------------------------------------------------------------|
-| **setAllGesturesEnabled**  | BOOL                      | void                 | Bật hoặc tắt tất cả cử chỉ tương tác với **map**                                      |
+| **setAllGesturesEnabled**  | BOOL                      | void                 | Bật hoặc tắt tất cả cử chỉ tương tác với **map**                                    |
 
 ### MFMapType
 
 `MFMapType` enum
 
-- MFMapTypeRoadmap
-- MFMapTypeRaster
+| Name                       | Description                                                                     |
+|----------------------------|:--------------------------------------------------------------------------------|
+| **MFMapTypeRoadmap**       | Map hiển thị tiles ở dạng vector                                                |
+| **MFMapTypeRaster**        | Map hiển thị tiles ở dạng raster                                                |
