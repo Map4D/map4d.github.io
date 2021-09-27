@@ -76,13 +76,6 @@ Bạn có thể dễ dàng tuỳ chỉnh **POI** thông qua các thuộc tính m
 | **iconView**               | Tuỳ chỉnh icon của **POI** bằng UIView                                                                                                           |
 | **icon**                   | Tuỳ chỉnh icon của **POI** bằng hình ảnh                                                                                                         |
 
-- **position**: Tuỳ chỉnh vị trí của **POI** được vẽ trên bản đồ
-- **title**: Tuỳ chỉnh tiểu đề của **POI**, được hiển thị bên cạnh **POI** icon
-- **titleColor**: Tuỳ chỉnh màu của tiêu đề
-- **type**: Tuỳ chỉnh kểu của **POI**, dùng để quy định icon (bank, hospital, cafe, ...) 
-- **iconView**: Tuỳ chỉnh icon của **POI** bằng UIView
-- **icon**: Tuỳ chỉnh icon của **POI** bằng hình ảnh
-
 > - **Chú ý**: Người dùng có thể set icon cho **POI** bằng các cách sau (theo thứ tự ưu tiên):
     + ***Tuỳ biến lại POI bằng cách dùng hàm setIconView***
     + ***Sử dụng 1 hình ảnh làm icon dùng hàm setIcon***

@@ -1,8 +1,8 @@
 # Building reference
 
-## Building Class
+`MFBuilding` class
 
-### 1 Constructor
+### Constructor
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -19,10 +19,10 @@ MFBuilding *Building = [[MFBuilding alloc] init];
 
 <!-- tabs:end -->
 
-#### Properties
+### Properties
 
-| Name                       | Type                | Description                                                                                                                |
-|----------------------------|:-------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name                       | Type                   | Description                                                                                                             |
+|----------------------------|:-----------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **name**                   | NSString               | Chỉ định tên của  **Building**.                                                                                         |
 | **position**               | CLLocationCoordinate2D | Chỉ định một **CLLocationCoordinate2D** để xác định vị trí ban đầu của **Building**.                                    |
 | **model**                  | NSString               | Chỉ định một đường dẫn **URL** để lấy dữ liệu **model** cho **Building**.                                               |
@@ -48,7 +48,7 @@ MFBuilding *Building = [[MFBuilding alloc] init];
 **Ghi chú:** Hiện tại Map4D hỗ trợ cái kiểu sau: **Buildingnt**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **Buildingnt**.
 
 
-#### Delegate
+### Delegate
 
   > **Chú ý**: Để sử dụng các sự kiện của **Building** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
@@ -62,15 +62,13 @@ MFBuilding *Building = [[MFBuilding alloc] init];
   #### ** Swift **
 
   ```swift 
-  func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: String!, name: String!, location: CLLocationCoordinate2D) {}
-  func mapView(_ mapView: MFMapView!, didTap building: MFBuilding!) {}
+    func mapView(_ mapView: MFMapView!, didTap building: MFBuilding!) {}
   ```
 
   #### ** Objective C **
 
   ```objc 
-  - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building{}
-  - (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location{}
+  - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building {}
   ```
 
   <!-- tabs:end -->
