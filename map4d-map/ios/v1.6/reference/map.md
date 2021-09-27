@@ -56,17 +56,7 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame: self.view.frame];
 | **cameraForBounds**        | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds) , UIEdgeInsets  | [MFCameraPosition](/reference/map?id=MFCameraPosition)   | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào.                                                                                                                                                                                 |
 | **animateCamera**          | [MFCameraUpdate](/reference/map?id=MFCameraUpdate)                         | none                 | **Animate** **camera** đến vị trí theo camera bạn truyền vào.        |
 | **moveCamera**             | [MFCameraUpdate](/reference/map?id=MFCameraUpdate)                         | none                 | **Move** **camera** đến vị trí theo camera bạn truyền vào.           |
-  
 
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
-
-  @property(nonatomic) CLLocationCoordinate2D target;
-  @property(nonatomic) double zoom;
-  @property(nonatomic) double bearing;
-  @property(nonatomic) double tilt;
   
 ### MFCameraPosition
 

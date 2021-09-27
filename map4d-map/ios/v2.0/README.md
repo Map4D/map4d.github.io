@@ -28,7 +28,7 @@ pod 'Map4dMap'
 
 ```xml
 <key>Map4dMapAccessKey</key>
-<string>{YOUR_KEY}</string>
+<string>YOUR_ACCESS_KEY</string>
 ```
 
 2. Create map view

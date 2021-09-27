@@ -9,6 +9,7 @@ Những thay đổi kể từ version 1.6.0
 - Render map dưới dạng vector
 - Thêm mới hàm `setMapType` cho **MFMapView** 
 - Thêm mới hàm `getBounds` cho **MFMapView**
+- Thêm sự kiện tap on Place
 - Hỗ trợ render chỉ đường với `MFDirectionsRenderer`
 
 #### Changed

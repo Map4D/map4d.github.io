@@ -26,13 +26,14 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame: self.view.frame];
 | **projection**             | [MFProjection](/guides/projection?id=Projection)                                |
 | **camera**                 | [MFCameraPosition](/reference/map?id=MFCameraPosition)                          | 
 | **settings**               | [MFUISettings](/reference/map?id=MFUISettings)                                  |
+| **mapType**                | [MFMapType](/reference/map?id=MFMapType)                                  |
 | **nativeScale**            | CGFloat                                                                         |
 
 
 ### 3. Methods
 
 | Name                       | Parameters              | Return value         | Description                                                                                                             |
-|----------------------------|:-----------------------:|:--------------------:|-------------------------------------------------------------------------------------------------------------------------|
+|----------------------------|-------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **setMyLocationEnabled**   | BOOL                    | void                 | Bật vị trí của thiết bị                                                                                                 |
 | **getMyLocation**          | none                    | CLLocation           | Lấy vị trí của thiết bị                                                                                                 |
 | **setFilterPlaces**        | [NSString]?             | void                 | Lọc các **place** theo **type** như: **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, ....   |
@@ -56,18 +57,9 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame: self.view.frame];
 | **cameraForBounds**        | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds) , UIEdgeInsets  | [MFCameraPosition](/reference/map?id=MFCameraPosition)   | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào.                                                                                                                                                                                 |
 | **animateCamera**          | [MFCameraUpdate](/reference/map?id=MFCameraUpdate)                         | none                 | **Animate** **camera** đến vị trí theo camera bạn truyền vào.        |
 | **moveCamera**             | [MFCameraUpdate](/reference/map?id=MFCameraUpdate)                         | none                 | **Move** **camera** đến vị trí theo camera bạn truyền vào.           |
-  
+| **getBounds**              | none         | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds)                 | Lấy khu vực hiển thị của map hiện tại.                               |
 
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-  - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
 
-  @property(nonatomic) CLLocationCoordinate2D target;
-  @property(nonatomic) double zoom;
-  @property(nonatomic) double bearing;
-  @property(nonatomic) double tilt;
-  
 ### MFCameraPosition
 
 #### 1. Constructor 
@@ -144,9 +136,16 @@ class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 | **zoomGestures**           | double                                                                          | 
 | **tiltGestures**           | double                                                                          |
 | **rotateGestures**         | double                                                                          |
- 
+
 #### 3. Methods
 
 | Name                       | Parameters                | Return value         | Description                                                                         |
 |----------------------------|:-------------------------:|:--------------------:|-------------------------------------------------------------------------------------|
 | **setAllGesturesEnabled**  | BOOL                      | void                 | Bật hoặc tắt tất cả cử chỉ tương tác với **map**                                      |
+
+### MFMapType
+
+`MFMapType` enum
+
+- MFMapTypeRoadmap
+- MFMapTypeRaster

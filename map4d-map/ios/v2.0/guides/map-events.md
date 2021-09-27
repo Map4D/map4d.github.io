@@ -149,6 +149,7 @@
   func mapView(_ mapView: MFMapView?, didTapBuildingWithBuildingID buildingID: String?, name: String?, location: CLLocationCoordinate2D)
   func mapView(_ mapView: MFMapView?, didTap poi: MFPOI?)
   func mapView(_ mapView: MFMapView?, didTapPOIWithPlaceID placeID: String?, name: String?, location: CLLocationCoordinate2D)
+  func mapView(_ mapView: MFMapView?, didTapPlaceWithName name: String?, location: CLLocationCoordinate2D)
   ```
 
   #### ** Objective C **
@@ -158,13 +159,15 @@
   - (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location;
   - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi;
   - (void)mapView: (MFMapView*)  mapView didTapPOIWithPlaceID: (NSString*) placeID name: (NSString*) name location: (CLLocationCoordinate2D) location;
+  - (void)mapView: (MFMapView*)  mapView didTapPlaceWithName:(NSString*)name location:(CLLocationCoordinate2D)location;
   ```
 
   <!-- tabs:end -->
 
-  | No       | Event name                            | Description                                                                                                                |
-  |----------------------------|:-------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-  | **1**    | **didTapBuilding**                    | Phát sinh khi người dùng touch vào **Building** trên **map**                                                               |
-  | **2**    | **didTapBuildingWithBuildingID**       | Phát sinh khi người dùng touch vào **Building** trên **map**                                                              |
-  | **3**    | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
-  | **4**    | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
+  | No    | Event name                             | Description                                                                                                               |
+  |-------|:--------------------------------------:|---------------------------------------------------------------------------------------------------------------------------|
+  | **1** | **didTapBuilding**                     | Phát sinh khi người dùng touch vào **Building** trên **map**                                                              |
+  | **2** | **didTapBuildingWithBuildingID**       | Phát sinh khi người dùng touch vào **Building** trên **map**                                                              |
+  | **3** | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
+  | **4** | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
+  | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map**                                                                 |
