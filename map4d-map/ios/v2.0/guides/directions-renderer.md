@@ -61,6 +61,8 @@ renderer.map = mapView;
 ```
 <!-- tabs:end -->
 
+![Directions Renderer](../../resources/directions-renderer.jpg) 
+
 ### 2. Xóa Directions Renderer khỏi bản đồ
 
 Để xóa **Directions Renderer** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
