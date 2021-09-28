@@ -2,10 +2,7 @@
 
 ## Giới thiệu
 
->Map4dMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo hai chế độ (Raster Tile và Vector Tile).
-
-* Raster Tile: hiển thị tile bản đồ bằng dữ liệu hình ảnh.
-* Vector Tile: hiển thị tile bản đồ bằng dữ liệu gốc, điều này làm cho bản đồ được hiển thị rõ ràng và sắc nét hơn.
+>Map4dMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo hai chế độ (Raster và Roadmap).
 
 ### Các loại bản đồ
 
@@ -14,7 +11,7 @@ Map4D Map SDK hiện cung cấp 2 loại bản đồ tùy chỉnh thông qua đ�
 | No. | Name    | Description                                                                                                                                                           |
 |:---:|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  1  | ROADMAP | Giá trị: `MFMapType.ROADMAP`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map4dMap SDK |
-|  2  | RASTER  | Giá trị: `MFMapType.RASTER`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh đã được dựng sẵn, tốc độ tải và hiển thị nhanh hơn so với roadmap.                |
+|  2  | RASTER  | Giá trị: `MFMapType.RASTER`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh đã được dựng sẵn, tốc độ tải và hiển thị nhanh hơn so với Roadmap.                |
 
 |                 ROADMAP                         | RASTER                                         |
 |:-----------------------------------------------:|:----------------------------------------------:|
@@ -22,8 +19,8 @@ Map4D Map SDK hiện cung cấp 2 loại bản đồ tùy chỉnh thông qua đ�
 
 ### Thay đổi kiểu bản đồ
 
-Để thay kiểu bản đồ, ta set giá trị  một gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `Map4D`  
-Ví dụ: để hiển thị bản đồ dạng raster:
+Để thay kiểu bản đồ, ta gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `Map4D`  
+Ví dụ: để hiển thị bản đồ dạng Raster:
 
 <!-- tabs:start -->
 #### ** Java **
