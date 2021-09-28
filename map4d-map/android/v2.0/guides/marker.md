@@ -338,7 +338,7 @@ public void onMapReady(Map4D map4D) {
 ```
 <!-- tabs:end -->
 
-![Marker](../resources/3-marker.png)
+![Marker](../../resources/3-marker.png)
 
 ### 4. Tạo một Marker có thể kéo được trên bản đồ
 
