@@ -54,17 +54,15 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 
 Chỉnh sửa file **build.gradle** (Project) như sau:
 ```
-buildscript {
-    ext {
+allprojects {
+    repositories {
         // ...
-        RNNKotlinVersion = "1.3.61" // Or any version above 1.3.x
-        RNNKotlinStdlib = "kotlin-stdlib-jdk8"
-    }
-    dependencies {
-        // ...
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+        maven {
+            url = "https://packages.map4d.vn/repository/maven-public"
+        }
     }
 }
+
 ```
 
 Chỉnh sửa file **build.gradle** (App) như sau:
