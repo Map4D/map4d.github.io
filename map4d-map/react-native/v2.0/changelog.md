@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 2.0.1
+
+Những thay đổi kể từ version 2.0.0
+
+#### Changed
+
+- Hỗ trợ Map4dMap SDK version từ 2.0.0 trở lên
+
 ## Version 2.0.0
 
 Những thay đổi kể từ version 1.1.0

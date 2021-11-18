@@ -26,10 +26,12 @@ MFDirectionsRenderer *renderer = [[MFDirectionsRenderer alloc] init];
 | map                   | [MFMapView](/reference/map?id=mfmapview)              | Chỉ định map view sẽ hiển thị các chỉ đường hoặc xóa chỉ đường khỏi map (set bằng nil).        |
 | routes                | [NSArray\<MFPath\>](/reference/coordinates?id=mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
 | activedIndex          | NSUInteger                                            | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
+| hideOriginPOI         | BOOL                                                  | Ẩn/hiện POI vị trí bắt đầu.                                                                    |
 | originPosition        | CLLocationCoordinate2D                                | Vị trí bắt đầu (nếu không thiết lập thì vị trí bắt đầu trùng với vị trí đầu của chỉ đường).    |
 | originIcon            | UIImage                                               | Icon cho vị trí bắt đầu (set nil thì lấy giá trị mặc định).                                    |
 | originTitle           | NSString                                              | Title cho vị trí bắt đầu.                                                                      |
 | originTitleColor      | UIColor                                               | Màu sắc của title cho vị trí bắt đầu.                                                          |
+| hideDestinationPOI    | BOOL                                                  | Ẩn/hiện POI vị trí kết thúc                                                                    |
 | destinationPosition   | CLLocationCoordinate2D                                | Vị trí kết thúc (nếu không thiết lập thì vị trí kết thúc trùng với vị trí cuối của chỉ đường). |
 | destinationIcon       | UIImage                                               | Icon cho vị trí kết thúc (set nil thì lấy giá trị mặc định).                                   |
 | destinationTitle      | NSString                                              | Title cho vị trí kết thúc.                                                                     |

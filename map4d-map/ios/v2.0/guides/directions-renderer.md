@@ -89,10 +89,12 @@ Bạn có thể dễ dàng tuỳ chỉnh **Directions Renderer** thông qua các
 |-----------------------|------------------------------------------------------------------------------------------------|
 | routes                | Tùy chỉnh các chỉ đường cho Directions Renderer.                                               |
 | activedIndex          | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
+| hideOriginPOI         | Ẩn hiện POI đánh dấu vị trí bắt đầu.                                                           |
 | originPosition        | Vị trí bắt đầu (nếu không thiết lập thì vị trí bắt đầu trùng với vị trí đầu của chỉ đường).    |
 | originIcon            | Icon cho vị trí bắt đầu (set nil thì lấy giá trị mặc định).                                    |
 | originTitle           | Title cho vị trí bắt đầu.                                                                      |
 | originTitleColor      | Màu sắc của title cho vị trí bắt đầu.                                                          |
+| hideDestinationPOI    | Ẩn/hiện POI đánh dấu vị trí kết thúc.                                                          |
 | destinationPosition   | Vị trí kết thúc (nếu không thiết lập thì vị trí kết thúc trùng với vị trí cuối của chỉ đường). |
 | destinationIcon       | Icon cho vị trí kết thúc (set nil thì lấy giá trị mặc định).                                   |
 | destinationTitle      | Title cho vị trí kết thúc.                                                                     |
