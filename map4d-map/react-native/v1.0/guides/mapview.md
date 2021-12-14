@@ -64,7 +64,7 @@ CameraShape là một kiểu dữ liệu lưu các thông tin của camera. Có 
 
 ```js
 {
-  target: {
+  center: {
     latitude: number,
     longitude: number,
   },
