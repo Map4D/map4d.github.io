@@ -15,7 +15,7 @@
 |  3  | titleColor | [ColorPropType](https://reactnative.dev/docs/colors) | Chỉ định màu tiêu đề                                                                                 |
 |  4  | poiType    | string                                               | Chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng.                  |
 |  5  | icon       |                                                      | Tùy chỉnh icon cho POI. **MFPOI** sẽ ưu tiên hiển thị `icon` hơn so với `type`.                      |
-|  6  | onPress    | func                                                 | Được gọi khi người dùng tap vào POI                                                                  |
+|  6  | [onPress](#PoiEventData) | func                                   | Được gọi khi người dùng tap vào POI                                                                  |
 
 ### Object Types
 
@@ -62,3 +62,35 @@ class Map4dScreen extends React.Component {
   }
 }
 ```
+
+#### PoiEventData
+
+Poi Event Data là một object chứa thông tin trả về của các sự kiện trên POI.
+
+Ví dụ:
+```js
+{
+  "action": "poi-press",
+  "cancelBubble": true,
+  "location": {
+    "latitude": 16.07674755665556,
+    "longitude": 108.22453381619147
+  },
+  "pixel": {
+    "x": 134.967041015625,
+    "y": 597.9375
+  },
+  "poi": {
+    "location": {
+      "latitude": 16.075671439786362,
+      "longitude": 108.22427988052367
+    },
+    "title": "Map4D React-Native"
+  }
+}
+```
+
+Các thông tin của dữ liệu trả về như sau:
+- **location** : tọa độ trên bản đồ mà người dùng press.
+- **pixel** : tọa độ trên màn hình mà người dùng press.
+- **poi** : dữ liệu của POI gồm `location` và `title`.

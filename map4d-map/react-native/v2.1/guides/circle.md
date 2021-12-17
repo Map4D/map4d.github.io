@@ -17,7 +17,7 @@ Bạn có thể dễ dàng vẽ các hình tròn lên bản đồ.
 | **zIndex**             | number        | Chỉ định thứ tự hiển thị giữa các **Circle** với nhau hoặc giữa **Circle** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.  |
 | **visible**            | bool          | Xác định **Circle** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                       |
 | **userData**           | object        | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với **Circle**.                                       |
-| **onPress**            | func          | Callbacks để nhận sự kiện khi người dùng press circle trên map.                                                                          |
+| [onPress](#CircleEventData) | func     | Callbacks để nhận sự kiện khi người dùng press circle trên map.                                                                          |
 
 ### Thêm một Circle
 
@@ -63,3 +63,36 @@ Thông tin tọa độ theo kinh độ, vĩ độ
 ```js
 let coordinate = {latitude: 10.7881732, longitude: 106.7000933}
 ```
+
+#### CircleEventData
+
+Circle Event Data là một object chứa thông tin trả về của các sự kiện trên Circle.
+
+Ví dụ:
+```js
+{
+  "action": "circle-press",
+  "cancelBubble": true,
+  "circle": {
+    "center": {
+      "latitude": 10.7881732,
+      "longitude": 106.7000933
+    },
+    "radius": 50,
+    "userData": {}
+  },
+  "location": {
+    "latitude": 10.7882559917268,
+    "longitude": 106.7001983011209
+  },
+  "pixel": {
+    "x": 480.970458984375,
+    "y": 826.921875
+  }
+}
+```
+
+Các thông tin của dữ liệu trả về như sau:
+- **location** : tọa độ trên bản đồ mà người dùng press.
+- **pixel** : tọa độ trên màn hình mà người dùng press.
+- **circle** : dữ liệu của Circle gồm `center`, `radius` và `userData`.

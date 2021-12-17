@@ -23,9 +23,9 @@ hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ
 | **userData**           | object        | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với **Marker**.                                       |
 | **onPress**            | func          | Callbacks để nhận sự kiện khi người dùng press Marker trên map.                                                                          |
 | **onPressInfoWindow**  | func          | Callbacks để nhận sự kiện khi người dùng press lên info window của Marker.                                                                          |
-| **onDragStart**        | func          | Callbacks để nhận sự kiện khi người dùng bắt đầu drag Marker trên map.                                                                          |
-| **onDrag**             | func          | Callbacks để nhận sự kiện khi người dùng đang kéo Marker trên map.                                                                          |
-| **onDragEnd**          | func          | Callbacks để nhận sự kiện khi người dùng kết thúc việc kéo Marker trên map.                                                                          |
+| [onDragStart](#MarkerEventData) | func | Callbacks để nhận sự kiện khi người dùng bắt đầu drag Marker trên map.                                                                          |
+| [onDrag](#MarkerEventData) | func      | Callbacks để nhận sự kiện khi người dùng đang kéo Marker trên map.                                                                          |
+| [onDragEnd](#MarkerEventData) | func   | Callbacks để nhận sự kiện khi người dùng kết thúc việc kéo Marker trên map.                                                                          |
 
 ### 1. Thêm một Marker
 
@@ -144,3 +144,35 @@ Thông tin custom icon cho Marker
 ```js
 let icon = {uri: 'https://b.thumbs.redditmedia.com/F82n9T2HtoYxNmxbe1CL0RKxBdeUEw-HVyd-F-Lb91o.png', width: 32, height: 32}
 ```
+
+#### MarkerEventData
+
+Marker Event Data là một object chứa thông tin trả về của các sự kiện trên Marker.
+
+Ví dụ:
+```js
+{
+  "action": "marker-drag",
+  "location": {
+    "latitude": 15.735618337054262,
+    "longitude": 108.15958389297481
+  },
+  "marker": {
+    "location": {
+      "latitude": 15.756043655270496,
+      "longitude": 108.1803695241597
+    },
+    "userData": "{\"obj\":{\"y\":11,\"x\":10},\"arr\":[1,5,9],\"name\":\"Marker 1\"}"
+  },
+  "pixel": {
+    "x": 404.967041015625,
+    "y": 702.416015625
+  }
+}
+```
+
+Các thông tin của dữ liệu trả về như sau:
+- **action** : tên sự kiện xảy ra trên Marker. Gồm có `marker-drag-start`, `marker-drag` và `marker-drag-end`.
+- **location** : tọa độ trên bản đồ mà người dùng press.
+- **pixel** : tọa độ trên màn hình mà người dùng press.
+- **marker** : dữ liệu của Marker gồm `location` và `userData`.

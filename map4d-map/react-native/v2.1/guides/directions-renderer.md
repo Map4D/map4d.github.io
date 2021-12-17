@@ -82,7 +82,7 @@ render() {
 | inactiveOutlineColor  | [ColorPropType](https://reactnative.dev/docs/colors) | Màu outline của các tuyến đường phụ. |
 | originPOIOptions      | [POIOptionsData](#POIOptionsData)                    | Các giá trị tùy chọn hiển thị cho POI đánh dấu vị trí bắt đầu. |
 | destinationPOIOptions | [POIOptionsData](#POIOptionsData)                    | Các giá trị tùy chọn hiển thị cho POI đánh dấu vị trí kết thúc. |
-| onPress               | func | Hàm được gọi khi người dùng chạm vào tuyến đường trên bản đồ.<br>Giá trị trả về bao gồm index của route được chạm phải. |
+| [onPress](#DirectionRendererEventData) | func | Hàm được gọi khi người dùng chạm vào tuyến đường trên bản đồ.<br>Giá trị trả về bao gồm index của route được chạm phải. |
 
 ### Methods
 
@@ -151,3 +151,31 @@ Ví dụ:
 let icon1 = {uri: 'https://example.com/poi_icon.png'}
 let icon2 = {uri: require('./assets/poi_icon.png')}
 ```
+
+#### DirectionRendererEventData
+
+Direction Renderer Event Data là một object chứa thông tin trả về của các sự kiện trên Direction Renderer.
+
+Ví dụ:
+```js
+{
+  "action": "directions-press",
+  "cancelBubble": true,
+  "location": {
+    "latitude": 16.077687176181513,
+    "longitude": 108.22174076100197
+  },
+  "pixel": {
+    "x": 296.96044921875,
+    "y": 761.94140625
+  },
+  "renderer": {
+    "routeIndex": 1
+  }
+}
+```
+
+Các thông tin của dữ liệu trả về như sau:
+- **location** : tọa độ trên bản đồ mà người dùng press.
+- **pixel** : tọa độ trên màn hình mà người dùng press.
+- **renderer** : dữ liệu của Direction Renderer chứa `routeIndex` mà người dùng press.
