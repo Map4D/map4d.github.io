@@ -37,8 +37,8 @@
 |  6  | is3DMode           | bool                              |                                      | Kiểm tra mode hiện tại của bản đồ có phải là 3D hay không               |
 |  7  | enable3DMode       |                                   | bool `enable`                        | Set chế độ 2D, 3D cho bản đồ, `true` thì sẽ hiển thị bản đồ ở chế độ 3D |
 |  8  | setTime            |                                   | string                               | Set time cho bản đồ                                                     |
-|  9  | coordinateForPoint | [CoordinateData](#CoordinateData) | [PointData](#PointData)              | Convert tọa độ kinh độ, vĩ độ sang tọa độ màn hình x,y                  |
-|  10 | pointForCoordinate | [PointData](#PointData)           | [CoordinateData](#CoordinateData)    | Convert tọa độ màn hình x,y sang tọa độ kinh độ, vĩ độ                  |
+|  9  | coordinateForPoint | [CoordinateData](#CoordinateData) | [PointData](#PointData)              | Convert tọa độ màn hình x,y sang tọa độ kinh độ, vĩ độ                  |
+|  10 | pointForCoordinate | [PointData](#PointData)           | [CoordinateData](#CoordinateData)    | Convert tọa độ kinh độ, vĩ độ sang tọa độ màn hình x,y                  |
 
 ### Object Types
 
