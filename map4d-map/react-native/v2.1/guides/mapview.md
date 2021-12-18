@@ -150,7 +150,7 @@ Ví dụ:
       "latitude": 10.788311,
       "longitude": 106.698198
     },
-    "placeId": "5c9845e4814a9df9d67e5aaa",
+    "id": "5c9845e4814a9df9d67e5aaa",
     "title": "Trường THCS Trần Văn Ơn"
   }
 }
@@ -170,7 +170,7 @@ Ví dụ:
 {
   "action": "map-building-press",
   "building": {
-    "buildingId": "5fab913686a8b557d9138d3c",
+    "id": "5fab913686a8b557d9138d3c",
     "location": {
       "latitude": 10.78648718805124,
       "longitude": 106.70222441989614

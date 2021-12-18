@@ -21,8 +21,8 @@ hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ
 | **zIndex**             | number        | Chỉ định thứ tự hiển thị giữa các **Marker** với nhau hoặc giữa **Marker** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.  |
 | **visible**            | bool          | Xác định **Marker** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                       |
 | **userData**           | object        | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với **Marker**.                                       |
-| **onPress**            | func          | Callbacks để nhận sự kiện khi người dùng press Marker trên map.                                                                          |
-| **onPressInfoWindow**  | func          | Callbacks để nhận sự kiện khi người dùng press lên info window của Marker.                                                                          |
+| [onPress](#MarkerEventData)            | func          | Callbacks để nhận sự kiện khi người dùng press Marker trên map.                                                                          |
+| [onPressInfoWindow](#MarkerEventData)  | func          | Callbacks để nhận sự kiện khi người dùng press lên info window của Marker.                                                                          |
 | [onDragStart](#MarkerEventData) | func | Callbacks để nhận sự kiện khi người dùng bắt đầu drag Marker trên map.                                                                          |
 | [onDrag](#MarkerEventData) | func      | Callbacks để nhận sự kiện khi người dùng đang kéo Marker trên map.                                                                          |
 | [onDragEnd](#MarkerEventData) | func   | Callbacks để nhận sự kiện khi người dùng kết thúc việc kéo Marker trên map.                                                                          |
@@ -172,7 +172,7 @@ Ví dụ:
 ```
 
 Các thông tin của dữ liệu trả về như sau:
-- **action** : tên sự kiện xảy ra trên Marker. Gồm có `marker-drag-start`, `marker-drag` và `marker-drag-end`.
+- **action** : tên sự kiện xảy ra trên Marker. Gồm có `marker-press`, `marker-drag-start`, `marker-drag`, `marker-drag-end` và `marker-info-window-press`.
 - **location** : tọa độ trên bản đồ mà người dùng press.
 - **pixel** : tọa độ trên màn hình mà người dùng press.
 - **marker** : dữ liệu của Marker gồm `location` và `userData`.

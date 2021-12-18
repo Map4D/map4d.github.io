@@ -169,13 +169,11 @@ Ví dụ:
     "x": 296.96044921875,
     "y": 761.94140625
   },
-  "renderer": {
-    "routeIndex": 1
-  }
+  "routeIndex": 1
 }
 ```
 
 Các thông tin của dữ liệu trả về như sau:
-- **location** : tọa độ trên bản đồ mà người dùng press.
-- **pixel** : tọa độ trên màn hình mà người dùng press.
-- **renderer** : dữ liệu của Direction Renderer chứa `routeIndex` mà người dùng press.
+- **location**: tọa độ trên bản đồ mà người dùng press.
+- **pixel**: tọa độ trên màn hình mà người dùng press.
+- **routeIndex**: index của tuyến đường mà người dùng press.

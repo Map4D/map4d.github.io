@@ -85,7 +85,8 @@ Ví dụ:
       "latitude": 16.075671439786362,
       "longitude": 108.22427988052367
     },
-    "title": "Map4D React-Native"
+    "title": "Map4D React-Native",
+    "userData": {}
   }
 }
 ```
@@ -93,4 +94,4 @@ Ví dụ:
 Các thông tin của dữ liệu trả về như sau:
 - **location** : tọa độ trên bản đồ mà người dùng press.
 - **pixel** : tọa độ trên màn hình mà người dùng press.
-- **poi** : dữ liệu của POI gồm `location` và `title`.
+- **poi** : dữ liệu của POI gồm `location`, `title` và `userData`.
