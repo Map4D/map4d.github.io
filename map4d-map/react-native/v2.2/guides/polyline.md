@@ -14,7 +14,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 | **zIndex**             | number        | Chỉ định thứ tự hiển thị giữa các **Polyline** với nhau hoặc giữa **Polyline** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.  |
 | **visible**            | bool          | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                       |
 | **userData**           | object        | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với **Polyline**.                                       |
-| **onPress**            | func          | Callbacks để nhận sự kiện khi người dùng press **Polyline** trên map.                                                                          |
+| [onPress](#onPress) | func   | Callbacks để nhận sự kiện khi người dùng press **Polyline** trên map.                                                                          |
 
 ### Thêm một Polyline
 
@@ -62,3 +62,33 @@ Thông tin tọa độ theo kinh độ, vĩ độ
 ```js
 let coordinate = {latitude: 10.7881732, longitude: 106.7000933}
 ```
+
+### Events
+
+#### onPress
+
+Được gọi khi người dùng tap vào `polyline` trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPress` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "polyline-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  polyline: {
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - polyline: thông tin trả về cho polyline, bao gồm:
+    + userData: object chứa thông tin được set vào thông qua props `userData`.

@@ -82,7 +82,7 @@ render() {
 | inactiveOutlineColor  | [ColorPropType](https://reactnative.dev/docs/colors) | Màu outline của các tuyến đường phụ. |
 | originPOIOptions      | [POIOptionsData](#POIOptionsData)                    | Các giá trị tùy chọn hiển thị cho POI đánh dấu vị trí bắt đầu. |
 | destinationPOIOptions | [POIOptionsData](#POIOptionsData)                    | Các giá trị tùy chọn hiển thị cho POI đánh dấu vị trí kết thúc. |
-| onPress               | func | Hàm được gọi khi người dùng chạm vào tuyến đường trên bản đồ.<br>Giá trị trả về bao gồm index của route được chạm phải. |
+| [onPress](#onPress)   | func | Hàm được gọi khi người dùng chạm vào tuyến đường trên bản đồ.<br>Giá trị trả về bao gồm index của route được chạm phải. |
 
 ### Methods
 
@@ -151,3 +151,30 @@ Ví dụ:
 let icon1 = {uri: 'https://example.com/poi_icon.png'}
 let icon2 = {uri: require('./assets/poi_icon.png')}
 ```
+
+### Events
+
+#### onPress
+
+Được gọi khi người dùng tap vào `Direction Renderer` trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPress` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "directions-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  routeIndex: number
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - routeIndex: index của tuyến đường mà người dùng tap vào.

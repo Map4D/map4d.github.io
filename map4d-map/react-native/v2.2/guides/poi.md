@@ -15,7 +15,7 @@
 |  3  | titleColor | [ColorPropType](https://reactnative.dev/docs/colors) | Chỉ định màu tiêu đề                                                                                 |
 |  4  | poiType    | string                                               | Chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng.                  |
 |  5  | icon       |                                                      | Tùy chỉnh icon cho POI. **MFPOI** sẽ ưu tiên hiển thị `icon` hơn so với `type`.                      |
-|  6  | onPress    | func                                                 | Được gọi khi người dùng tap vào POI                                                                  |
+|  6  | [onPress](#onPress) | func                                   | Được gọi khi người dùng tap vào POI                                                                  |
 
 ### Object Types
 
@@ -62,3 +62,40 @@ class Map4dScreen extends React.Component {
   }
 }
 ```
+
+### Events
+
+#### onPress
+
+Được gọi khi người dùng tap vào `poi` (được add bằng [MFPOI](#MFPOI)) trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPress` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "poi-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  poi: {
+    title: string,
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - poi: thông tin trả về cho poi, bao gồm:
+    + title: tiêu đề của poi.
+    + location: vị trí hiển thị của poi trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.

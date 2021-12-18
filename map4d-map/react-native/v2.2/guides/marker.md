@@ -21,11 +21,11 @@ hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ
 | **zIndex**             | number        | Chỉ định thứ tự hiển thị giữa các **Marker** với nhau hoặc giữa **Marker** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.  |
 | **visible**            | bool          | Xác định **Marker** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                       |
 | **userData**           | object        | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với **Marker**.                                       |
-| **onPress**            | func          | Callbacks để nhận sự kiện khi người dùng press Marker trên map.                                                                          |
-| **onPressInfoWindow**  | func          | Callbacks để nhận sự kiện khi người dùng press lên info window của Marker.                                                                          |
-| **onDragStart**        | func          | Callbacks để nhận sự kiện khi người dùng bắt đầu drag Marker trên map.                                                                          |
-| **onDrag**             | func          | Callbacks để nhận sự kiện khi người dùng đang kéo Marker trên map.                                                                          |
-| **onDragEnd**          | func          | Callbacks để nhận sự kiện khi người dùng kết thúc việc kéo Marker trên map.                                                                          |
+| [onPress](#onPress)            | func          | Callbacks để nhận sự kiện khi người dùng press Marker trên map.                                                                          |
+| [onPressInfoWindow](#onPressInfoWindow)  | func          | Callbacks để nhận sự kiện khi người dùng press lên info window của Marker.                                                                          |
+| [onDragStart](#onDragStart) | func | Callbacks để nhận sự kiện khi người dùng bắt đầu drag Marker trên map.                                                                          |
+| [onDrag](#onDrag) | func      | Callbacks để nhận sự kiện khi người dùng đang kéo Marker trên map.                                                                          |
+| [onDragEnd](#onDragEnd) | func   | Callbacks để nhận sự kiện khi người dùng kết thúc việc kéo Marker trên map.                                                                          |
 
 ### 1. Thêm một Marker
 
@@ -144,3 +144,170 @@ Thông tin custom icon cho Marker
 ```js
 let icon = {uri: 'https://b.thumbs.redditmedia.com/F82n9T2HtoYxNmxbe1CL0RKxBdeUEw-HVyd-F-Lb91o.png', width: 32, height: 32}
 ```
+
+### Events
+
+#### onPress
+
+Được gọi khi người dùng tap vào `marker` trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPress` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "marker-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  marker: {
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - marker: thông tin trả về cho marker, bao gồm:
+    + location: vị trí hiển thị của marker trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.
+
+#### onPressInfoWindow
+
+Được gọi khi người dùng tap vào info window của `marker` trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPressInfoWindow` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "marker-info-window-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  marker: {
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - marker: thông tin trả về cho marker, bao gồm:
+    + location: vị trí hiển thị của marker trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.
+
+#### onDragStart
+
+Được gọi khi người dùng bắt đầu kéo `marker` trên bản đồ (đối với marker có props `draggable` là true).  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onDragStart` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "marker-drag-start",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  marker: {
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - marker: thông tin trả về cho marker, bao gồm:
+    + location: vị trí hiển thị của marker trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.
+
+#### onDrag
+
+Được gọi liên tục khi người dùng kéo `marker` trên bản đồ (đối với marker có props `draggable` là true).  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onDrag` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "marker-drag",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  marker: {
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - marker: thông tin trả về cho marker, bao gồm:
+    + location: vị trí hiển thị hiện tại của marker trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.
+
+#### onDragEnd
+
+Được gọi khi người dùng kết thúc việc kéo `marker` trên bản đồ (đối với marker có props `draggable` là true).  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onDragEnd` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "marker-drag-end",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  marker: {
+    location: {
+      latitude: number,
+      longitude: number
+    },
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - marker: thông tin trả về cho marker, bao gồm:
+    + location: vị trí hiển thị hiện tại của marker trên bản đồ, theo hệ tọa độ địa lý.
+    + userData: object chứa thông tin được set vào thông qua props `userData`.

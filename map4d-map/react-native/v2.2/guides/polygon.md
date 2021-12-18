@@ -18,7 +18,7 @@
 | 6   | zIndex      | number                                               | Chỉ định thứ tự hiển thị giữa các Polygon với nhau hoặc giữa Polygon với các đối tượng anotation khác trên bản đồ. Giá trị mặc định là 0 |
 | 7   | visible     | bool                                                 | Xác định Polygon có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là true.                                                               |
 | 8   | userData    | object                                               | Dữ liệu bất kỳ mà người dùng muốn lưu cùng với polygon                                                                                   |
-| 9   | onPress     | func                                                 | Callbacks để nhận sự kiện khi người dùng tap vào polygon                                                                                 |
+| 9   | [onPress](#onPress) | func                                | Callbacks để nhận sự kiện khi người dùng tap vào polygon                                                                                 |
 
 ### Methods
 
@@ -94,3 +94,33 @@ render() {
   </MFMapView>
 }
 ```
+
+### Events
+
+#### onPress
+
+Được gọi khi người dùng tap vào `polygon` trên bản đồ.  
+Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onPress` được gọi là một object, có dạng như sau:
+
+```js
+{
+  action: "polygon-press",
+  location: {
+    latitude: number,
+    longitude: number
+  },
+  pixel: {
+    x: number,
+    y: number
+  },
+  polygon: {
+    userData: object
+  }
+}
+```
+
+Trong đó:
+  - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
+  - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
+  - polygon: thông tin trả về cho polygon, bao gồm:
+    + userData: object chứa thông tin được set vào thông qua props `userData`.
