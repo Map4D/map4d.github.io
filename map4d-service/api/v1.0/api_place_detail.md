@@ -59,14 +59,14 @@ https://api.map4d.vn/sdk/place/detail/{id}?key={}
 |---------------|-------|-------------------------------------------------------------------------------------------------------|
 | code          |Yes    | mã trả về, nếu 'ok' nghĩa là thành công, ngoài ra thì yêu cầu bị lỗi                               |
 | message       |No     | nội dung của mã lỗi(nếu có)                                                                        |
-| result        |No     | place được tìm thấy gần nhất (nếu có địa điểm trong 50 mét sẽ trả về, không thì sẽ trả về đường trong phạm vi 50 mét, nếu không có nữa thì sẽ trả về địa giới hành chính chứa vị trí này), nếu lỗi thì result là null|
+| result        |No     | địa điểm tương ứng với `id` truyền vào|
+| id            |Yes    | khóa của địa điểm                                                                                  |
 | description   |No     | mô tả thêm về địa điểm                                                                                 |
 | tags          |No     | danh sách các nhãn của người dùng thêm vào để thuận tiện cho việc tìm kiếm                     |
 | metadata      |No     | danh sách thông tin liên quan đến địa điểm. VD: bài báo, đường link liên kết, link video...     |
 | photos        |No     | danh sách thông tin hình ảnh về địa điểm                                                                                      |
 | addressComponents|No  | danh sách đơn vị hành chính của địa điểm thuộc vị trí đó
 | objectId      |No     | đối tượng của địa điểm đó (ví dụ như địa điểm nó thuộc tòa nhà nào - tòa nhà là đối tượng)                                                                          |
-| id            |Yes    | khóa của địa điểm                                                                                  |
 | location      |Yes    | vị trí đặt địa điểm(lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS)                     |
 | address       |Yes    | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nai Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng      |
 | name          |Yes    | tên của địa điểm                                                                                      |

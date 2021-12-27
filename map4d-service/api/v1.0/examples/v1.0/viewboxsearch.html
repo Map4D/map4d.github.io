@@ -12,10 +12,6 @@
 <p>Types: <input class="input" id="inputType" placeholder="Kiểu của địa điểm. VD: cafe, atm"/></p>
 <p>Tags: <input class="input" id="inputTags" placeholder="Đánh dấu địa điểm riêng để tìm"/></p>
 <p>DateTime: <input class="input" id="inputDate" placeholder="Thời gian (đơn vị miliseconds)"/></p>
-<p>Accuracy: <select  class="input" id="inputAccuracy">
-    <option value="0">Tìm chính xác</option>
-    <option value="1">Tìm tương đối</option>
-</select></p>
 <p><button onclick="viewBoxSearch_Run();">Submit</button></p>
 <pre id="displayResult"></pre>
 
@@ -63,8 +59,7 @@
         for (var i in inputTags){
             tags += "&tags="+inputTags[i];
         }
-        let selectedAccuracy = inputAccuracy.options[inputAccuracy.selectedIndex].value;
-        $.getJSON('https://api.map4d.vn/sdk/place/viewbox-search?key='+key+'&viewbox='+inputViewBox+'&text='+inputText +types+tags+'&datetime='+inputDate+'&accuracy=' + selectedAccuracy, function(data) {
+        $.getJSON('https://api.map4d.vn/sdk/place/viewbox-search?key='+key+'&viewbox='+inputViewBox+'&text='+inputText +types+tags+'&datetime='+inputDate, function(data) {
             var limit =5;
             var result;
             if(data.result != null){

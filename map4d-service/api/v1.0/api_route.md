@@ -6,12 +6,13 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 | Parameter  |Required| Description                                                                                                           |
 |------------|--------|-----------------------------------------------------------------------------------------------------------------------|
 | key        |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key |
-| origin     |No      | vị trí lat, lng của địa điểm bắt đầu. VD:16.024634,108.209217                                                      |
-| destination|No      | vị trí lat,lng của địa điểm kết thúc. VD:16.020179,108.211212                                                      |
-| points     |No      | danh sách các lat,lng mà muốn đi qua. VD:16.039173,108.210912;16.044597,108.217263                                 |
+| origin     |Yes      | vị trí lat, lng của địa điểm bắt đầu. VD:16.024634,108.209217                                                      |
+| destination|Yes      | vị trí lat,lng của địa điểm kết thúc. VD:16.020179,108.211212                                                      |
+| points     |No      | danh sách các điểm trung gian muốn đi qua. VD:16.039173,108.210912;16.044597,108.217263                                 |
 | mode       |Yes     | phương tiện đi qua, hiện tại hỗ trợ 4 loại phương tiện: car (xe hơi), bike (xe đạp), foot (đi bộ), motorcycle (xe máy) |
 | language   |No      | ngôn ngữ dùng chỉ đường, hiện tại hỗ trợ Tiếng Việt (vi) hoặc Tiếng Anh (en), mặc định sẽ là Tiếng Việt              |
-| weighting  |No      | thuộc tính tìm theo đường đi ngắn nhất hay đường đi nhanh nhất hay đường đi cần bằng giữa ngắn nhất và nhanh nhất mặc định là ngắn nhất. Nếu weighting=0 là tìm đường đi ngắn nhất, nếu weighting=1 là tìm đường đi nhanh nhất, nếu weighting=2 là cân bằng giữa ngắn nhất và nhanh nhất.|
+| weighting  |No      | thuộc tính tìm theo đường đi ngắn nhất hay đường đi nhanh nhất hay đường đi cần bằng giữa ngắn nhất và nhanh nhất mặc định là nhanh nhất. Nếu weighting=0 là tìm đường đi ngắn nhất, nếu weighting=1 là tìm đường đi nhanh nhất, nếu weighting=2 là cân bằng giữa ngắn nhất và nhanh nhất.|
+| avoid   |No      | điểm/khu vực bị chặn, tuyến đường sẽ không đi qua đây. Hỗ trợ các định dạng: 1. lat,lon ; 2. lat,lon,radius - Radius là mét, nhỏ hơn 50 và lớn hơn 0 ; 3   lat1,lon1,lat2,lon2 ; 4 lat1,lon1,lat2,lon2,...,latN,lonN   |
 
 ## 2. Output (Đầu ra)
 ```json
@@ -95,16 +96,15 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 | code          |Yes    | mã trả về, nếu 'ok' nghĩa là thành công, ngoài ra thì yêu cầu bị lỗi                               |
 | message       |No     | nội dung của mã lỗi(nếu có)                                                                        |
 | result        |No     | đường đi                                                                                           |
-| status        |No     | trạng thái tìm đường đi, nếu ok thì có đường, ngược lại thì không tìm thấy đường                   |
-| routes        |Yes    | danh sách các đường đi                                                                             |
-| legs          |Yes    | danh sách đường đi từ điểm đầu đến điểm tiếp theo, từ tiếp theo đến tiếp theo nữa.. và đến cuối   |
-| distance      |Yes    | khoảng cách về km mỗi địa điểm đi qua (text mô tả quản đường đi, còn value là giá trị đơn vị là mét)|
-| duration      |Yes    | khoảng cách về thời gian mỗi địa điểm đi qua (text mô tả thời gian, còn value là thời gian khi đi trên đoạn đường đó đơn vị là giây)|
-| endAddress    |Yes    | địa chỉ kết thục mỗi điểm                                                                          |
-| startAddress  |Yes    | địa chỉ bắt đầu mỗi điểm                                                                           |
+| routes        |No    | danh sách các đường đi                                                                             |
+| legs          |Yes    | danh sách đoạn đường để đi qua điểm trung gian `points`  |
+| distance      |Yes    | khoảng cách về km mỗi địa điểm đi qua (khoảng cách dưới dạng text, còn value là giá trị đơn vị là mét)|
+| duration      |Yes    | khoảng cách về thời gian mỗi địa điểm đi qua (thời gian dưới dạng text, còn value là thời gian khi đi trên đoạn đường đó đơn vị là giây)|
+| endAddress    |No    | địa chỉ kết thúc mỗi điểm                                                                          |
+| startAddress  |No    | địa chỉ bắt đầu mỗi điểm                                                                           |
 | startLocation |Yes    | điểm lat, lng bắt đầu                                                                              |
-| steps         |Yes    | bước đi con trong mỗi đoạn trên url                                                                 |
-| htmlInstructions|Yes  | mô tả dạng html                                                                                  |
+| steps         |Yes    | Danh sách các bước cần thực hiện                                                |
+| htmlInstructions|Yes  | mô tả bước cần thực hiện dạng html                                                                                  |
 | maneuver      |Yes    | hướng chuyển đổi                                                                                   |
 | polyline      |Yes    | đường đi từng điểm dưới dạng mã hóa polyline làm tròn 5 ký tự                                      |
 | travelMode    |Yes    | phương tiện đi                                                                                     |
