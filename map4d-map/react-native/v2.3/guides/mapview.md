@@ -50,7 +50,7 @@
 |  13 | setScrollGesturesEnabled   |                           | bool `enable`                        | Bật/Tắt thao tác người dùng có thể di chuyển map.                       |
 |  14 | setRotateGesturesEnabled   |                           | bool `enable`                        | Bật/Tắt thao tác người dùng có thể xoay map.`                           |
 |  15 | setTiltGesturesEnabled     |                           | bool `enable`                        | Bật/Tắt thao tác người dùng có thể nghiêng map.                         |
-|  15 | setAllGesturesEnabled      |                           | bool `enable`                        | Bật/Tắt tất các các thao tác người dùng tác động đến map.               |
+|  16 | setAllGesturesEnabled      |                           | bool `enable`                        | Bật/Tắt tất các các thao tác người dùng tác động đến map.               |
 
 ### Object Types
 
