@@ -12,7 +12,8 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 | mode       |Yes     | phương tiện đi qua, hiện tại hỗ trợ 4 loại phương tiện: car (xe hơi), bike (xe đạp), foot (đi bộ), motorcycle (xe máy) |
 | language   |No      | ngôn ngữ dùng chỉ đường, hiện tại hỗ trợ Tiếng Việt (vi) hoặc Tiếng Anh (en), mặc định sẽ là Tiếng Việt              |
 | weighting  |No      | thuộc tính tìm theo đường đi ngắn nhất hay đường đi nhanh nhất hay đường đi cần bằng giữa ngắn nhất và nhanh nhất mặc định là nhanh nhất. Nếu weighting=0 là tìm đường đi ngắn nhất, nếu weighting=1 là tìm đường đi nhanh nhất, nếu weighting=2 là cân bằng giữa ngắn nhất và nhanh nhất.|
-| avoid   |No      | điểm/khu vực bị chặn, tuyến đường sẽ không đi qua đây. Hỗ trợ các định dạng: 1. lat,lon ; 2. lat,lon,radius - Radius là mét, nhỏ hơn 50 và lớn hơn 0 ; 3   lat1,lon1,lat2,lon2 ; 4 lat1,lon1,lat2,lon2,...,latN,lonN   |
+| avoid   |No      | điểm/khu vực bị chặn, tuyến đường sẽ không đi qua đây. Hỗ trợ các định dạng: 1. lat,lng ; 2. lat,lng,radius - Radius là mét, nhỏ hơn 50 và lớn hơn 0 ; 3   lat1,lng1,lat2,lng2 ; 4 lat1,lng1,lat2,lng2,...,latN,lngN   |
+| avoidRoad   |No      | danh sách loại đường cấm đi qua, hỗ trợ: motorway,trunk,ferry,bridge,tunnel. Format: `motorway,trunk` |
 
 ## 2. Output (Đầu ra)
 ```json
