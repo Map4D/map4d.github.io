@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mapView.getMapAsync(this)
+        mapView?.getMapAsync(this)
     }
 
     override fun onMapReady(map4D: Map4D?) {
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
     
      override fun onDestroy() {
-        map4D?.onDestroy()
+        mapView?.onDestroy()
         super.onDestroy()
      }
 }
