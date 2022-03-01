@@ -65,6 +65,15 @@ dependencies {
 ```
 3. Working with map view (kotlin)
 
+> **Chú ý:** <span style="color:red">Khi dùng MFMapView thì chúng ta cần override các phương thức lifecycle sau của Activity hoặc Fragment chứa nó và gọi tới
+các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở bên dưới).</span>
+ 
+- **onCreate(Bundle)**
+- **onDestroy()**
+- **onSaveInstanceState(Bundle)**
+- **onStart()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
+- **onStop()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
+
 <!-- tabs:start -->
 #### ** Java **
 
@@ -163,11 +172,3 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 }
 ```
 <!-- tabs:end -->
-
-> **Chú ý:** Khi dùng MFMapView thì chúng ta cần override các phương thức lifecycle sau của Activity hoặc Fragment chứa nó và gọi tới
-các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở trên).
-- **onCreate(Bundle)**
-- **onDestroy()**
-- **onSaveInstanceState(Bundle)**
-- **onStart()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
-- **onStop()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
