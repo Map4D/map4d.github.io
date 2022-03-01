@@ -54,7 +54,7 @@ dependencies {
 
 ```
 
-2. Create layout
+2. Create layout sử dụng MFMapView
 
 ```xml
 <vn.map4d.map.core.MFMapView
@@ -72,26 +72,47 @@ dependencies {
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback{ 
     
     private MFMapView mapView;
-	private Map4D map4D;
+    private Map4D map4D;
   
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple3d_map_activity);
         mapView = findViewById(R.id.map3D);
+        mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this); 
     }
   
     @Override
     public void onMapReady(Map4D map4D) { 
         map4D.enable3DMode(true);
-		// Your code
+        // Your code
     }
       
     @Override
     protected void onDestroy() { 
         mapView.onDestroy(); 
         super.onDestroy();
+    }
+    
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+    
+    // Override phương thức này nếu sử dụng phiên bản SDK >= 2.0.11
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    // Override phương thức này nếu sử dụng phiên bản SDK >= 2.0.11
+    @Override
+    protected void onStop() {
+        mapView.onStop();
+        super.onStop();
     }
 }
 ```
@@ -104,11 +125,12 @@ import vn.map4d.map.core.OnMapReadyCallback
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-	private var map4D: Map4D? = null
+    private var map4D: Map4D? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mapView?.onCreate(savedInstanceState)
         mapView?.getMapAsync(this)
     }
 
@@ -117,12 +139,35 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         // Your code
     }
     
-     override fun onDestroy() {
+    override fun onDestroy() {
         mapView?.onDestroy()
         super.onDestroy()
-     }
+    }
+    
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        mapView?.onSaveInstanceState(outState)
+    }
+
+    // Override phương thức này nếu sử dụng phiên bản SDK >= 2.0.11
+    override fun onStart() {
+        super.onStart()
+        mapView?.onStart()
+    }
+
+    // Override phương thức này nếu sử dụng phiên bản SDK >= 2.0.11
+    override fun onStop() {
+        mapView?.onStop()
+        super.onStop()
+    }
 }
 ```
 <!-- tabs:end -->
 
-> **Chú ý:** Khi dùng MFMapView thì cần phải destroy view để tránh trường hợp leak memory
+> **Chú ý:** Khi dùng MFMapView thì chúng ta cần override các phương thức lifecycle sau của Activity hoặc Fragment chứa nó và gọi tới
+các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở trên).
+- **onCreate(Bundle)**
+- **onDestroy()**
+- **onSaveInstanceState(Bundle)**
+- **onStart()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
+- **onStop()** (Override phương thức này nếu sử dụng phiên bản SDK >= **2.0.11**)
