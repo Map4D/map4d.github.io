@@ -11,6 +11,7 @@ Những thay đổi kể từ version 1.6.0
 - Thêm mới hàm `getBounds` cho **Map4D**
 - Thêm sự kiện `OnPlaceClickListener` cho **Map4D**
 - Hỗ trợ render chỉ đường với `MFDirectionsRenderer`
+- Thêm anchor cho icon của MFPOI.
 
 #### Changed
 
