@@ -2,116 +2,70 @@
 
 > Hiện tại trên bản đồ đã có những điểm đánh dấu địa điểm có sẵn (như địa danh công cộng, quán cà phê, nhà hàng, bến xe, ...)
 và chúng chỉ hiển thị khi bản đồ ở chế độ 2D. Khi bạn cần một đối tượng để đánh dấu một địa điểm trên bản đồ tương tự như
-những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các đối tượng **POI** bạn thêm vào bản đồ có thể hiện thị
-ở **cả 2 chế độ 2D và 3D**.
-
-### Các thuộc tính của **POI**:
-
-| Name                       |Description                                                                                                              |
-|----------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **position**               | Chỉ định một [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html) để xác định vị trí ban đầu của **POI**.|
-| **title**                  | Chỉ định tiêu đề của **POI**. Tiêu đề sẽ hiển thị thông tin của **POI** mà bạn muốn hiển thị cho người dùng.            |
-| **titleColor**             | Chỉ định màu tiêu đề của **POI**.                                                                                       |
-| **subtitle**               | Chỉ định thông tin mô tả của **POI**.                                                                                   |
-| **type**                   | Chỉ định kiểu của **POI**, tùy thuộc vào kiểu mà icon của **POI** sẽ có hình ảnh tương ứng.                             |
-| **icon**                   | Tùy chỉnh **icon** cho **POI**. Có thể truyền vào là một **UIImage**                                                    |
-| **consumeTapEvents**       | Cho phép người dùng có thể tương tác được với **POI** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **POI** thì tất cả các sự kiện liên quan tới **POI** từ phía người dùng sẽ không có tác dụng. | 
-| **visible**                | Xác định **POI** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                          |
-| **zIndex**                 | Chỉ định thứ tự hiển thị giữa **POI** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**                     |
-
-**Ghi chú:** Hiện tại Map4D hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
-
-### 1. Thêm một POI
-
-- Ta nên tạo một mảng **pois** để quản lý các **poi** biển diển trên **map**.
+những điểm có sẵn đó thì bạn có thể dùng lớp [MFPOI](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPOI-class.html).  
+Các đối tượng POI bạn thêm vào bản đồ có thể hiện thị
+ở cả 2 chế độ 2D và 3D.
 
 ![POI](../../resources/poi.png) 
 
-```dart
-Map<MFPOIId, MFPOI> pois = <MFPOIId, MFPOI>{};
-```
+## MFPOI
+
+### Constructors
 
 ```dart
-void _add() {
-  final String poiIdVal = 'poi_id_0';
-  final MFPOIId poiId = MFPOIId(poiIdVal);
-  final MFPOI poi = MFPOI(
-    poiId: poiId,
-    consumeTapEvents: true,
-    position: MFLatLng(16.0324816, 108.132791),
-    title: "IOT Link",
-    titleColor: Colors.red,
-    type: "hospital",
-    onTap: () {
-      _onPOITapped(poiId);
-    },
-  );
-
-  setState(() {
-    pois[poiId] = poi;
-  });
-}
+const MFPOI({
+  required this.poiId,
+  this.consumeTapEvents = false,
+  this.position = const MFLatLng(0.0, 0.0),
+  this.title = '',
+  this.titleColor = Colors.blue,
+  this.icon = MFBitmap.defaultIcon,
+  this.type = 'point',
+  this.visible = true,
+  this.zIndex = 0,
+  this.onTap
+});
 ```
 
-Bạn có thể tùy chỉnh thuộc tính của **POI** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
+### Properties
 
-### 2. Xóa POI khỏi bản đồ
+| Name             | Type                                                                                     | Description                                           |
+|------------------|------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| poiId            | [MFPOIId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPOIId-class.html)         | Id của POI.                                           |
+| consumeTapEvents | `bool` | Default: `false`. Cho phép người dùng có thể tương tác được với POI hay không. Nếu `false` thì `onTap` callback sẽ không được gọi.      |
+| position         | [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)       | Vị trí của POI trên bản đồ                            |
+| title            | `String`       | Chỉ định tiêu đề của POI. Tiêu đề sẽ hiển thị thông tin của POI mà bạn muốn hiển thị cho người dùng.                            |
+| titleColor       | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html)                        | Chỉ định màu tiêu đề của POI.                         |
+| icon             | [MFBitmap](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap-class.html)       | Tùy chỉnh icon cho POI.                               |
+| type             | `String`       | Default: `point`. Chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. E.g: atm, park, cafe, ... |
+| visible          | `bool`                                                     | Default: `true`. Ẩn hay hiện POI trên bản đồ.                                       |
+| zIndex           | `int`                                                      | Default: `0`. Chỉ định thứ tự hiển thị giữa POI với các đối tượng khác trên bản đồ. |
+| onTap            | [VoidCallback](https://api.flutter.dev/flutter/dart-ui/VoidCallback.html)                | Callback được gọi khi người dùng tap vào POI.         |
 
-```dart
-void _remove(MFPOIId poiId) {
-  setState(() {
-    if (pois.containsKey(poiId)) {
-      pois.remove(poiId);
-    }
-  });
-}
-```
+## Notes
 
-### 3. Tùy chỉnh cho POI
+### Type của POI
 
-#### 3.1 Ẩn hiện POI
+Type của POI tương ứng với các type của base map poi hiển thị trên bản đồ. Tùy vào từng type sẽ có icon hiển thị tương ứng với type của base map với màu sắc nổi bật hơn.  
 
-```dart
-void _toggleVisible(MFPOIId poiId) {
-  final MFPOI poi = pois[poiId]!;
-  setState(() {
-    pois[poiId] = poi.copyWith(
-      visibleParam: !poi.visible,
-    );
-  });
-}
-```
+Hiện tại Map4D hỗ trợ cái kiểu sau: point, cafe, bus_station, electronics, shop, bakery, fuel, restaurant, police, payment_centre, museum, university, school, airport, bank, clothes, motel, insurance, furniture, atm, hospital, bar, books, theatre, car, goverment, townhall, apartment, park, stadium, nightclub.
 
-#### 3.2 Thay đổi tiêu đề của POI
+### Custom icon cho POI
 
-```dart
-void _changeTitle(MFPOIId poiId) {
-  final MFPOI poi = pois[poiId]!;
-  setState(() {
-    pois[poiId] = poi.copyWith(
-      titleParam: "IOT Link",
-    );
-  });
-}
-```
+Map4dMap Flutter SDKs cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của POI bằng hình ảnh sẵn có.  
+Để tạo được đối tượng `MFBitmap` chính xác cần gọi phương thức [MFBitmap.fromAssetImage](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap/fromAssetImage.html) với 2 tham số quan trọng là:
+- configuration: [ImageConfiguration](//api.flutter.dev/flutter/painting/ImageConfiguration-class.html)
+- assetName: String
 
-#### 3.3 Thay đổi màu tiêu đề của POI
+!> Trong đó: `configuration` cần phải được tạo từ phương thức [createLocalImageConfiguration](//api.flutter.dev/flutter/widgets/createLocalImageConfiguration.html) để có thể nhận diện được chính xác hình ảnh từ context của ứng dụng.  
+Nếu không tạo bằng phương thức này, custom icon có thể sẽ không hiển thị chính xác.
 
-```dart
-void _changeTitleColor(MFPOIId poiId) {
-  final MFPOI poi = pois[poiId]!;
-  setState(() {
-    pois[poiId] = poi.copyWith(titleColorParam: Colors.blue);
-  });
-}
-```
+### Type và Icon
 
-### 4. Sự kiện tap của POI
-```dart
-void _onPOITapped(MFPOIId poiId) {
-  setState(() {
-    final MFPOI poi = pois[poiId]!;
-    print("Selected poi: " + poiId.toString());
-  });
-}
-```
+!> Trong trường hợp cả type và icon đều được gán giá trị thì Map4dMap SDKs sẽ ưu tiên hiển thị hình ảnh của POI từ tham số `icon`.
+
+## Example
+
+Ví dụ tương tác với poi có thể xem tại:
+
+<https://github.com/map4d/map4d-map-flutter/blob/master/example/lib/place_poi.dart>
