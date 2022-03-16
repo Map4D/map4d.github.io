@@ -319,3 +319,5 @@ map4D.setOnReachLimitedZoom(object: Map4D.OnReachLimitedZoom {
 })
 ```
 <!-- tabs:end -->
+
+Tham số `zoom` sẽ trả về mức zoom tối thiểu hoặc tối đa của chế độ Map hiện tại khi chúng ta đạt tới mức zoom đó.
