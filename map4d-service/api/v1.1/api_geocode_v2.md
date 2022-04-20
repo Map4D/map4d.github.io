@@ -1,34 +1,37 @@
+#  Geocodev2 (Phân giải địa chỉ phiên bản 2)
+Chuyển đổi từ tọa độ vị trí (vĩ độ, kinh độ) sang địa chỉ và ngược lại.
 
-#  GeoCode(Phân giải địa điểm ra tọa độ địa lý)
-## 1. Input(Đầu vào)
+Phương thức: GET
+## 1. Input (Đầu vào)
 ```
 https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
 ```
-| Parameter |Required| Description                                                                                           |
-|-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
-| location  |No      | tọa độ lat, lng tại địa điểm mà bạn muốn phân giải, VD: 16.036505,108.218186                                                                       |
-| address   |No      | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nại Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng                                      |
-| viewbox   |No      | khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm năm trong box này sẽ được ưu tiên hơn (không ràng buộc) VD: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375                                |
+| Parameter | Required | Description                                                                                                                                                                                                           |
+|-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                     |
+| location  | No       | Tọa độ lat, lng tại địa điểm muốn phân giải. Ví dụ: 16.0758766,108.2290401                                                                                                                                            |
+| address   | No       | Địa chỉ của địa điểm tương ứng. Ví dụ: 271 Trần Hưng Đạo, An Hải Bắc, Sơn Trà, Đà Nẵng, Việt Nam                                                                                                                      |
+| viewbox   | No       | Khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm nằm trong box này sẽ được ưu tiên hơn (không ràng buộc). Ví dụ: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375 |
 
-Note: Yêu cầu phải có location hoặc address
-## 2. Output(Đầu ra)
+**Note:** Yêu cầu phải có `location` hoặc `address`
+## 2. Output (Đầu ra)
 ```json
 {
   "code": "string",
   "message": "string",
-  "result": {
-    "id": "string",
-    "location": {
-      "lng": 0,
-      "lat": 0
-    },
-    "address": "string",
-    "name": "string",
-    "types": [
-      "string"
-    ],
-    "addressComponents": [
+  "result": [
+    {
+      "id": "string",
+      "name": "string",
+      "address": "string",
+      "location": {
+        "lng": 0,
+        "lat": 0
+      },
+      "types": [
+        "string"
+      ],
+      "addressComponents": [
         {
           "types": [
             "string"
@@ -36,19 +39,21 @@ Note: Yêu cầu phải có location hoặc address
           "name": "string"
         }
       ]
-  }
+    }
+  ]
 }
 ```
-| Parameter |Notnull| Description                                                                                           |
-|-----------|-------|-------------------------------------------------------------------------------------------------------|
-| code      |Yes    | mã trả về, nếu 'ok' nghĩa là thành công, ngoài ra thì yêu cầu bị lỗi                               |
-| message   |No     | nội dung của mã lỗi(nếu có)                                                                        |
-| result    |No     | place được tìm thấy gần nhất (nếu có địa điểm trong 50 mét sẽ trả về, không thì sẽ trả về đường trong phạm vi 50 mét, nếu không có nữa thì sẽ trả về địa giới hành chính chứa vị trí này), nếu lỗi thì result là null|
-| id        |No    | khóa của địa điểm.                                                                                |
-| location  |Yes    | vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS)                     |
-| name      |Yes    | tên của địa điểm                                                                                      |
-| address   |Yes    | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nại Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng      |
-| types     |Yes    | danh sách các loại đối tượng của địa điểm. VD: cafe, restaurant...|
-| addressComponents     |No    | danh sách các thành phần của địa chỉ, `types` (notnull) của addressComponents gồm: `housenumber`: số nhà; `street`: tên đường; `admin_level_4`: phường/xã; `admin_level_3`: quận/huyện; `admin_level_2`: tỉnh/thành phố trực thuộc trung ương; `admin_level_1`: quốc gia, `extra`: các thông tin khác; và `name` (notnull) là giá trị tương ứng |
+| Parameter         | Notnull | Description                                                                                                                                                                                                                                                                                                                                                                                            |
+|-------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| code              | **Yes** | Mã trả về thành công hoặc lỗi.<br>Nếu trả về mã code "ok" nghĩa là thành công.<br>Ngược lại, nếu lỗi thì trả về mã lỗi tương ứng.                                                                                                                                                                                                                                                                      |
+| message           | No      | Nội dung của mã lỗi (nếu có).                                                                                                                                                                                                                                                                                                                                                                          |
+| result            | No      | "Place" được tìm thấy gần nhất (nếu có địa điểm trong 50 mét sẽ trả về, không thì sẽ trả về đường trong phạm vi 50 mét, nếu không có nữa thì sẽ trả về địa giới hành chính chứa vị trí này), nếu lỗi thì result là "null".                                                                                                                                                                             |
+| id                | No      | Khóa của địa điểm tương ứng. Trường hợp nội suy id là "null".                                                                                                                                                                                                                                                                                                                                          |
+| name              | **Yes** | Tên của địa điểm tương ứng.                                                                                                                                                                                                                                                                                                                                                                            |
+| address           | **Yes** | Địa chỉ của địa điểm tương ứng. Ví dụ: 271 Trần Hưng Đạo, An Hải Bắc, Sơn Trà, Đà Nẵng, Việt Nam                                                                                                                                                                                                                                                                                                       |
+| location          | **Yes** | Vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS).                                                                                                                                                                                                                                                                                                                    |
+| types             | **Yes** | Danh sách các loại đối tượng của địa điểm. Ví dụ: point, cafe, restaurant, ...                                                                                                                                                                                                                                                                                                                         |
+| addressComponents | No      | Danh sách các thành phần của địa chỉ.<br>`types` (notnull) của addressComponents gồm: <br>  `housenumber`: số nhà; <br>  `street`: tên đường; <br>  `admin_level_4`: phường/xã;<br>  `admin_level_3`: quận/huyện; <br>  `admin_level_2`: tỉnh/thành phố trực thuộc trung ương; <br>  `admin_level_1`: quốc gia;<br>  `extra`: các thông tin khác<br>`name` (notnull) là tên địa chỉ tương ứng `types`. |
+
 **Ví dụ**
 <iframe src="./examples/v1.0/geocode_v2.html" height = "400px"> </iframe>

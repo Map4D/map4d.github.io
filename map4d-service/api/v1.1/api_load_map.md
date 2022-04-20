@@ -1,14 +1,19 @@
+#  Load map theo version (Bản đồ 2D trên web)
+Get file js theo version.
 
-#  Load map theo version
-## 1. Input(Đầu vào)
+Cho phép nhà phát triển tích hợp Map4D SDK vào ứng dụng web với đầy đủ tính năng điều khiển. 
+
+Phương thức: **GET**
+## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/map/js?key={key}&version={version}&callback={callback}
-key là thuộc tính bắc buộc.
-version là phiên bản nội dung javascript
-callback 
+http://api.map4d.vn/sdk/map/js?version={version}&callback={callback}
 ```
-## 2. Output(Đầu ra)
+| Parameter | Required | Description                                                                                        |
+|---------------|--------------|--------------------------------------------------------------------------------------------------------|
+| version       | **Yes**      | Phiên bản nội dung "javascript" Map4D. Chỉ hỗ trợ dạng x.y.z hoặc x.y. Ví dụ: 2.1.0                    |
+| callback      | No           | Gọi lại một function sẽ được thực thi sau khi một function khác đã được thực thi xong. Ví dụ: callback |
+## 2. Output (Đầu ra)
 ```text
-Nội dung tập tin javascript
+Trả về nội dung tập tin "javascript " gồm các function liên quan đến bản đồ 2D trên web.
 ```
 [Chức năng nội dung tập tin javascript](https://github.com/map4d/map4d-web-sdk)
