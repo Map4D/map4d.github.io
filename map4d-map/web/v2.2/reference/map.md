@@ -341,3 +341,120 @@ Projection(map)
 |------------------------|-------------------------------------------------------------------------------------|--------------------------------------------|------------------------------------------------|
 | **fromLatLngToScreen** | latLng: [LatLng](/reference/coordinates?id=latlng)<br> elevation?: number           | [Point](/reference/coordinates?id=point)   | Chuyển đổi từ toạ độ LatLng sang toạ độ Screen |
 | **fromScreenToLatLng** | screenCoordinate: [IPoint](/reference/coordinates?id=ipoint)<br> elevation?: number | [LatLng](/reference/coordinates?id=latlng) | Chuyển đổi từ toạ độ Screen sang toạ độ LatLng |
+
+## PatternItem
+
+Là một lớp trừu tượng dùng để định nghĩa các kiểu pattern cho line.
+
+Chúng ta sẽ dùng các **class** triển khai sau để set pattern cho line:
+- Class [SolidPattern](/reference/map?id=solidpattern-class) : dùng để định nghĩa kiểu pattern liền mạch.
+- Class [DashPattern](/reference/map?id=dashpattern-class) : dùng để định nghĩa kiểu pattern nét đứt.
+- Class [DotPattern](/reference/map?id=dotpattern-class) : dùng để định nghĩa kiểu pattern chấm tròn.
+- Class [IconPattern](/reference/map?id=iconpattern-class) : dùng để định nghĩa kiểu pattern cho phép người dùng gắn một image lên line, image này sẽ được lặp lại nếu độ dài ngắn hơn độ dài của line.
+
+## SolidPattern class
+
+`map4d.SolidPattern` class
+
+Lớp này kế thừa lớp [PatternItem](/reference/map?id=patternitem)
+
+**Constructor**
+
+```javascript
+SolidPattern()
+```
+
+## DashPattern class
+
+`map4d.DashPattern` class
+
+Lớp này kế thừa lớp [PatternItem](/reference/map?id=patternitem)
+
+**Constructor**
+
+```javascript
+DashPattern(options)
+```
+
+- Parameters:
+  - options: [DashPatternOptions](/reference/map?id=dashpatternoptions) *required*
+
+## DashPatternOptions
+
+Định nghĩa giao diện quy định hình dạng của nét đứt.
+
+`map4d.DashPatternOptions` interface
+
+```javascript
+interface DashPatternOptions {
+    length: number
+    gap: number
+}
+```
+
+| No | Name         | Description                                                    |
+|----|--------------|----------------------------------------------------------------|
+| 1  | length       | Độ dài của nét đứt                                             |
+| 2  | gap          | Khoảng hở giữa các nét đứt                                     |
+
+## DotPattern class
+
+`map4d.DotPattern` class
+
+Lớp này kế thừa lớp [PatternItem](/reference/map?id=patternitem)
+
+**Constructor**
+
+```javascript
+DotPattern(options)
+```
+
+- Parameters:
+  - options: [DotPatternOptions](/reference/map?id=dotpatternoptions) *required*
+
+## DotPatternOptions
+
+Định nghĩa giao diện quy định khoảng cách của các chấm tròn
+
+`map4d.DotPatternOptions` interface
+
+```javascript
+interface DotPatternOptions {
+    repeat?: number
+}
+```
+
+| No | Name         | Description                                                    |
+|----|--------------|----------------------------------------------------------------|
+| 1  | repeat       | Khoảng cách giữa các chấm tròn, giá trị khoảng cách này được tính theo số lần đường kính của chấm tròn đó, giá trị mặc định là 1 |
+
+## IconPattern class
+
+`map4d.IconPattern` class
+
+Lớp này kế thừa lớp [PatternItem](/reference/map?id=patternitem)
+
+**Constructor**
+
+```javascript
+IconPattern(options)
+```
+
+- Parameters:
+  - options: [IconPatternOptions](/reference/map?id=iconpatternoptions) *required*
+
+## IconPatternOptions
+
+Định nghĩa giao diện để set image cho IconPattern.
+
+`map4d.IconPatternOptions` interface
+
+```javascript
+interface IconPatternOptions {
+    url: string
+}
+```
+
+| No | Name         | Description                                                    |
+|----|--------------|----------------------------------------------------------------|
+| 1  | url          | set đường dẫn của image, hỗ trợ ảnh có alpha để tạo khoảng hở khi lặp lại image |

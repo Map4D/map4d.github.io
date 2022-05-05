@@ -33,8 +33,10 @@ Polyline(options)
 | **getStrokeOpacity**         | `none`                                  | number       | Get độ trong suốt của polyline                                                         |
 | **setVisible**               | boolean                                 | `none`       | Ẩn/hiện polyline trên map hay không                                                    |
 | **isVisible**                | `none`                                  | boolean      | Get trạng thái ẩn/hiện của polyline                                                    |
-| **setStyle**                 | string                                 | `none`        | Set kiểu vẽ cho polyline (có 2 kiểu là: **solid** và **dotted**)                       |
-| **getStyle**                 | `none`                                  | string       | Get kiểu vẽ hiện tại của polyline                                                      |
+| **~~setStyle~~** *(deprecated)*| string                                | `none`       | Set kiểu vẽ cho polyline (có 2 kiểu là: **solid** và **dotted**). Được thay thế bằng `setStrokePattern` method|
+| **~~getStyle~~** *(deprecated)*| `none`                                | string       | Get kiểu vẽ hiện tại của polyline                                                      |
+| **setStrokePattern**         | [PatternItem](/reference/map?id=patternitem)| `none`   | Set kiểu vẽ cho polyline (có 4 kiểu là: [SolidPattern](/reference/map?id=solidpattern-class), [DashPattern](/reference/map?id=dashpattern-class), [DotPattern](/reference/map?id=dotpattern-class) và [IconPattern](/reference/map?id=iconpattern-class))|
+| **getStrokePattern**         | `none` | [PatternItem](/reference/map?id=patternitem)  | Get kiểu vẽ hiện tại của polyline                                                      |
 | **setZIndex**                | number                                  | `none`       | Set giá trị zIndex cho polyline                                                        |
 | **getZIndex**                | `none`                                  | number       | Get giá trị zIndex hiện tại của polyline                                               |
 | **setElevation**             | number                                  | `none`       | Set giá trị độ cao cho polyline theo đơn vị mét                                        |
@@ -66,5 +68,6 @@ Polyline(options)
 | **draggable** *optional*     | number              | cho phép người dùng có thể kéo Polyline trên bản đồ hay không. Giá trị mặc định là **false**.                                                                         |
 | **zIndex** *optional*        | boolean             | chỉ định thứ tự chồng nhau giữa các Polyline với nhau hoặc giữa Polyline với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.                               |
 | **elevation** *optional*     | number              | chỉ định độ cao của Polyline so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**                                                                           |
-| **style** *optional*         | number              | chỉ định Polyline là loại nét liền (**"solid"**) hay nét đứt (**"dotted"**). Giá trị mặc định là **"solid"**                                                          |
+| **~~style~~** *(deprecated)* | string              | chỉ định Polyline là loại nét liền (**"solid"**) hay nét đứt (**"dotted"**). Giá trị mặc định là **"solid"**                                                          |
+| **strokePattern** *optional* | [PatternItem](/reference/map?id=patternitem) | chỉ định kiểu vẽ của Polyline ([SolidPattern](/reference/map?id=solidpattern-class), [DashPattern](/reference/map?id=dashpattern-class), [DotPattern](/reference/map?id=dotpattern-class) hay [IconPattern](/reference/map?id=iconpattern-class)). Giá trị mặc định là `SolidPattern`|
 | **userInteractionEnabled** *optional*| boolean     | cho phép người dùng có thể tương tác được với Polyline hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với Polyline thì tất cả các sự kiện liên quan tới Polyline từ phía người dùng sẽ không có tác dụng.|

@@ -13,6 +13,7 @@ Những thay đổi kể từ version 2.1.x
 
 - Update vẽ lớp building ở chế độ Roadmap từ mức zoom 17 trở lên.
 - Hỗ trợ mức zoom lẻ (số thực)
+- Hỗ trợ thêm các marker waypoint cho [Directions Renderer](reference/directions-renderer.md)
 
 #### Deprecated
 

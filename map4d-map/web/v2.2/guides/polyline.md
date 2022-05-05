@@ -25,7 +25,7 @@ interface PolylineOptions {
     draggable?: boolean
     zIndex?: number
     elevation?: number
-    style?: string
+    strokePattern?: PatternItem
     userInteractionEnabled?: boolean
 }
 ```
@@ -45,7 +45,9 @@ Nếu bạn chỉ định thuộc tính này bằng **true** thì bạn sẽ đ�
 - **zIndex** (tùy chọn): chỉ định thứ tự chồng nhau giữa các Polyline với nhau hoặc giữa Polyline với các đối tượng khác
 trên bản đồ. Giá trị mặc định là **0**.
 - **elevation** (tùy chọn): chỉ định độ cao của Polyline so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**
-- **style** (tùy chọn): chỉ định Polyline là loại nét liền (**"solid"**) hay nét đứt (**"dotted"**). Giá trị mặc định là **"solid"**
+- **strokePattern** (tùy chọn): chỉ định kiểu vẽ của Polyline ([SolidPattern](/reference/map?id=solidpattern-class),
+[DashPattern](/reference/map?id=dashpattern-class), [DotPattern](/reference/map?id=dotpattern-class) hay
+[IconPattern](/reference/map?id=iconpattern-class)). Giá trị mặc định là `SolidPattern`
 - **userInteractionEnabled** (tùy chọn): cho phép người dùng có thể tương tác được với Polyline hay không. Giá trị mặc định
 là **true**. Khi không cho phép người dùng tương tác với Polyline thì tất cả các sự kiện liên quan tới Polyline từ phía người dùng
 sẽ không có tác dụng.
@@ -75,7 +77,23 @@ bằng **true** ở trong **PolylineOptions** khi tạo **Polyline**
 Ngoài ra bạn có thể gọi phương thức **setDraggable()** của đối tượng **Polyline** và truyền vào tham số **true** để bật
 tính năng draggable của Polyline hoặc truyền vào tham số **false** để tắt tính năng draggable.
 
-### 4. Các sự kiện trên Polyline
+### 4. Tạo một Polyline sử dụng Pattern
+
+Chúng ta có thể thay đổi kiểu của Polyline bằng cách chỉ định thuộc tính **strokePattern** bằng các đối tượng như [SolidPattern](/reference/map?id=solidpattern-class),
+[DashPattern](/reference/map?id=dashpattern-class), [DotPattern](/reference/map?id=dotpattern-class) hay [IconPattern](/reference/map?id=iconpattern-class) ở
+trong **PolylineOptions** khi tạo **Polyline**.
+
+Ví dụ sau đây vẽ polyline với **Dash Pattern**
+
+<iframe src="//jsfiddle.net/duydung2007/ds5btgn1/embedded/" style="min-width: 914px;" height="490px"></iframe>
+
+Ví dụ sau đây vẽ polyline với  **IconPattern**
+
+<iframe src="//jsfiddle.net/duydung2007/xcdka50s/embedded/" style="min-width: 914px;" height="490px"></iframe>
+
+Ngoài ra chúng ta có thể gọi phương thức `setStrokePattern` của đối tượng **Polyline** để set kiểu pattern.
+
+### 5. Các sự kiện trên Polyline
 
 Để lắng nghe các sự kiện xảy ra trên Polyline, bạn hãy dùng phương thức **addListener()** của lớp **Map** với tham số **EventOptions**
 là đối tượng **{polyline: true}**.

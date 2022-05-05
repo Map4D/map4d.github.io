@@ -27,8 +27,8 @@ DirectionsRenderer(options)
 | **setDirections**            | string                                  | `none`       | Set dữ liệu các route cho Directions Renderer bằng JSON                                |
 | **setActivedIndex**          | number                                  | `none`       | Set index của route muốn active trong Directions Renderer                              |
 | **getActivedIndex**          | `none`                                  | number       | Get index của route đang active trong Directions Renderer                              |
-| **setActiveStrokePattern**   | [PatternItem]()                         | `none`       | Set pattern cho active line trong Directions Renderer                              |
-| **setInactiveStrokePattern** | [PatternItem]()                         | `none`       | Set pattern cho inactive line trong Directions Renderer                              |
+| **setActiveStrokePattern**   | [PatternItem](/reference/map?id=patternitem)| `none`   | Set pattern cho active line trong Directions Renderer. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
+| **setInactiveStrokePattern** | [PatternItem](/reference/map?id=patternitem)| `none`   | Set pattern cho inactive line trong Directions Renderer. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
 
 ## DirectionsRenderer Options
 
@@ -45,14 +45,15 @@ DirectionsRenderer(options)
 | **activedIndex** *optional*  | number              | chỉ định index cho route được active trong Directions Renderer.                                   |
 | **activeStrokeWidth** *optional*   | number        | chỉ định độ rộng của active line theo đơn vị point.                                               |
 | **activeStrokeColor** *optional*   | string        | chỉ định màu sắc của active line theo mã HEX (ví dụ **"#FF0000"**).                               |
-| **activeStrokePattern** *optional* |[PatternItem]()| chỉ định pattern của active line.                               |
+| **activeStrokePattern** *optional* |[PatternItem](/reference/map?id=patternitem)| chỉ định pattern của active line. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
 | **activeOutlineWidth** *optional*  | number        | chỉ định độ rộng của active outline theo đơn vị point.                                            |
 | **activeOutlineColor** *optional*  | string        | chỉ định màu sắc của active outline theo mã HEX (ví dụ **"#FF0000"**).                            |
 | **inactiveStrokeWidth** *optional* | number        | chỉ định độ rộng của inactive line theo đơn vị point.                                             |
 | **inactiveStrokeColor** *optional* | string        | chỉ định màu sắc của inactive line theo mã HEX (ví dụ **"#FF0000"**).                             |
 | **inactiveOutlineWidth** *optional*| number        | chỉ định độ rộng của inactive outline theo đơn vị point.                                          |
 | **inactiveOutlineColor** *optional*| string        | chỉ định màu sắc của inactive outline theo mã HEX (ví dụ **"#FF0000"**).                          |
-| **inactiveOutlinePattern** *optional*|[PatternItem]()| chỉ định pattern của inactive outline.                          |
+| **inactiveOutlinePattern** *optional*|[PatternItem](/reference/map?id=patternitem)| chỉ định pattern của inactive outline. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
 | **originMarkerOptions** *optional* |[MarkerOptions](/reference/marker?id=marker-options)       | chỉ định các options cho marker bắt đầu               |
 | **destinationMarkerOptions** *optional*|[MarkerOptions](/reference/marker?id=marker-options)   | chỉ định các options cho marker kết thúc              |
-| **onMarkerDragEnd** *optional*| Function           | chỉ định options callback sau khi thực hiện việc kéo Marker, callback được gọi với tham số `args` là đối tượng chứa tọa độ của các Marker trong Directions Renderer.|
+| **waypointMarkerOptions** *optional*|[MarkerOptions](/reference/marker?id=marker-options)[]    | chỉ định mảng options cho các marker waypoint. **Chú ý:** <span style="color:red">Để có đường polyline nối marker waypoint với route trong trường hợp route có waypoint thì bắt buộc chúng ta phải set route bằng JSON</span>|
+| **onMarkerDragEnd** *optional*| Function           | chỉ định options callback sau khi thực hiện việc kéo Marker, callback được gọi với tham số `args` là đối tượng chứa tọa độ LatLng của các Marker trong Directions Renderer.|
