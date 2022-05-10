@@ -1,12 +1,14 @@
-
 # Get Place Type By Id(Lấy chi tiết của kiểu địa điểm)
-## 1. Input(Đầu vào)
+Phương thức: **GET**
+## 1. Input (Đầu vào)
 ```
 https://api.map4d.vn/sdk/place/type/{id}?key={key}
-key và id là thuộc tính bắc buộc.
-id: là khóa chính của type. vd: cafe, atm
 ```
-## 2 Output(Đầu ra)
+| Parameter | Required | Description                                                                                                                                                                       |
+|-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key. |
+| id        | **Yes**  | Khóa chính của type. Ví dụ: cafe, atm, ...                                                                                                                                        |
+## 2 Output (Đầu ra)
 ```json
 {
   "code": "string",
@@ -21,16 +23,17 @@ id: là khóa chính của type. vd: cafe, atm
   }
 }
 ```
-```html
-code: là mã trả về, nếu 'ok' nghĩa là thành công, ngoài ra thì yêu cầu bị lỗi
-message: là nội dung của mã lỗi(nếu có)
-result: là địa điểm tương ứng với id truyền vào
-id: là khóa chính của type
-name: là tên của type
-iconName: là tên của icon
-iconUrl: là url truy cập trực tiêp tới icon
-color: màu của icon
-description: mô tả về icon
-```
+| Parameter   | Notnull | Description                                                                                                                       |
+|-------------|---------|-----------------------------------------------------------------------------------------------------------------------------------|
+| code        | **Yes** | Mã trả về thành công hoặc lỗi.<br>Nếu trả về mã code "ok" nghĩa là thành công.<br>Ngược lại, nếu lỗi thì trả về mã lỗi tương ứng. |
+| message     | No      | Nội dung của mã lỗi (nếu có).                                                                                                     |
+| result      | No      | Kiểu địa điểm tương ứng với 'id' truyền vào, nếu lỗi thì result là "null".                                                        |
+| id          | **Yes** | Khóa của type tương ứng.                                                                                                          |
+| name        | **Yes** | Tên của type tương ứng.                                                                                                           |
+| iconName    | **Yes** | Tên của icon tương ứng.                                                                                                           |
+| iconUrl     | **Yes** | Link URL truy cập trực tiếp tới icon.                                                                                             |
+| color       | No      | Màu của icon tương ứng.                                                                                                           |
+| description | No      | Mô tả về icon.                                                                                                                    |
+| types       | No      | Gồm 3 types: `object`, `place` và `address`.                                                                                      |
 [Ví dụ](./examples/v1.0/typeid.html)
 <iframe src="./examples/v1.0/typeid.html"> </iframe>
