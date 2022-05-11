@@ -8,6 +8,7 @@ Những thay đổi kể từ version 2.0.x
 
 - Thêm mới [map types](guides/map-types.md): satellite, map3d
 - Thêm mới [sự kiện](guides/map-events.md) `limitedZoom` khi người dùng zoom map tới mức giới hạn của map
+- Hiển thị layer building ở chế độ roadmap từ mức zoom 17 trở lên.
 
 #### Changed
 
@@ -28,5 +29,7 @@ Nếu muốn hiển di chuyển camera đến đúng mức zoom và hiển thị
 
 - Fixed lỗi thỉnh thoảng xoay map khi click chuột phải.
 - Fixed lỗi vẫn hiển thị roadmap khi chuyển map từ 2D sang 3D lúc bản đồ ở mức zoom nhỏ hơn 17.
+- Fixed lỗi marker info window bị marker khác vẽ đè lên.
+- Fixed lỗi khó click marker nếu được set bằng icon.
 
 <!-- #### Security -->
