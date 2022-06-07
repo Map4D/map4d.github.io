@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 2.1.1
+
+Những thay đổi kể từ version 2.1.0
+
+#### Removed
+
+- Remove class MFServices nhằm tránh xung đột với [Map4dServices](https://cocoapods.org/pods/Map4dServices)
+
+#### Fixed
+
+- Fixed lỗi request api khởi tạo map nhiều hơn 1 lần khi tạo mới 1 map view
+
 ## Version 2.1.0
 
 Những thay đổi kể từ version 2.0.7
