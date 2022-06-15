@@ -42,7 +42,7 @@ POIOverlay(options)
 
 ## POIData interface
 
-`.map4d.POIData` interface
+`map4d.POIData` interface
 
 Đối tượng POIData dùng để xác định các thuộc tính của POI
 

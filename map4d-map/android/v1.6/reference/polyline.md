@@ -76,5 +76,5 @@
 | **visible**                  | boolean             | xác định Polyline có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                       |
 | **touchable**                | boolean             | cho phép người dùng có thể tương tác với Polyline trên bản đồ hay không. Giá trị mặc định là **true**.                                                                |
 | **zIndex**                   | float               | chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa Polyline với các đối tượng khác trên bản đồ. Giá trị mặc định là **-1.0f**.                             |
-| **style**                    | number              | chỉ định Polyline là loại nét liền (**"MFPolylineStyle.Solid"**) hay nét đứt (**"MFPolylineStyle.Dotted"**). Giá trị mặc định là **"MFPolylineStyle.Solid"**          |
+| **style**                    | MFPolylineStyle     | chỉ định Polyline là loại nét liền (**"MFPolylineStyle.Solid"**) hay nét đứt (**"MFPolylineStyle.Dotted"**). Giá trị mặc định là **"MFPolylineStyle.Solid"**          |
 | **userData**                 | Object              | Kiểu User Data mà người dùng muốn lưu                                                                                                                                 |

@@ -63,7 +63,7 @@ dependencies {
   android:layout_height="wrap_content"
 />
 ```
-3. Working with map view (kotlin)
+3. Working với map view
 
 <!-- tabs:start -->
 #### ** Java **

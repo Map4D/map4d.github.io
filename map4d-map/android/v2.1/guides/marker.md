@@ -290,14 +290,16 @@ public void onMapReady(Map4D map4D) {
 > Ngoài ra bạn có thể gọi phương thức **setDraggable()** của đối tượng **Marker** và truyền vào tham số **true** để bật
   tính năng draggable của marker hoặc truyền vào tham số **false** để tắt tính năng draggable.
   
+Để có thể drag marker thì chúng ta phải long press lên nó, sau đó mới có thể drag nó trên Map được. 
+  
 <!-- tabs:start -->
 
 #### ** Kotlin  **
 ```kotlin
-map4D.addMarker(MFMarkerOptions()
+var marker = map4D.addMarker(MFMarkerOptions()
     .position(MFLocationCoordinate(10.771666, 106.704405))
     .draggable(true))  
-or  
+// or
 
 marker.isDraggable = true
 ```
@@ -307,7 +309,7 @@ marker.isDraggable = true
 MFMarker marker = map4D.addMarker(new MFMarkerOptions()
                     .position(new MFLocationCoordinate(10.771666, 106.704405))
                     .draggable(true));  
-or
+// or
 
 marker.setDraggable(true);
 ```
@@ -344,7 +346,48 @@ map4D.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
 - Nếu trả về *false* thì sự kiện mặc định khi nhấn vào marker sẽ vẫn được thực thi.
 - Sự kiện mặc định khi nhấn vào marker sẽ là hiển thị InfoWindow của marker.
 
-### 6. Một vài lưu ý khi vẽ Marker
+### 6. Sự kiện drag marker
+
+Nếu marker được tạo có thể kéo trên bản đồ thì sự kiện drag marker sẽ phát sinh khi người dùng kéo marker trên Map.
+Khi marker được kéo thì `onMarkerDragStart(MFMarker)` sẽ được gọi đầu tiên. Trong khi marker đang được kéo trên bản đồ thì
+`onMarkerDrag(MFMarker)` sẽ được gọi liên tục. Khi chúng ta kết thúc drag thì `onMarkerDragEnd(MFMarker)` sẽ được gọi.
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+map4D?.setOnMarkerDragListener(object : Map4D.OnMarkerDragListener {
+    override fun onMarkerDrag(marker: MFMarker?) {
+    }
+
+    override fun onMarkerDragEnd(marker: MFMarker?) {
+    }
+
+    override fun onMarkerDragStart(marker: MFMarker?) {
+    }
+})
+```
+
+#### ** Java **
+```java
+map4D.setOnMarkerDragListener((new Map4D.OnMarkerDragListener() {
+    @Override
+    public void onMarkerDrag(MFMarker marker) {
+    }
+
+    @Override
+    public void onMarkerDragEnd(MFMarker marker) {
+    }
+
+    @Override
+    public void onMarkerDragStart(MFMarker marker) {
+    }
+}));
+```
+<!-- tabs:end -->
+
+- Tham số *marker* sẽ trả về đối tượng marker mà người dùng drag.
+
+### 7. Một vài lưu ý khi vẽ Marker
 > Giá trị default zIndex của marker nếu người dùng không truyền vào là 1.f
 
 > zIndex: Marker nào có zIndex lớn hơn sẽ được vẽ sau, zIndex càng lớn càng sẽ được vẽ sau.

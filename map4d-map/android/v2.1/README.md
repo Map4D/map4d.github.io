@@ -63,7 +63,7 @@ dependencies {
   android:layout_height="wrap_content"
 />
 ```
-3. Working with map view (kotlin)
+3. Working với map view
 
 > **Chú ý:** <span style="color:red">Khi dùng MFMapView thì chúng ta cần override các phương thức lifecycle sau của Activity hoặc Fragment chứa nó và gọi tới
 các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở bên dưới).</span>
