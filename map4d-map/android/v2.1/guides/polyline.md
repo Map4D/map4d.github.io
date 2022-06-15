@@ -108,17 +108,17 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
 ```kotlin
   val latLngList: MutableList<MFLocationCoordinate> = mutableListOf()
   
-      latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
-      latLngList.add(MFLocationCoordinate(16.066496, 108.210311))
-      latLngList.add(MFLocationCoordinate(16.064877, 108.210397))
-      latLngList.add(MFLocationCoordinate(16.059980, 108.211137))
-      latLngList.add(MFLocationCoordinate(16.059516, 108.208358))
-  
-      val polyline = map4D!!.addPolyline(
-        MFPolylineOptions().add(*latLngList.toTypedArray())
-          .color(Color.RED)
-          .width(8f)
-          .style(MFPolylineStyle.Dotted)
+  latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
+  latLngList.add(MFLocationCoordinate(16.066496, 108.210311))
+  latLngList.add(MFLocationCoordinate(16.064877, 108.210397))
+  latLngList.add(MFLocationCoordinate(16.059980, 108.211137))
+  latLngList.add(MFLocationCoordinate(16.059516, 108.208358))
+
+  val polyline = map4D!!.addPolyline(
+	MFPolylineOptions().add(*latLngList.toTypedArray())
+	  .color(Color.RED)
+	  .width(8f)
+	  .style(MFPolylineStyle.Dotted)
 ```
 #### ** Java **
 ```java

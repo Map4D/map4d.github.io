@@ -38,9 +38,9 @@ var options = MFBuildingOverlayOptions()
 
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
-| **buildingProvider**| MFBuildingProvider                 | MFBuildingOverlayOptions| set đối tượng MFBuildingProvider cho MFBuildingOverlayOptions                               |
-| **visible**    | boolean                                 | MFBuildingOverlayOptions| set giá trị visible cho MFBuildingOverlayOptions                                      |
-| **prefixId**   | String                                  | MFBuildingOverlayOptions| Set giá trị prefixId cho MFBuildingOverlayOptions                                     |
+| **buildingProvider**| `MFBuildingProvider`               | MFBuildingOverlayOptions| set đối tượng MFBuildingProvider cho MFBuildingOverlayOptions               |
+| **visible**    | boolean                                 | MFBuildingOverlayOptions| set giá trị visible cho MFBuildingOverlayOptions                            |
+| **prefixId**   | String                                  | MFBuildingOverlayOptions| Set giá trị prefixId cho MFBuildingOverlayOptions                           |
 
 
 ## MFUrlBuildingProvider class
@@ -52,5 +52,59 @@ var options = MFBuildingOverlayOptions()
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **getBuildingUrl** | int, int, int                       | String       | Trả về là một đường dẫn URL chứa dữ liệu của POI trên Tile ứng với tọa độ x, y và mức zoom tương ứng|
-| **parserBuildingData**| String                           |List< MFBuildingData >| Biến đổi dữ liệu từ String trả vê từ phương thức `getBuildingUrl()` sang List< MFBuildingData >|
+| **parserBuildingData**| String                           |List<[MFBuildingData](/reference/building-overlay?id=mfbuildingdata-class)>| Biến đổi dữ liệu từ String trả vê từ phương thức `getBuildingUrl()` sang List< MFBuildingData >|
+
+## MFBuildingData class
+
+`MFBuildingData` class
+
+MFBuildingData là object chứa thông tin của building để Map4D SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
+đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+
+**Constructor**
+
+Để tạo một đối tượng `MFBuildingData` ta làm như sau:
+
+<!-- tabs:start -->
+#### ** Java **
+
+```java
+String id = "id";
+String model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/models/5b21d9a5cd18d02d045a5e99";
+String texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/textures/0cb35e1610c34e55946a7839356d8f66.jpg";
+double lat = 16.075854;
+double lng = 108.228765;
+MFLocationCoordinate location = new MFLocationCoordinate(lat, lng);
+MFBuildingData buildingData = new MFBuildingData(id, location, model, texture);
+```
+
+#### ** Kotlin **
+
+```kotlin
+val id = "id"
+val model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/models/5b21d9a5cd18d02d045a5e99"
+val texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/textures/0cb35e1610c34e55946a7839356d8f66.jpg"
+val lat = 16.075854
+val lng = 108.228765
+val location = MFLocationCoordinate(lat, lng)
+val buildingData = MFBuildingData(id, location, model, texture)
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name           | Parameters                              | Return Value | Description                                                                            |
+|----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
+| **setId**      | String                                  | `none`       | set id cho Building                                                                    |
+| **setName**    | String                                  | `none`       | set tên cho Building                                                                   |
+| **setPosition**| [MFLocationCoordinate](/reference/coordinates?id=mflocationcoordinate) | `none`| Set vị trí hiển thị của Building trên bản đồ                   |
+| **setScale**   | double                                  | `none`       | Set tỉ lệ hiển thị của Building so với thực tế                                         |
+| **setBearing** | double                                  | `none`       | Set góc quay của Building khi được vẽ lên bản đồ (đơn vị: độ)                          |
+| **setElevation**| double                                 | `none`       | Set độ cao của Building so với mực nước biển                                           |
+| **setHeight**  | double                                  | `none`       | Set chiều cao của Building (đơn vị: mét)                                               |
+| **setModel**   | String                                  | `none`       | Set đường dẫn để lấy dữ liệu Model cho Building                                        |
+| **setTexture** | String                                  | `none`       | Set đường dẫn để lấy dữ liệu Texture cho Building                                      |
+| **setCoordinates** | List<[MFLocationCoordinate](/reference/coordinates?id=mflocationcoordinate)> | `none`| Set một mảng tọa độ để tạo một Building hình khối với mặt đáy là mảng vị trí này. Kết hợp với thuộc tính `height` để tạo chiều cao|
+| **setStartDate**   | long                                | `none`       | Set ngày bắt đầu hiển thị Building                                                     |
+| **setEndDate** | long                                    | `none`       | Set ngày kết thúc hiển thị Building                                                    |
 
