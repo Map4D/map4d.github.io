@@ -38,7 +38,7 @@ interface DirectionsRendererOptions {
 Các thuộc tính của **DirectionsRendererOptions** :
 
 - **routes** (tùy chọn): truyền vào một mảng 2 chiều các tọa độ ILatLng để tạo Directions Renderer. Mỗi mảng một chiều tương ứng là một route.
-- **directions** (tùy chọn): chỉ định dữ liệu các route cho Directions Renderer bằng JSON.
+- **directions** (tùy chọn): chỉ định dữ liệu các route cho Directions Renderer bằng JSON string.
 - **activedIndex** (tùy chọn): chỉ định index cho route được active trong Directions Renderer.
 - **activeStrokeWidth** (tùy chọn): chỉ định độ rộng của active line theo đơn vị point. 
 - **activeStrokeColor** (tùy chọn): chỉ định màu sắc của active line theo mã HEX (ví dụ "#FF0000").
@@ -52,14 +52,20 @@ Các thuộc tính của **DirectionsRendererOptions** :
 - **inactiveStrokePattern** (tùy chọn): chỉ định pattern của inactive outline. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)
 - **originMarkerOptions** (tùy chọn): chỉ định các options cho marker bắt đầu.
 - **destinationMarkerOptions** (tùy chọn): chỉ định các options cho marker kết thúc.
-- **waypointMarkerOptions** (tùy chọn): là mảng marker option chỉ định các marker waypoint. **Chú ý:** <span style="color:red">Để có đường polyline nối marker
-waypoint với route trong trường hợp route có waypoint thì bắt buộc chúng ta phải set route bằng JSON</span>
+- **waypointMarkerOptions** (tùy chọn): là mảng marker option chỉ định các marker waypoint. Các marker waypoint này có vị trí nằm ngoài route **Chú ý:** <span style="color:red">Để có đường polyline nối marker
+waypoint với routes thì routes phải chứa các điểm waypoint. Muốn vậy thì chúng ta phải dùng option `directions` để set routes bằng JSON string vì hiện tại set routes bằng options `routes` với mảng 2 chiều các
+tọa độ `ILatLng` chưa hỗ trợ set các điểm waypoint. Trường hợp set routes bằng JSON string thì Map4D SDK tự lấy được các điểm waypoint cho routes nếu routes đó có chứa các điểm waypoint.</span>
 - **onMarkerDragEnd** (tùy chọn): chỉ định options callback sau khi thực hiện việc kéo Marker. Callback được gọi với tham số `args` là đối tượng
 chứa tọa độ LatLng của các Marker trong Directions Renderer.
 
-Ví dụ sau đây sẽ thêm một Directions Renderer vào bản đồ:
+Ví dụ sau đây sẽ thêm một Directions Renderer vào bản đồ với **routes** là mảng hai chiều các tọa độ `ILatLng`:
 
 <iframe src="//jsfiddle.net/duydung2007/fnjhr8x0/embedded/" style="min-width: 914px;" height="490px"></iframe>
+
+Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
+2 điểm waypoint:
+
+<iframe src="//jsfiddle.net/duydung2007/v250y47p/embedded/" style="min-width: 914px;" height="490px"></iframe>
 
 ### 2. Xóa Directions Renderer khỏi bản đồ
 
