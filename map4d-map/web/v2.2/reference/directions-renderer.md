@@ -24,7 +24,7 @@ DirectionsRenderer(options)
 | **getMap**                   | `none`                                  | Map          | Lấy đối tượng map mà Directions Renderer được thêm vào                                 |
 | **setRoutes**                | [ILatLng](/reference/coordinates?id=ilatlng)[][]| `none`| Set mảng tọa độ các routes cho Directions Renderer                                    |
 | **getRoutes**                | `none` |  [LatLng](/reference/coordinates?id=latlng)[][]| Get mảng tạo độ các routes của Directions Renderer                                    |
-| **setDirections**            | string                                  | `none`       | Set dữ liệu các route cho Directions Renderer bằng JSON                                |
+| **setDirections**            | string                                  | `none`       | Set dữ liệu các route cho Directions Renderer bằng JSON string                         |
 | **setActivedIndex**          | number                                  | `none`       | Set index của route muốn active trong Directions Renderer                              |
 | **getActivedIndex**          | `none`                                  | number       | Get index của route đang active trong Directions Renderer                              |
 | **setActiveStrokePattern**   | [PatternItem](/reference/map?id=patternitem)| `none`   | Set pattern cho active line trong Directions Renderer. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
@@ -41,7 +41,7 @@ DirectionsRenderer(options)
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **routes** *optional*        |[ILatLng](/reference/coordinates?id=ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ **ILatLng** để tạo Directions Renderer. Mỗi mảng một chiều tương ứng là một route                   |
-| **directions** *optional*    | string              | chỉ định dữ liệu các route cho Directions Renderer bằng JSON                                      |
+| **directions** *optional*    | string              | chỉ định dữ liệu các route cho Directions Renderer bằng JSON string                               |
 | **activedIndex** *optional*  | number              | chỉ định index cho route được active trong Directions Renderer.                                   |
 | **activeStrokeWidth** *optional*   | number        | chỉ định độ rộng của active line theo đơn vị point.                                               |
 | **activeStrokeColor** *optional*   | string        | chỉ định màu sắc của active line theo mã HEX (ví dụ **"#FF0000"**).                               |
