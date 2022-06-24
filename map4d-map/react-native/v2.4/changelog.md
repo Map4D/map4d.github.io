@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 2.4.2
+
+Những thay đổi kể từ version 2.4.1
+
+#### Fixed
+
+- Android: Handle null when get bound from ReadableMap in cameraForBounds method
+
+## Version 2.4.1
+
+Những thay đổi kể từ version 2.4.0
+
+#### Changed
+
+- Update Android lifecycle
+
 ## Version 2.4.0
 
 Những thay đổi kể từ version 2.3.0
