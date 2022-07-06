@@ -1,13 +1,8 @@
 - [Overview](/ "Map4DService API")
 - [Changelog](changelog.md)
 
-- Group API Tile
-  - [API Get Tile](api_tile_info.md)
-  - [API Get Tile V1](api_tile_info_object_location.md)
-
 - Group API Route
-  - [API Get Router](api_route.md)
-  - [API Post Eta](api_eta.md)
+  - [API Get Route](api_route.md)
   - [API Get Matrix](api_matrix.md)
   - [API Get Graph](api_graph.md)
 

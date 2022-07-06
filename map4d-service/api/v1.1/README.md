@@ -10,18 +10,15 @@ Map4D API Service cung cấp nền tảng cho Web, iOS, Android,
 
 
 ## 2. Danh sách API
-1. Lấy thông tin của tile [API Get Tile](api_tile_info.md)
-2. Lấy thông tin đối tượng và địa điểm của tile [API Get Tile V1](api_tile_info_object_location.md)
-3. Tìm đường đi giữa các địa điểm [Route](api_route.md)
-4. Ước tính thời gian đến [API Post Eta](api_eta.md)
-5. Ma trận khoảng cách [API Get Matrix](api_matrix.md)
-6. Ma trận khoảng cách graph [API Get Graph](api_graph.md)
-7. Tự động đề xuất chuỗi tìm kiếm [AutoSuggest](api_autosuggest.md)
-8. Thông tin chi tiết địa điểm [API Place Detail](api_place_detail.md)
-9. Tìm kiếm dạng văn bản [TextSearch](api_text_search.md)
-10. Tìm kiếm lân cận [NearbySearch](api_nearby_search.md)
-11. Tìm kiếm trong hộp chữ nhật [ViewboxSearch](api_viewbox_search.md)
-12. Phân giải địa chỉ phiên bản 2 [API GeoCode V2](api_geocode_v2.md)
+1. Tìm đường đi giữa các địa điểm [API Get Route](api_route.md)
+2. Ma trận khoảng cách [API Get Matrix](api_matrix.md)
+3. Ma trận khoảng cách graph [API Get Graph](api_graph.md)
+4. Tự động đề xuất chuỗi tìm kiếm [API AutoSuggest](api_autosuggest.md)
+5. Thông tin chi tiết địa điểm [API Place Detail](api_place_detail.md)
+6. Tìm kiếm dạng văn bản [API TextSearch](api_text_search.md)
+7. Tìm kiếm lân cận [API NearbySearch](api_nearby_search.md)
+8. Tìm kiếm trong hộp chữ nhật [API ViewboxSearch](api_viewbox_search.md)
+9. Phân giải địa chỉ phiên bản 2 [API GeoCode V2](api_geocode_v2.md)
 
 
 ## 3. Call API
