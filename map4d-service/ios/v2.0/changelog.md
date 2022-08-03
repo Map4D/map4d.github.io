@@ -15,8 +15,6 @@
 - Directions services
   + Directions
   + Distance matrix
-  + Route ETA
-  + Graph route
 
 <!-- #### Changed -->
 <!-- #### Deprecated -->

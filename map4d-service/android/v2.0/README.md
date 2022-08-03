@@ -16,9 +16,7 @@ Map4D Service Android API cung cấp thư viện gọi API cho Android, được
 5. Tìm kiếm các địa điểm lân cận [NearbySearch](guides/api_nearby_search.md)
 6. Tìm kiếm các địa điểm trong một vùng địa lý viewbox [ViewboxSearch](guides/api_viewbox_search.md)
 7. Tìm đường đi giữa các địa điểm [Route](guides/api_route.md)
-8. Tìm thời gian dự kiến của đường đi giữa các địa điểm [Route ETA](guides/api_eta.md)
-9. Tìm khoảng cách và thời gian di chuyển cho một ma trận gồm các điểm xuất phát và các điểm đến [Matrix](guides/api_matrix.md)
-10. Tìm biểu đồ tuyến đường giữa các địa điểm [Graph](guides/api_graph.md)
+8. Tìm khoảng cách và thời gian di chuyển cho một ma trận gồm các điểm xuất phát và các điểm đến [Matrix](guides/api_matrix.md)
 
 ## 3. Installation
 
