@@ -18,6 +18,7 @@ Hàm khởi tạo của lớp [GroundOverlay](/reference/ground-overlay?id=groun
 |  3  | override | boolean                                                  |    NO   |    `false`    | Nếu `true` thì sẽ không hiển thị Map4D tile và các đối tượng cảu Map4D trong khu vực của ground overlay |
 |  4  | visible  | boolean                                                  |    NO   |     `true`    | Nếu là `true` thì ground overlay sẽ được hiển thị                                                       |
 |  5  | zIndex   | number                                                   |    NO   |      `0`      | Thứ tự hiển thị của ground overlay                                                                      |
+|  6  | opacity  | number                                                   |    NO   |      `1`      | Độ trong suốt của ground overlay. Có giá trị từ 0 đến 1                                                 |
 
 
 ### Tạo mới Ground overlay
@@ -65,4 +66,13 @@ Chú ý:
 
 ```js
 overlay.setVisible(false)
+```
+
+### Thay đổi opacity
+
+Gọi hàm `setOpacity(number)` để thay đổi giá trị opacity của ground overlay.
+Chú ý: Giá trị opacity nằm trong khoảng từ 0 đến 1.
+
+```js
+overlay.setOpacity(0.8)
 ```
