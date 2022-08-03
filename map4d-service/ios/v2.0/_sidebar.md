@@ -11,9 +11,7 @@
 
 - Directions Services
   - [Directions](guides/directions.md)
-  - [Route ETA](guides/route-eta.md)
   - [Distance Matrix](guides/distance-matrix.md)
-  - [Graph Route](guides/graph-route.md)
 
 - References
   - [MFDirectionsService](reference/directions-service.md)
@@ -29,8 +27,6 @@
   - [MFRouteType](reference/route-type.md)
   - [MFDirectionsParams](reference/directions-params.md)
   - [MFDistanceMatrixParams](reference/distance-matrix-params.md)
-  - [MFRouteETAParams](reference/route-eta-params.md)
-  - [MFGraphRouteParams](reference/graph-route-params.md)
   - [MFGeocodeParams](reference/geocode-params.md)
   - [MFSuggestionParams](reference/suggestion-params.md)
   - [MFTextSearchParams](reference/text-search-params.md)
@@ -38,8 +34,6 @@
   - [MFViewboxSearchParams](reference/viewbox-search-params.md)
   - [MFDirectionsResult](reference/directions-result.md)
   - [MFDistanceMatrixResult](reference/distance-matrix-result.md)
-  - [MFRouteETAResult](reference/route-eta-result.md)
-  - [MFGraphRouteResult](reference/graph-route-result.md)
   - [MFRouteResult](reference/route-result.md)
   - [MFRouteDescriptionResult](reference/route-description-result.md)
   - [MFDistanceMatrixRowResult](reference/distance-matrix-row-result.md)

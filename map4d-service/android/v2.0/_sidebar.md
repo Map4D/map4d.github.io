@@ -12,9 +12,7 @@
 
 - Group Directions Services
   - [Directions](guides/api_route.md)
-  - [Route ETA](guides/api_eta.md)
   - [Distance Matrix](guides/api_matrix.md)
-  - [Graph Route](guides/api_graph.md)
   
 - References
   - [MFDirectionsService](reference/directions-service.md)
