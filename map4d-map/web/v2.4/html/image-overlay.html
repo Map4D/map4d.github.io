@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer
+    src="https://api.map4d.vn/sdk/map/js?version=2.4&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    let map;
+
+    function initMap() {
+      let mapOptions = {
+        center: [108.222987, 16.067465],
+        zoom: 15,
+        controls: true
+      }
+      map = new map4d.Map(document.getElementById("map"), mapOptions)
+      
+      let overlayOptions = {
+        url: `https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189`,
+        bounds: [{lng: 108.214421, lat: 16.061733}, {lng: 108.23086738586424, lat: 16.075630202564316}],
+      }
+      overlay = new map4d.ImageOverlay(overlayOptions)
+      overlay.setMap(map)
+    }
+    // initMap()
+  </script>
+</body>
+
+</html>

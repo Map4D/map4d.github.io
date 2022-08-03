@@ -16,8 +16,8 @@ Hàm khởi tạo của lớp [GroundOverlay](/reference/ground-overlay?id=groun
 |  1  | bounds   | [ILatLngBounds](/reference/coordinates?id=ilatlngbounds) |   YES   |               | Vùng hiển thị của ground overlay                                                                        |
 |  2  | getUrl   | function                                                 |   YES   |               | Hàm nhận vào 4 giá trị `x`, `y`, `zoom`, `is3dMode`và trả về đường dẫn đến map tile                     |
 |  3  | override | boolean                                                  |    NO   |    `false`    | Nếu `true` thì sẽ không hiển thị Map4D tile và các đối tượng cảu Map4D trong khu vực của ground overlay |
-|  4  | visible  | boolean                                                  |    NO   |     `true`    |                                                                                                         |
-|  5  | zIndex   | number                                                   |    NO   |      `0`      |                                                                                                         |
+|  4  | visible  | boolean                                                  |    NO   |     `true`    | Nếu là `true` thì ground overlay sẽ được hiển thị                                                       |
+|  5  | zIndex   | number                                                   |    NO   |      `0`      | Thứ tự hiển thị của ground overlay                                                                      |
 
 
 ### Tạo mới Ground overlay
