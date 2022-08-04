@@ -1,6 +1,5 @@
 - [Overview](/ "Map4dMap JavaScript SDK")
 - [Changelog](changelog.md)
-- [Using Typescript](guides/using-typescript.md)
 
 - Interacting with the Map
   - [Map Options](guides/map-options.md)
