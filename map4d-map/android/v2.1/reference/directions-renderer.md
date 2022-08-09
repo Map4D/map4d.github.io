@@ -84,8 +84,8 @@
 | **getStartLocation**         | `none` | [MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)       | Get tọa độ của điểm bắt đầu                             |
 | **setEndLocation**           | [MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)| `none`       | Set tọa độ của điểm kết thúc                             |
 | **getEndLocation**           | `none` | [MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)       | Get tọa độ của điểm kết thúc                            |
-| **setWidth**                 | `none`                                  | float        | Get độ rộng line của Directions Renderer                                               |
-| **getWidth**                 | `none`                                  | float        | Set độ rộng line của Directions Renderer                                               |
+| **setWidth**                 | float                                   | `none`       | Set độ rộng line của Directions Renderer                                               |
+| **getWidth**                 | `none`                                  | float        | Get độ rộng line của Directions Renderer                                               |
 | **setJsonData**              | String                                  | `none`       | Set dữ liệu các route cho Directions Renderer bằng JSON                                |
 | **setBinaryData**            | byte[][]                                | `none`       | Set dữ liệu các route cho Directions Renderer bằng dữ liệu nhị phân                    |
 | **setActivedIndex**          | int                                     | `none`       | Set index của route chính trong Directions Renderer                                    |
