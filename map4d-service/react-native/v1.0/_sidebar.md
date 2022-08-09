@@ -11,7 +11,5 @@
 
 - Directions Services
   - [Directions](guides/directions.md)
-  - [Route ETA](guides/route-eta.md)
   - [Distance Matrix](guides/distance-matrix.md)
-  - [Graph Route](guides/graph-route.md)
 

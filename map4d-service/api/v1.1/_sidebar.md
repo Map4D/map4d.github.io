@@ -4,7 +4,6 @@
 - Group API Route
   - [API Get Route](api_route.md)
   - [API Get Matrix](api_matrix.md)
-  - [API Get Graph](api_graph.md)
 
 - Group API Place
   - [API Auto Suggest](api_autosuggest.md)

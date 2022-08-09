@@ -12,13 +12,12 @@ Map4D API Service cung cấp nền tảng cho Web, iOS, Android,
 ## 2. Danh sách API
 1. Tìm đường đi giữa các địa điểm [API Get Route](api_route.md)
 2. Ma trận khoảng cách [API Get Matrix](api_matrix.md)
-3. Ma trận khoảng cách graph [API Get Graph](api_graph.md)
-4. Tự động đề xuất chuỗi tìm kiếm [API AutoSuggest](api_autosuggest.md)
-5. Thông tin chi tiết địa điểm [API Place Detail](api_place_detail.md)
-6. Tìm kiếm dạng văn bản [API TextSearch](api_text_search.md)
-7. Tìm kiếm lân cận [API NearbySearch](api_nearby_search.md)
-8. Tìm kiếm trong hộp chữ nhật [API ViewboxSearch](api_viewbox_search.md)
-9. Phân giải địa chỉ phiên bản 2 [API GeoCode V2](api_geocode_v2.md)
+3. Tự động đề xuất chuỗi tìm kiếm [API AutoSuggest](api_autosuggest.md)
+4. Thông tin chi tiết địa điểm [API Place Detail](api_place_detail.md)
+5. Tìm kiếm dạng văn bản [API TextSearch](api_text_search.md)
+6. Tìm kiếm lân cận [API NearbySearch](api_nearby_search.md)
+7. Tìm kiếm trong hộp chữ nhật [API ViewboxSearch](api_viewbox_search.md)
+8. Phân giải địa chỉ phiên bản 2 [API GeoCode V2](api_geocode_v2.md)
 
 
 ## 3. Call API
