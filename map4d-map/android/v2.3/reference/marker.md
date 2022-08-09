@@ -63,6 +63,8 @@ public void onMapReady(final Map4D map4D) {
 | **showInfoWindow**           | `none`                                  | void         | Hiện bảng thông tin của marker                                                         |
 | **setZIndex**                | float                                   | `none`       | Set giá trị zIndex cho Marker                                                          |
 | **getZIndex**                | `none`                                  | float        | Get giá trị zIndex hiện tại của Marker                                                 |
+| **setFlat**                  | boolean                                 | `none`       | Set Marker có thể nghiêng và xoay theo Map không                                       |
+| **isFlat**                   | `none`                                  | boolean      | Kiểm tra xem hiện tại marker có thể nghiêng và xoay theo Map không                     |
 
 ### Marker Options
 
@@ -88,6 +90,7 @@ public void onMapReady(final Map4D map4D) {
 | **snippet**                | string              | mô tả thông tin ngắn gọn cho Marker. Snippet sẽ được hiển thị ở bẳng thông tin của Marker và phía dưới dòng tiêu đề.                                                  |
 | **rotation**               | number              | chỉ định góc quay của Marker theo đơn vị là Độ. Giá trị mặc định là **0**                                                                                             |
 | **draggable**              | boolean             | cho phép người dùng có thể kéo Marker trên bản đồ hay không. Giá trị mặc định là **false**                                                                            |
+| **flat**                   | boolean             | chỉ định Marker có thể nghiêng và xoay theo bản đồ hay không. Giá trị mặc định là **false**                                                                           |
 | **userData**               | Object              | truyền vào userData mà người dùng định nghĩa                                                                                                                          |
 
 ### MFBitmapDescriptor

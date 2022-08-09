@@ -31,10 +31,13 @@
     directionsRendererOptions.activeOutlineColor(Color.BLUE)
     directionsRendererOptions.inactiveOutlineColor(Color.BLACK)
     directionsRendererOptions.width(10f)
+    directionsRendererOptions.outlineWidth(2f)
     directionsRendererOptions.startLocation(MFLocationCoordinate(16.070526, 108.220990))
     directionsRendererOptions.startLabel("Start")
+    directionsRendererOptions.startIconAnchor(1.0f, 1.0f)
     directionsRendererOptions.endLocation(MFLocationCoordinate(16.071523, 108.222960))
     directionsRendererOptions.endLabel("End")
+    directionsRendererOptions.endIconAnchor(0.0f, 0.0f)
     val directionsRenderer = map4D?.addDirectionsRenderer(directionsRendererOptions)
 ```
 
@@ -62,10 +65,13 @@
     directionsRendererOptions.activeOutlineColor(Color.BLUE);
     directionsRendererOptions.inactiveOutlineColor(Color.BLACK);
     directionsRendererOptions.width(10.f);
+    directionsRendererOptions.outlineWidth(2.f);
     directionsRendererOptions.startLocation(new MFLocationCoordinate(16.070526, 108.220990));
     directionsRendererOptions.startLabel("Start");
+    directionsRendererOptions.startIconAnchor(1.0f, 1.0f);
     directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
     directionsRendererOptions.endLabel("End");
+    directionsRendererOptions.endIconAnchor(0.0f, 0.0f);
     directionsRenderer = map4D.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
@@ -82,6 +88,8 @@
 | **getEndLocation**           | `none` | [MFLocationCoordinate](/reference/coordinates?id=MFLocationCoordinate)       | Get tọa độ của điểm kết thúc                            |
 | **setWidth**                 | float                                   | `none`       | Set độ rộng line của Directions Renderer                                               |
 | **getWidth**                 | `none`                                  | float        | Get độ rộng line của Directions Renderer                                               |
+| **setOutlineWidth**          | float                                   | `none`       | Set độ rộng outline của Directions Renderer                                            |
+| **getOutlineWidth**          | `none`                                  | float        | Get độ rộng outline của Directions Renderer                                            |
 | **setJsonData**              | String                                  | `none`       | Set dữ liệu các route cho Directions Renderer bằng JSON                                |
 | **setBinaryData**            | byte[][]                                | `none`       | Set dữ liệu các route cho Directions Renderer bằng dữ liệu nhị phân                    |
 | **setActivedIndex**          | int                                     | `none`       | Set index của route chính trong Directions Renderer                                    |
@@ -94,7 +102,15 @@
 | **getStartLabel**            | `none`                                  | String       | Get tên của điểm bắt đầu                                                               |
 | **getEndLabel**              | `none`                                  | String       | Get tên của điểm kết thúc                                                              |
 | **getStartIcon**             | `none`                                  |MFBitmapDescriptor| Get icon của điểm bắt đầu                                                          |
+| **setStartIcon**             | MFBitmapDescriptor                      | `none`       | Set icon của điểm bắt đầu                                                              |
 | **getEndIcon**               | `none`                                  |MFBitmapDescriptor| Get icon của điểm kết thúc                                                         |
+| **setEndIcon**               | MFBitmapDescriptor                      | `none`       | Set icon của điểm kết thúc                                                             |
+| **setStartIconAnchor**       | float, float                            | `none`       | Set anchor cho icon của điểm bắt đầu                                                   |
+| **setEndIconAnchor**         | float, float                            | `none`       | Set anchor cho icon của điểm kết thúc                                                  |
+| **getStartIconAnchorU**      | `none`                                  | float        | Get anchor icon của điểm bắt đầu theo chiều x                                          |
+| **getStartIconAnchorV**      | `none`                                  | float        | Get anchor icon của điểm bắt đầu theo chiều y                                          |
+| **getEndIconAnchorU**        | `none`                                  | float        | Get anchor icon của điểm kết thúc theo chiều x                                         |
+| **getEndIconAnchorV**        | `none`                                  | float        | Get anchor icon của điểm kết thúc theo chiều y                                         |
 
 
 ### Directions Renderer Options
@@ -119,7 +135,10 @@
 | **inactiveOutlineColor**     | @ColorInt int       | chỉ định màu sắc outline của route không được active theo kiểu ColorInt. Giá trị màu mặc định là **Color.TRANSPARENT**.    |
 | **titleColor**               | @ColorInt int       | chỉ định màu sắc của tên điểm bắt đầu và điểm kết thúc theo kiểu @ColorInt int. Giá trị mặc định là **"Color.BLACK"**.     |
 | **width**                    | float               | chỉ định độ rộng của line theo đơn vị point (dp).                                                                          |
+| **outlinewidth**             | float               | chỉ định độ rộng của outline theo đơn vị point (dp).                                                                       |
 | **startIcon**                | MFBitmapDescriptor  | chỉ định icon của điểm bắt đầu.                                                                                            |
 | **endIcon**                  | MFBitmapDescriptor  | chỉ định icon của điểm kết thúc.                                                                                           |
+| **startIconAnchor**          | float, float        | chỉ định anchor của icon bắt đầu.                                                                                          |
+| **endIconAnchor**            | float, float        | chỉ định anchor của icon kết thúc.                                                                                         |
 | **startLabel**               | String              | chỉ định tên của điểm bắt đầu.                                                                                             |
 | **endLabel**                 | String              | chỉ định tên của điểm kết thúc.                                                                                            |

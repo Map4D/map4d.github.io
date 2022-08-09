@@ -47,6 +47,7 @@ public void onMapReady(final Map4D map4D) {
 | **isDraggable**              | `none`                                  | boolean      | Kiểm tra xem marker có thể kéo trên bản đồ hay không                                   |
 | **isInfoWindowShown**        | `none`                                  | boolean      | Kiểm tra xem bảng thông tin của marker có hiển thị hay không                           |
 | **isTouchable**              | `none`                                  | boolean      | Kiểm tra xem hiện tại có thể tương tác với marker không                                |
+| **setVisible**               | boolean                                 | `none`       | Set ẩn hiện cho Marker                                                                 |
 | **isVisible**                | `none`                                  | boolean      | Kiểm tra xem hiện tại marker có hiển thị hay không                                     |
 | **setDraggable**             | boolean                                 | void         | Cho phép marker có được kéo trên bản đồ hay không                                      |
 | **setIcon**                  | [MFBitmapDescriptor](/reference/marker?id=MFBitmapDescriptor)|void| Set một hình ảnh đơn giản cho marker để thay cho hình ảnh mặc định          |
@@ -80,14 +81,14 @@ public void onMapReady(final Map4D map4D) {
 | **visible**                | boolean             | xác định Marker có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                         |
 | **touchable**              | boolean             | cho phép người dùng có thể tương tác với Marker trên bản đồ hay không. Giá trị mặc định là **true**                                                                   |
 | **elevation**              | double              | chỉ định độ cao của Marker so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**                                                                             |
-| **zIndex**                 | float               | chỉ định thứ tự chồng nhau giữa các Marker với nhau hoặc giữa Marker với các đối tượng khác trên bản đồ. Giá trị mặc định là **1.0f**                                    |
+| **zIndex**                 | float               | chỉ định thứ tự chồng nhau giữa các Marker với nhau hoặc giữa Marker với các đối tượng khác trên bản đồ. Giá trị mặc định là **1.0f**                                 |
 | **windowAnchorU**          | float               | xác định điểm neo bảng thông tin của Marker theo chiều x. Bảng thông tin này sẽ hiện lên khi click vào Marker.                                                        |
 | **windowAnchorV**          | float               | xác định điểm neo bảng thông tin của Marker theo chiều y. Bảng thông tin này sẽ hiện lên khi click vào Marker.                                                        |
 | **title**                  | string              | chỉ định tiêu đề của Marker. Tiêu đề sẽ được hiển thị ở dòng đầu tiên của bảng thông tin Marker.                                                                      |
 | **snippet**                | string              | mô tả thông tin ngắn gọn cho Marker. Snippet sẽ được hiển thị ở bẳng thông tin của Marker và phía dưới dòng tiêu đề.                                                  |
 | **rotation**               | number              | chỉ định góc quay của Marker theo đơn vị là Độ. Giá trị mặc định là **0**                                                                                             |
 | **draggable**              | boolean             | cho phép người dùng có thể kéo Marker trên bản đồ hay không. Giá trị mặc định là **false**                                                                            |
-| **userData**               | Object              | truyền vào userData mà người dùng định nghĩa                                                                                                                                                |
+| **userData**               | Object              | truyền vào userData mà người dùng định nghĩa                                                                                                                          |
 
 ### MFBitmapDescriptor
 
