@@ -66,7 +66,7 @@ let weatherProvider: map4d.WeatherProvider = {
         callback(weather);
     }
 }
-this.map.setWeather(map4d.Weather.Live, weatherProvider)
+map.setWeather(map4d.Weather.Live, weatherProvider)
 ```
 
 

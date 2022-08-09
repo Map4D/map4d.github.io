@@ -100,13 +100,13 @@ với tham số truyền vào là **null** hoặc một một mảng rỗng ([])
 Ví dụ:
 
 ```javascript
-this.map.setFilterPOIs(null)
+map.setFilterPOIs(null)
 ``` 
 
 hoặc
 
 ```javascript
-this.map.setFilterPOIs([])
+map.setFilterPOIs([])
 ```
 
 Để kiểm tra các **type** nào đang được filter bạn có thể sử dụng phương thức **getFilterPOIs()** của lớp Map. Phương
@@ -133,7 +133,7 @@ Mô tả các sự kiện này tương tự như mô tả của **Map Event**. C
 Ví dụ để lắng nghe sự kiện **click** cho POI ta thực hiện như sau:
 
 ```javascript
-let clickEvent = this.map.addListener("click", (args) => {
+let clickEvent = map.addListener("click", (args) => {
   console.log("POI clicked: ")
   console.log(args)
 }, {poi: true})

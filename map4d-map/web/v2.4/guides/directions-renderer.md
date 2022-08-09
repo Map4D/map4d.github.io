@@ -93,7 +93,7 @@ Mô tả các sự kiện này tương tự như mô tả của **Map Event**. C
 Ví dụ để lắng nghe sự kiện **click** cho Directions Renderer ta thực hiện như sau:
 
 ```javascript
-let clickEvent = this.map.addListener("click", (args) => {
+let clickEvent = map.addListener("click", (args) => {
   console.log("Directions Renderer clicked: ")
   let directionsRenderer = args.renderer
   directionsRenderer.setActivedIndex(args.routeIndex)

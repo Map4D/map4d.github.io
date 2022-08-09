@@ -92,7 +92,7 @@ Mô tả các sự kiện này tương tự như mô tả của **Map Event**. C
 Ví dụ để lắng nghe sự kiện **click** cho Polygon ta thực hiện như sau:
 
 ```javascript
-let clickEvent = this.map.addListener("click", (args) => {
+let clickEvent = map.addListener("click", (args) => {
   console.log("Polygon clicked: ")
   console.log(args)
 }, {polygon: true})

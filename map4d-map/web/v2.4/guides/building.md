@@ -126,13 +126,13 @@ với tham số truyền vào là **null** hoặc một một mảng rỗng ([])
 Ví dụ:
 
 ```javascript
-this.map.setFilterBuildings(null)
+map.setFilterBuildings(null)
 ``` 
 
 hoặc
 
 ```javascript
-this.map.setFilterBuildings([])
+map.setFilterBuildings([])
 ```
 
 Để kiểm tra các **type** nào đang được filter bạn có thể sử dụng phương thức **getFilterBuildings()** của lớp Map. Phương
@@ -186,7 +186,7 @@ Mô tả các sự kiện này tương tự như mô tả của **Map Event**. C
 Ví dụ để lắng nghe sự kiện **click** cho Building ta thực hiện như sau:
 
 ```javascript
-let clickEvent = this.map.addListener("click", (args) => {
+let clickEvent = map.addListener("click", (args) => {
   console.log("Building clicked: ")
   console.log(args)
 }, {building: true})
