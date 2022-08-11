@@ -1,6 +1,6 @@
 # Ground Overlay References
 
-## GroundOverlay class
+## MFGroundOverlay class
 
 `MFGroundOverlay` class
 
@@ -44,7 +44,7 @@ var options = MFGroundOverlayOptions()
 | **groundProvider** | MFGroundProvider                    |MFGroundOverlayOptions| set đối tượng MFGroundProvider cho MFGroundOverlayOptions                       |
 | **bounds**     | MFCoordinateBounds                      |MFGroundOverlayOptions| set giá trị bounds cho MFGroundOverlayOptions                                   |
 | **override**   | boolean                                 |MFGroundOverlayOptions| set giá trị override cho MFGroundOverlayOptions                                 |
-| **mapUrl**     | boolean                                 |MFGroundOverlayOptions| set giá trị mapUrl cho MFGroundOverlayOptions                                   |
+| **mapUrl**     | String                                  |MFGroundOverlayOptions| set giá trị mapUrl cho MFGroundOverlayOptions                                   |
 | **visible**    | boolean                                 |MFGroundOverlayOptions| set giá trị visible cho MFGroundOverlayOptions                                  |
 | **zIndex**     | double                                  |MFGroundOverlayOptions| set giá trị zIndex cho MFGroundOverlayOptions                                   |
 
