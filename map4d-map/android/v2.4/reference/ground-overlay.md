@@ -14,7 +14,8 @@
 | **getZIndex**  | `none`                                  | double       | Get giá trị zIndex hiện tại của Ground Overlay                                         |
 | **getMapUrl**  | `none`                                  | String       | Get giá trị zIndex hiện tại của Ground Overlay                                         |
 | **isOverride** | `none`                                  | boolean      | Get giá trị zIndex hiện tại của Ground Overlay                                         |
-
+| **setTransparency** | float                              | `none`       | Set độ trong suốt của Ground Overlay (giá trị trong khoảng từ 0 tới 1)                 |
+| **getTransparency** | `none`                             | float        | Get độ trong suốt hiện tại của Ground Overlay                                          |
 ## MFGroundOverlayOptions class
 
 `MFGroundOverlayOptions` class
@@ -47,7 +48,7 @@ var options = MFGroundOverlayOptions()
 | **mapUrl**     | String                                  |MFGroundOverlayOptions| set giá trị mapUrl cho MFGroundOverlayOptions                                   |
 | **visible**    | boolean                                 |MFGroundOverlayOptions| set giá trị visible cho MFGroundOverlayOptions                                  |
 | **zIndex**     | double                                  |MFGroundOverlayOptions| set giá trị zIndex cho MFGroundOverlayOptions                                   |
-
+| **transparency**| float                                  |MFGroundOverlayOptions| set độ trong suốt cho MFGroundOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1 |
 
 ## MFUrlGroundProvider class
 

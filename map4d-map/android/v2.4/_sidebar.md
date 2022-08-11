@@ -1,6 +1,5 @@
-- [Overview](/ "Map4dMap iOS SDK")
+- [Overview](/ "Map4dMap Android SDK")
 - [Changelog](changelog.md)
-- [Samples](samples.md)
 
 - Interacting with the Map
   - [Controls](guides/map-controls.md)
