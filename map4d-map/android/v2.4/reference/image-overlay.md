@@ -10,8 +10,8 @@
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **setVisible** | boolean                                 | `none`       | Ẩn/hiện Image Overlay trên map                                                         |
 | **isVisible**  | `none`                                  | boolean      | Get trạng thái ẩn/hiện của Image Overlay                                               |
-| **setTransparency** | float                              | `none`       | Set độ trong suốt của Image Overlay (giá trị trong khoảng từ 0 tới 1)                  |
-| **getTransparency** | `none`                             | float        | Get độ trong suốt hiện tại của Image Overlay                                           |
+| **setOpacity** | float                                   | `none`       | Set độ trong suốt của Image Overlay (giá trị trong khoảng từ 0 tới 1)                  |
+| **getOpacity** | `none`                                  | float        | Get độ trong suốt hiện tại của Image Overlay                                           |
 
 ## MFImageOverlayOptions class
 
@@ -43,4 +43,4 @@ var options = MFImageOverlayOptions()
 | **image**      |[MFBitmapDescriptor](/reference/marker?id=MFBitmapDescriptor)|MFImageOverlayOptions| set hình ảnh cho cho MFImageOverlayOptions                   |
 | **visible**    | boolean                                 |MFImageOverlayOptions| set giá trị visible cho MFImageOverlayOptions. Giá trị mặc định là `true`        |
 | **zIndex**     | double                                  |MFImageOverlayOptions| set giá trị zIndex cho MFImageOverlayOptions, quy định zIndex giữa các Image Overlay với nhau. Giá trị mặc định là 0 |
-| **transparency**| float                                  |MFImageOverlayOptions| set độ trong suốt cho MFImageOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|
+| **opacity**    | float                                   |MFImageOverlayOptions| set độ trong suốt cho MFImageOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|

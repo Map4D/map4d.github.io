@@ -22,7 +22,7 @@ MFImageOverlayOptions options = new MFImageOverlayOptions()
     .image(MFBitmapDescriptorFactory.fromResource(R.drawable.default_overlay))
     .visible(true)
     .zIndex(2)
-    .transparency(0.5f);
+    .opacity(0.5f);
 MFImageOverlay imageOverlay = map4D.addImageOverlay(options);
 ```
 
@@ -41,7 +41,7 @@ val options = MFImageOverlayOptions()
     .image(MFBitmapDescriptorFactory.fromResource(R.drawable.default_overlay))
     .visible(true)
     .zIndex(2.0)
-    .transparency(0.5f)
+    .opacity(0.5f)
 val imageOverlay = map4D.addImageOverlay(options)
 ```
 <!-- tabs:end -->
@@ -84,7 +84,7 @@ imageOverlay.setVisible(false)
 
 ### Thay đổi độ trong suốt của Image Overlay
 
-Để thay đổi độ trong suốt của hình ảnh, ta gọi phương thức `setTransparency(float)` cho đối tượng `MFImageOverlay`
+Để thay đổi độ trong suốt của hình ảnh, ta gọi phương thức `setOpacity(float)` cho đối tượng `MFImageOverlay`
 
 Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 
@@ -92,12 +92,12 @@ Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 #### ** Java **
 
 ```java
-imageOverlay.setTransparency(0.5f)
+imageOverlay.setOpacity(0.5f)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-imageOverlay.transparency = 0.5f
+imageOverlay.opacity = 0.5f
 ```
 <!-- tabs:end -->

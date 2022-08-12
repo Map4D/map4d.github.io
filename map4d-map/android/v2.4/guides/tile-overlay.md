@@ -152,7 +152,7 @@ tileOverlay.setVisible(false)
 
 ### Thay đổi độ trong suốt của Tile Overlay
 
-Để thay đổi độ trong suốt của tile, ta gọi phương thức `setTransparency(float)` cho đối tượng `MFTileOverlay`
+Để thay đổi độ trong suốt của tile, ta gọi phương thức `setOpacity(float)` cho đối tượng `MFTileOverlay`
 
 Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 
@@ -160,12 +160,12 @@ Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 #### ** Java **
 
 ```java
-tileOverlay.setTransparency(0.5f)
+tileOverlay.setOpacity(0.5f)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-tileOverlay.transparency = 0.5f
+tileOverlay.opacity = 0.5f
 ```
 <!-- tabs:end -->

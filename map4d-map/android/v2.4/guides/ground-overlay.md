@@ -147,7 +147,7 @@ groundOverlay.setVisible(false)
 
 ### Thay đổi độ trong suốt của Ground Overlay
 
-Để thay đổi độ trong suốt của tile, ta gọi phương thức `setTransparency(float)` cho đối tượng `MFGroundOverlay`
+Để thay đổi độ trong suốt của tile, ta gọi phương thức `setOpacity(float)` cho đối tượng `MFGroundOverlay`
 
 Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 
@@ -155,13 +155,13 @@ Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 #### ** Java **
 
 ```java
-groundOverlay.setTransparency(0.5f)
+groundOverlay.setOpacity(0.5f)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-groundOverlay.transparency = 0.5f
+groundOverlay.opacity = 0.5f
 ```
 <!-- tabs:end -->
 
