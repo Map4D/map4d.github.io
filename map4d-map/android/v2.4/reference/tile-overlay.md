@@ -12,8 +12,8 @@
 | **isVisible**  | `none`                                  | boolean      | Get trạng thái ẩn/hiện của Tile Overlay                                                |
 | **setZIndex**  | double                                  | `none`       | Set giá trị zIndex                                                                     |
 | **getZIndex**  | `none`                                  | double       | Get giá trị zIndex hiện tại của Tile Overlay                                           |
-| **setTransparency** | float                              | `none`       | Set độ trong suốt của Tile Overlay (giá trị trong khoảng từ 0 tới 1)                  |
-| **getTransparency** | `none`                             | float        | Get độ trong suốt hiện tại của Tile Overlay                                           |
+| **setOpacity** | float                                   | `none`       | Set độ trong suốt của Tile Overlay (giá trị trong khoảng từ 0 tới 1)                  |
+| **getOpacity** | `none`                                  | float        | Get độ trong suốt hiện tại của Tile Overlay                                           |
 
 ## MFTileOverlayOptions class
 
@@ -44,7 +44,7 @@ var options = MFTileOverlayOptions()
 | **tileProvider** | MFTileProvider                        | MFTileOverlayOptions| set đối tượng TileProvider cho MFTileOverlayOptions                             |
 | **visible**    | boolean                                 | MFTileOverlayOptions| set giá trị visible cho MFTileOverlayOptions                                    |
 | **zIndex**     | double                                  | MFTileOverlayOptions| Set giá trị zIndex cho MFTileOverlayOptions                                     |
-| **transparency**| float                                  | MFTileOverlayOptions| set độ trong suốt cho MFTileOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|
+| **opacity**    | float                                   | MFTileOverlayOptions| set độ trong suốt cho MFTileOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|
 
 ## MFUrlTileProvider class
 
