@@ -18,4 +18,5 @@
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
+  - [Image Overlay](guides/image-overlay.md)
 
