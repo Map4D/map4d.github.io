@@ -1,5 +1,21 @@
 # Changelog
 
+## Version 2.4.2
+
+Những thay đổi kể từ version 2.4.1
+
+#### Fixed
+
+- Fixed lỗi không hiển thị tile overlay và ground overlay nếu không set opacity
+
+## Version 2.4.1
+
+Những thay đổi kể từ version 2.4.0
+
+#### Fixed
+
+- Fixed lỗi build test với thiết bị thật
+
 ## Version 2.4.0
 
 Những thay đổi kể từ version 2.3.0

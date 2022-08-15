@@ -2,6 +2,8 @@
 
 Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên Map4D.
 
+![Image Overlay](../../resources/image-overlay.png)
+
 ## Add Image overlay
 
 Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](reference/image-overlay?id=mfimageoverlay-class) sau đó set `map` cho đối tượng đó.  
@@ -13,8 +15,8 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 <!-- tabs:start -->
 #### ** Swift **
 ```swift
-let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: 40.773941, longitude: -74.12544),
-                               coordinate1: CLLocationCoordinate2D(latitude: 40.712216, longitude: -74.22655))
+let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: 16.066154, longitude: 108.207276),
+                               coordinate1: CLLocationCoordinate2D(latitude: 16.020262, longitude: 108.189487))
 let image = UIImage(named: "default_overlay")
 let imageOverlay = MFImageOverlay(image: image!, bounds: bounds)
 imageOverlay.map = mapView
@@ -22,8 +24,8 @@ imageOverlay.map = mapView
 
 #### ** Objective-C **
 ```objc
-MFCoordinateBounds *bounds = [[MFCoordinateBounds alloc] initWithCoordinate:CLLocationCoordinate2DMake(40.773941, -74.12544)
-                                                                coordinate1:CLLocationCoordinate2DMake(40.712216, -74.22655)];
+MFCoordinateBounds *bounds = [[MFCoordinateBounds alloc] initWithCoordinate:CLLocationCoordinate2DMake(16.066154, 108.207276)
+                                                                coordinate1:CLLocationCoordinate2DMake(16.020262, 108.189487)];
 UIImage *image = [UIImage imageNamed:@"default_overlay"];
 MFImageOverlay *imageOverlay = [MFImageOverlay imageOverlayWithImage:image bounds:bounds];
 imageOverlay.map = mapView;
