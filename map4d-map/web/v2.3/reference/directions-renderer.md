@@ -53,7 +53,7 @@ DirectionsRenderer(options)
 | **inactiveOutlinePattern** *optional*|[PatternItem](/reference/map?id=patternitem)| chỉ định pattern của inactive outline. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
 | **originMarkerOptions** *optional* |[MarkerOptions](/reference/marker?id=marker-options)       | chỉ định các options cho marker bắt đầu               |
 | **destinationMarkerOptions** *optional*|[MarkerOptions](/reference/marker?id=marker-options)   | chỉ định các options cho marker kết thúc              |
-| **waypointMarkerOptions** *optional*|[MarkerOptions](/reference/marker?id=marker-options)[]    | chỉ định mảng options cho các marker waypoint. **Chú ý:** <span style="color:red">Để có đường polyline nối marker waypoint với route trong trường hợp route có waypoint thì bắt buộc chúng ta phải set route bằng JSON</span>|
+| **waypointMarkerOptions** *optional*|[MarkerOptions](/reference/marker?id=marker-options)[]    | chỉ định mảng options cho các marker waypoint. **Chú ý:** <span style="color:red">Để có đường polyline nối marker waypoint với route trong trường hợp route có waypoint thì bắt buộc chúng ta phải set route bằng JSON hoặc đối tượng RouteOptions</span>|
 | **onMarkerDragEnd** *optional*| Function           | chỉ định options callback sau khi thực hiện việc kéo Marker, callback được gọi với tham số `args` là đối tượng chứa tọa độ LatLng của các Marker trong Directions Renderer.|
 
 ## RouteOptions
