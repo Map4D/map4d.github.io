@@ -42,7 +42,6 @@ Dưới đây là bản đồ hiển thị bảng điều khiển nằm ở vị
 Các phần tử điều khiển được cung cấp sẵn của Map4D:
 - zoom: thay đổi mức zoom của map, gồm zoom in ![zoom-in](../../resources/zoom-in.png) và zoom out ![zoom-out](../../resources/zoom-out.png)
 - direction: hiển thị hướng của bản đồ đang hiển thị ![direct-ion](../../resources/direct-icon.png)
-- 3D button: chuyển đổi mode 2D sang 3D và ngược lại ![mode-icon](../../resources/mode-icon.png)
 - geolocate: lấy vị trí hiện tại của người dùng ![location-icon](../../resources/location-icon.png)
 
 ### Hiển thị bảng điều khiển trên bản đồ

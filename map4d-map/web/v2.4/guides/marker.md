@@ -135,11 +135,11 @@ tính năng draggable của marker hoặc truyền vào tham số **false** đ�
 Để lắng nghe các sự kiện xảy ra trên marker, bạn hãy dùng phương thức **addListener()** của lớp **Map** với tham số **EventOptions**
 là đối tượng **{marker: true}**.
 
-Các sự kiện có thể lắng nghe trên marker là: **click, dblClick, longClick, rightClick, hover, drag, dragStart, dragEnd**
+Các sự kiện có thể lắng nghe trên marker là: **click, dblClick, longClick, rightClick, hover, mouseOut, drag, dragStart, dragEnd**
 
 Mô tả các sự kiện này tương tự như mô tả của **Map Event**. Các bạn có thể tham khảo [tại đây](guides/map-events.md)
 
-Ví dụ để lắng nghe sự kiện **click** cho marker ta thực hiện như sau:
+#### i. Ví dụ: để lắng nghe sự kiện **click** cho marker ta thực hiện như sau:
 
 ```javascript
 let clickEvent = map.addListener("click", (args) => {
@@ -153,4 +153,10 @@ Tham số **args** trả về khi có sự kiện xảy ra sẽ bao gồm các t
 - location: là tọa độ click trên bản đồ theo latitude và longitude.
 - pixel: là tọa độ pixel mà người dùng click trên màn hình.
 
+####  ii. Ví dụ: để lắng nghe sự kiện **mouseOut** cho marker ta thực hiện như sau:
 
+```javascript
+let clickEvent = map.addListener("mouseOut", (args) => {
+  console.log("Mouse Out Marker:", args.marker)
+}, {marker: true})
+```
