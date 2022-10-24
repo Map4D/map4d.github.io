@@ -60,3 +60,10 @@ map = new map4d.Map(document.getElementById("map"), options)
 ### Map Options
 
 [MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng Map4D
+
+### Modules .d.ts
+
+Tải module .d.ts cho Map4d [tại đây](//docs.map4d.vn/map4d-map/web/v2.4/dts/map4d.d.ts)
+
+
+
