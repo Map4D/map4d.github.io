@@ -24,7 +24,11 @@
       "tilesLoaded",
       "longClick",
       "boundsChanged",
-      "limitedZoom"
+      "limitedZoom",
+      "targetChanged",
+      "zoomChanged",
+      "tiltChanged",
+      "bearingChanged"
     ];
 
     function populateTable() {
@@ -65,14 +69,14 @@
     html,
 
     #iframe-contents {
-      height: 400px;
+      height: 450px;
       overflow: auto;
     }
 
     #map {
       float: left;
       width: 725px;
-      height: 400px;
+      height: 450px;
       margin-right: 10px;
     }
 

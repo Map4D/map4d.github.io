@@ -1,4 +1,4 @@
-// Type definitions for map4dsdk 2.4.1
+// Type definitions for map4dsdk 2.4.2
 
 declare module 'map4d' {
   enum MapType {
@@ -140,7 +140,11 @@ declare module 'map4d' {
     modeChanged,
     longClick,
     boundsChanged,
-    limitedZoom
+    limitedZoom,
+    tiltChanged,
+    zoomChanged,
+    bearingChanged,
+    targetChanged
   }
 
   enum ControlOptions {

@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.4.2
+
+#### Added
+
+- Thêm sự kiện `tiltChanged`, `zoomChanged`, `bearingChanged`, `targetChanged` cho map
+
 ## Version 2.4.1
 
 #### Added
