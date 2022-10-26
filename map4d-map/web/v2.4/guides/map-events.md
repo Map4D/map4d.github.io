@@ -2,7 +2,7 @@
 
 Map4D Web SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
-<iframe src="./html/map-events.html" style="min-width: 914px;" height="420px"></iframe>
+<iframe src="./html/map-events.html" style="min-width: 914px;" height="460px"></iframe>
 
 | No | Event Name       | Description                                                                                                             |
 |:--:|------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -20,10 +20,13 @@ Map4D Web SDK cung cấp các sự kiện của map hay tương tác của ngư�
 | 12 | mouseOver        | Đưọc gọi khi chuột di chuyển từ ngoài vào trong map                                                                     |
 | 13 | rightClick       | Được gọi khi click chuột phải trên map, annotation hoặc đối tượng 3D                                                    |
 | 14 | tilesLoaded      | Được gọi khi tất cả các visible tiles đã load hoàn thành (visible tiles là tất cả tiles sẽ được hiển thị trên màn hình) |
-| ~~15~~ | ~~modeChanged~~      | ~~Được gọi khi map chuyển từ 2D sang 3D và ngược lại~~ *(removed)*                                                |
-| 16 | longClick        | Được gọi khi giữ chuột trái trong 1 khoảng thời gian trên bản đồ                                                        |
-| 17 | boundsChanged    | Được gọi khi viewport đã thay đổi                                                                                       |
-| 18 | limitedZoom      | Được gọi khi người dùng thao tác zoom trên bản đồ đạt tới mức zoom giới hạn (max zoom, min zoom hoặc mức zoom 17 ở chế độ 3D) |
+| 15 | longClick        | Được gọi khi giữ chuột trái trong 1 khoảng thời gian trên bản đồ                                                        |
+| 16 | boundsChanged    | Được gọi khi viewport đã thay đổi                                                                                       |
+| 17 | limitedZoom      | Được gọi khi người dùng thao tác zoom trên bản đồ đạt tới mức zoom giới hạn (max zoom, min zoom hoặc mức zoom 17 ở chế độ 3D) |
+| 18 | targetChanged    | Được gọi khi vị trí tâm của camera thay đổi  |
+| 19 | zoomChanged      | Được gọi khi mức zoom thay đổi               |
+| 20 | tiltChanged      | Được gọi khi góc nghiêng của bản đồ thay đổi |
+| 21 | bearingChanged   | Được gọi khi góc quay của bản đồ thay đổi    |
 
 ## Handling Events
 
@@ -111,3 +114,34 @@ Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên POI c�
 
 Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên place của Map4D và thực hiện hiển thị thông tin của place được click
 <iframe src="//jsfiddle.net/duydung2007/s59fLe8z/embedded/" style="min-width: 914px;" height="600px" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
+### Usage
+
+#### Target Changed
+
+```js
+map.addListener("targetChanged", () => {
+  console.log("targetChanged")
+})
+```
+
+#### Zoom Changed
+```js
+map.addListener("zoomChanged", () => {
+  console.log("zoomChanged")
+})
+```
+
+#### Tilt Changed
+```js
+map.addListener("tiltChanged", ()) => {
+  console.log("tiltChanged")
+})
+```
+
+#### Bearing Changed
+```js
+map.addListener("bearingChanged", () => {
+  console.log("bearingChanged")
+})
+```
