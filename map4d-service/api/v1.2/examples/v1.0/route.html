@@ -24,8 +24,8 @@
     <option value="foot">Foot (đi bộ)</option>
     <option value="motorcycle">Motorcycle (xe máy)</option>
 </select></p>
-<p>Avoid: <input class="input" id="inputavoid" placeholder="điểm/khu vực bị chặn. vd: 16.065280,108.219871"/></p>
-<p>AvoidRoad: <input class="input" id="inputavoidRoad" placeholder="danh sách loại đường cấm đi qua vd: motorway,trunk"/></p>
+<p>Avoid: <input class="input" id="inputAvoid" placeholder="điểm/khu vực bị chặn. vd: 16.065280,108.219871"/></p>
+<p>AvoidRoads: <input class="input" id="inputAvoidRoads" placeholder="danh sách loại đường cấm đi qua vd: motorway,trunk"/></p>
 <p>Language: <select class="input" id="inputLanguage">
     <option value="vi">Tiếng Việt (vi)</option>
     <option value="en">Tiếng Anh (en)</option>
@@ -35,11 +35,8 @@
     <option value="1">Tìm đường đi nhanh nhất</option>
     <option value="2">Cân bằng giữa ngắn nhất và nhanh nhất</option>
 </select> </p>
+<p>Departure Time: <input class="input" type="number" id="inputDepartureTime" placeholder="thời gian dự kiến khởi hành, tính là giây từ 1970-01-01T00:00:00"/></p>
 <p><button onclick="textSearch_Run();">Submit</button></p>
-
-<pre id="displayResult"></pre>
-<code>Danh sách location</code>
-<pre id="multiLinestring"></pre>
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script>
@@ -71,16 +68,21 @@
         var mode = document.getElementById("inputMode");
         var language = document.getElementById("inputLanguage");
         var weighting = document.getElementById("inputWeighting");
-        var avoid = document.getElementById("inputavoid").value;
-        var avoidRoad = document.getElementById("inputavoidRoad").value;
+        var avoid = document.getElementById("inputAvoid").value;
+        var avoidRoads = document.getElementById("inputAvoidRoads").value;
+        var departureTime = document.getElementById("inputDepartureTime").value;
         if(key == null|| key==""){
             displayResult.innerHTML="(*) là bắt buộc";
             return;
         }
+        var time = null;
+        if(departureTime != null && departureTime.trim().length > 0 && !isNaN(departureTime)){
+            time = departureTime;
+        }
         var selectedMode = mode.options[mode.selectedIndex].value;
         var selectedLanguage = language.options[language.selectedIndex].value;
         var selectedWeighting = weighting.options[weighting.selectedIndex].value;
-        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoad=`+avoidRoad, function(data) {
+        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoads=`+avoidRoads+`&departureTime=`+time, function(data) {
             displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
             document.getElementById("multiLinestring").innerHTML = syntaxHighlight(JSON.stringify(polyline(data), null, 2));
         })
