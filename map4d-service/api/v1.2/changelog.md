@@ -26,4 +26,5 @@ Update các API theo logic hiện tại.
 - Tìm kiếm dạng văn bản [API TextSearch](api_text_search.md) 
 - Tìm kiếm lân cận [API NearbySearch](api_nearby_search.md)
 - Tìm kiếm trong hộp chữ nhật [API ViewboxSearch](api_viewbox_search.md)
+
 Update link Tạo key cho tất cả các API.
