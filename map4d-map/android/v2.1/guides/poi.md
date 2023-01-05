@@ -253,4 +253,5 @@ map4D.setOnPOIClickListener(new Map4D.OnPOIClickListener() {
         Toast.makeText(context , "Poi Clicked: " + title, Toast.LENGTH_SHORT).show();
     }
 });
+```
 <!-- tabs:end -->

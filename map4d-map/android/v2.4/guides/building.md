@@ -119,7 +119,7 @@ boolean isBuildingsEnabled = map4.isBuildingsEnabled();
 ### 5. Sự kiện click Building
 
 - Phát sinh khi người dùng click vào Building có sẵn của Map:
-  
+
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
