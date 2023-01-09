@@ -63,4 +63,4 @@ typedef NS_ENUM(NSUInteger, MFGeoJSONGeometryType) {
 
 | Name            | Type                                                               | Description             |
 |-----------------|:-------------------------------------------------------------------|-------------------------|
-| **icon**        | icon                                                               | Icon mặc định cho point |
+| **icon**        | UIImage                                                            | Icon mặc định cho point |

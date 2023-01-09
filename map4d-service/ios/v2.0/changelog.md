@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.0.1
+
+#### Fixed
+
+- Sửa lỗi tham số directions waypoints không chính xác
+
 ## Version 2.0.0
 
 #### Added
