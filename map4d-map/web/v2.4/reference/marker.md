@@ -109,10 +109,12 @@ MarkerLabel(options)
 | **getFontWeight**  | `none`     | string       | Get kiểu font của Marker Label. Có 2 loại fontWeight là normal (nét thường) và bold (nét đậm)|
 | **getFontSize**    | `none`     | number       | Get kích thước của Marker Label                                                              |
 | **getText**        | `none`     | string       | Get text của Marker Label                                                                    |
+| **getLine**        | `none`     | number       | Get số dòng lớn nhất mà Marker Label có thể vẽ                                               |
+| **getMaxWidth**    | `none`     | number       | Get độ rộng lớn nhất mà Marker Label có thể vẽ                                               |
 | **hasHalo**        | `none`     | boolean      | Kiểm tra xem đối tượng Marker Label có viền bao quanh khi vẽ text hay không                  |
 | **getHaloColor**   | `none`     | string       | Get màu bao quanh text khi vẽ lên bản đồ                                                     |
-| **getAnchor**      | `none`     |[Point](/reference/coordinates?id=point)| Get điểm neo của Marker Label                                       |
-| **getMargin**      | `none`     |[MarginOptions](/reference/marker?id=margin-options)| Get thông tin về căn lề của Marker Label                                                     |
+| **getAnchor**      | `none`     |[Point](/reference/coordinates?id=point)| Get điểm neo của Marker Label                                      |
+| **getMargin**      | `none`     |[MarginOptions](/reference/marker?id=margin-options)| Get thông tin về căn lề của Marker Label               |
 
 ## Marker Label Options
 
