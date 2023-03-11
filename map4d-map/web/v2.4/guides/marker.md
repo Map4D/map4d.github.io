@@ -25,7 +25,8 @@ interface MarkerOptions {
     label?: string | MarkerLabel
     draggable?: boolean
     iconView?: string | Node
-    userInteractionEnabled?: boolean
+    clickable?: boolean
+    animation?: IAnimation
   }
 ```
 
@@ -47,9 +48,10 @@ bản đồ. Giá trị mặc định là **0**
 - **label** (tùy chọn) : chỉ định label của Marker. Label sẽ được hiển thị ở tâm của Marker.
 - **draggable** (tùy chọn) : cho phép người dùng có thể kéo Marker trên bản đồ hay không. Giá trị mặc định là **false**
 - **iconView** (tùy chọn) : cho phép thêm node HTML vào và thay thế icon mặc định của Marker.
-- **userInteractionEnabled** (tùy chọn) : cho phép người dùng có thể tương tác được với Marker hay không. Giá trị mặc định
+- **clickable** (tùy chọn) : cho phép người dùng có thể tương tác được với Marker hay không. Giá trị mặc định
 là true. Khi không cho phép người dùng tương tác với Marker thì tất cả các sự kiện liên quan tới Marker từ phía người dùng
 sẽ không có tác dụng.
+- **animation** (tùy chọn) : hoạt ảnh của marker khi được thêm vào bản đồ
 
 Ví dụ sau đây thêm một Marker đơn giản vào bản đồ tại Bình Thạnh, Thành phố Hồ Chí Minh:
 
@@ -130,7 +132,30 @@ Như đoạn mã tạo maker với label ở trên, ta có label là một đố
 Ngoài ra bạn có thể gọi phương thức **setDraggable()** của đối tượng **Marker** và truyền vào tham số **true** để bật
 tính năng draggable của marker hoặc truyền vào tham số **false** để tắt tính năng draggable.
 
-### 5. Các sự kiện trên Marker
+### 5. Marker Animations
+
+Bạn có thể tạo hiệu ứng chuyển động cho marker bằng cách set giá trị thuộc tính `animation` (thuộc loại: `map4d.Animation`). Các giá trị được hỗ trợ:
+- DROP: cho biết rằng điểm đánh dấu sẽ rơi từ trên cùng của bản đồ xuống vị trí cuối cùng của nó khi được đặt lần đầu tiên trên bản đồ.
+- BOUNCE: marker sẽ nảy tại chỗ (dừng lại khi set `animation` bằng null)
+
+Ví dụ:
+
+Tạo marker với giá trị animation từ options
+
+```javascript
+const marker = new map4d.Marker({
+  position: { lat: 10.773201, lng: 106.700147 },
+  animation: map4d.Animation.DROP,
+})
+```
+
+Thay đổi giá trị animation bằng phương thức setAnimation
+
+```javascript
+marker.setAnimation(map4d.Animation.BOUNCE)
+```
+
+### 6. Các sự kiện trên Marker
 
 Để lắng nghe các sự kiện xảy ra trên marker, bạn hãy dùng phương thức **addListener()** của lớp **Map** với tham số **EventOptions**
 là đối tượng **{marker: true}**.

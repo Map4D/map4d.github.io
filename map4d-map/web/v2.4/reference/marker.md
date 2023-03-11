@@ -54,10 +54,10 @@ Marker(options)
 | **setLabel**                 | string`or`[MarkerLabel](/reference/marker?id=marker-label)| `none`| Set một label để vẽ trong marker                                            |
 | **setIconView**              | string `or` Node                        | `none`       | Thay thế hình ảnh mặc định của marker bằng một HTML view                               |
 | **getIconView**              | `none`                                  |string`or`Node| Get thông tin hình ảnh HTML của marker                                                 |
-| **isUserInteractionEnabled** | `none`                                  | boolean      | Kiểm tra marker có thể tương tác bởi người dùng hay không                              |
-| **setUserInteraction**       | boolean                                 | `none`       | Cho phép marker có thể tương tác bởi người dùng hay không                              |
-
-
+| **isClickable**              | `none`                                  | boolean      | Kiểm tra marker có thể tương tác bởi người dùng hay không                              |
+| **setClickable**             | boolean                                 | `none`       | Cho phép marker có thể tương tác bởi người dùng hay không                              |
+| **getAnimation**             | `none`                                  | [Animation](/reference/marker?id=animation) | Get giá trị hoạt ảnh của marker                         |
+| **setAnimation**             | [Animation](/reference/marker?id=animation) or null or string | `none`          | Set hoạt ảnh cho marker, set `null` để dừng hoạt ảnh hiện tại |
 
 ## Marker Options
 
@@ -83,7 +83,8 @@ Marker(options)
 | **label** *optional*       |string`or`[MarkerLabel](/reference/marker?id=marker-label)| chỉ định label của Marker. Label sẽ được hiển thị ở tâm của Marker.                                                              |
 | **draggable** *optional*   | boolean             | cho phép người dùng có thể kéo Marker trên bản đồ hay không. Giá trị mặc định là **false**                                                                            |
 | **iconView** *optional*    |string`or`Node       | cho phép thêm node HTML vào và thay thế icon mặc định của Marker.                                                                                                     |
-| **userInteractionEnabled** *optional*| boolean   | cho phép người dùng có thể tương tác được với Marker hay không. Giá trị mặc định là true. Khi không cho phép người dùng tương tác với Marker thì tất cả các sự kiện liên quan tới Marker từ phía người dùng sẽ không có tác dụng.|
+| **clickable** *optional*   | boolean             | cho phép người dùng có thể tương tác được với Marker hay không. Giá trị mặc định là true. Khi không cho phép người dùng tương tác với Marker thì tất cả các sự kiện liên quan tới Marker từ phía người dùng sẽ không có tác dụng.|
+| **animation** *optional*   | [Animation](/reference/marker?id=animation) `or` string | Hoạt ảnh của marker khi được thêm vào bản đồ.|
 
 
 ## Marker Label
@@ -188,3 +189,12 @@ Icon(width: number, height: number, url: string)
 | **getWidth**    | `none`     | number       | Get chiều rộng của Icon                                                                      |
 | **getHeight**   | `none`     | number       | Get chiều cao của Icon                                                                       |
 | **getUrl**      | `none`     | string       | Get đường dẫn chứa hình ảnh của Icon                                                         |
+
+## Animation
+
+`map4d.Animation` type
+
+| Constants                  | Description                                                                                  |
+|----------------------------|----------------------------------------------------------------------------------------------|
+| **map4d.Animation.BOUNCE** | Marker nảy liên tục cho đến khi setAnimation bằng null |
+| **map4d.Animation.DROP**   | Marker rơi từ phía trên bản đồ xuống vị trí của nó khi marker được thêm vào bản đồ |
