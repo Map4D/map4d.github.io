@@ -1,5 +1,48 @@
 # Changelog
 
+## Version 2.4.5
+
+#### Added
+
+- Hỗ trợ render label cho marker sử dụng iconView
+- Hỗ trợ `animation` cho marker
+- Hỗ trợ set giá trị `controlOptions` của bản đồ bằng string
+
+### Fixed
+
+- Sửa lỗi `MFPOI` không kéo được  khi set `draggable` là true
+
+### Changed
+
+- Tối ưu thời gian phản hồi sự kiện cho các poi, place
+
+## Version 2.4.4
+
+### Changed
+
+- Tối ưu thời gian phản hồi sự kiện cho các annotations
+
+### Fixed
+
+- Sửa lỗi sự kiện `hover` được gọi nhiều lần
+
+## Version 2.4.3
+
+#### Added
+
+- Hỗ trợ `contextOptions` cho bản đồ
+
+### Fixed
+
+- Sửa lỗi sự kiện `zoomChanged` hoạt động không chính xác ở trình duyệt di động
+- Sửa lỗi không cuộn trang khi chạm vào vùng xám của bản đồ lúc sử dụng cử chỉ hợp tác
+- Sửa lỗi sự kiện `mouseOut` của marker sử dụng iconView
+
+### Changed
+
+- Thêm tham số `clickable` cho các annotations nhằm thay thế tham số `userInteractionEnabled`
+- Không hiển thị một số loại đường ở mức zoom nhỏ hơn 16
+
 ## Version 2.4.2
 
 #### Added
