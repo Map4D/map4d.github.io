@@ -6,10 +6,10 @@ https://api-test.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={typ
 | Parameter |Required| Description                                                                                      |
 |-----------|--------|--------------------------------------------------------------------------------------------------|
 | key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
-| text      |Yes     | nội dung muốn tìm                                                                             |
-| types     |No      | kiểu của địa điểm. VD: cafe, atm ...                                                             |
-| datetime  |No      | thời gian địa điểm vẫn còn tồn tại múi giờ là 0, đổi ra đơn vị là miliseconds                 |                                                                        |
-| location  |No      | tọa độ lat, lng tại địa điểm mà bạn muốn tìm. VD: 16.036505,108.218186                         |
+| text      |Yes     | Nội dung muốn tìm và nội dung tìm kiếm tối đa là 1024 ký tự.                                                                             |
+| types     |No      | Loại đối tượng của địa điểm. <br>Hỗ trợ 2 formats:<br>  Format 1: AND `type1,type2,type3` -> tìm kiếm và trả về những kết quả có cả type1, type2 và type3. <br>Nếu `types={type1}&types={type2}` -> sẽ hiểu là `types=type1,type2`.<br>  Format 2: OR `type1\|type2\|type3` -> tìm kiếm hoặc trả về những kết có 1 trong các type1, type2, type3. <br>Nếu có cả 2 format được truyền vào, chỉ xử lý type đầu tiên. Ví dụ: `type1,type2\|type3` -> chỉ type1 được nhận.                                                              |
+| datetime  |No      | Thời gian địa điểm vẫn còn tồn tại múi giờ là 0, đổi ra đơn vị là miliseconds                 |                                                                        |
+| location  |No      | Tọa độ lat, lng tại địa điểm mà bạn muốn tìm. VD: 16.036505,108.218186                         |
 
 ## 2. Output (Đầu ra)
 ```json
