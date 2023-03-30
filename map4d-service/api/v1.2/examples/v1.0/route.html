@@ -36,7 +36,12 @@
     <option value="2">Cân bằng giữa ngắn nhất và nhanh nhất</option>
 </select> </p>
 <p>Departure Time: <input class="input" type="number" id="inputDepartureTime" placeholder="thời gian dự kiến khởi hành, tính là giây từ 1970-01-01T00:00:00"/></p>
+<p>IsOptimize: <select class="input" id="inputIsOptimize">
+    <option value="true">Xắp xếp các điểm ở giữa, giải quyết bài toán người giao hàng</option>
+    <option value="false" selected>Tìm đường bình thường</option>
+</select> </p>
 <p><button onclick="textSearch_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
 
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script>
@@ -71,6 +76,10 @@
         var avoid = document.getElementById("inputAvoid").value;
         var avoidRoads = document.getElementById("inputAvoidRoads").value;
         var departureTime = document.getElementById("inputDepartureTime").value;
+        var isOptimize = document.getElementById("inputIsOptimize").value;
+        if(departureTime === ""){
+            departureTime = "0";
+        }
         if(key == null|| key==""){
             displayResult.innerHTML="(*) là bắt buộc";
             return;
@@ -82,7 +91,7 @@
         var selectedMode = mode.options[mode.selectedIndex].value;
         var selectedLanguage = language.options[language.selectedIndex].value;
         var selectedWeighting = weighting.options[weighting.selectedIndex].value;
-        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoads=`+avoidRoads+`&departureTime=`+time, function(data) {
+        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoads=`+avoidRoads+`&departureTime=`+time+`&isOptimize`+isOptimize, function(data) {
             displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
             document.getElementById("multiLinestring").innerHTML = syntaxHighlight(JSON.stringify(polyline(data), null, 2));
         })
