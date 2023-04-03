@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 2.4.6
+
+### Changed
+
+- Sử dụng chung worker giữa các đối tượng map, số lượng worker tối đa là 3
+- Hỗ trợ hiển thị chữ của POI theo các hướng khác nhau
+- Hiển thị marker info window nằm trong vùng hiển thị của bản đồ (nếu marker nằm trong vùng hiển thị)
+
+### Fixed
+
+- Sửa lỗi sự kiện click place, poi không chính xác trong một số trường hợp
+- Sửa lỗi thay đổi stroke pattern cho polyline không được áp dụng ngay lập tức
+- Sửa lỗi bầu trời đè lên highlight của đối tượng 3D
+
 ## Version 2.4.5
 
 #### Added
