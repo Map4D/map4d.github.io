@@ -90,17 +90,9 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
             "lat": 0
           }
         ],
-        "skippedPoint":[
-          {
-            "lng": 0,
-            "lat": 0
-          }
-        ],
-        "passedPoint":[
-          {
-            "lng": 0,
-            "lat": 0
-          }
+        "waypointOrder":[
+          1,
+          2
         ]
       }
     ]
@@ -129,8 +121,7 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
 | overviewPolyline | **Yes**  | Thông tin dạng mã hóa các điểm đi, dưới dạng tổng quát polyline.                                                                                  |
 | summary          | No       | Tóm lược đường đi (khoảng cách `distance` và thời gian di chuyển `duration`).                                                                     |
 | snappedWaypoints | No       | Danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc.                                                       |
-| skippedPoint     | No       | Danh sách các điểm bị bỏ qua với lí do không thể đi qua khi cố gắng tìm đường đi tối ưu giữa các điểm ở giữa `points`.                                                       |
-| passedPoint      | No       | Danh sách các điểm đi qua trên đường theo thứ tự đã đường tối ưa hóa từ điểm bắt đầu cho đến điểm kết thúc.                                                 |
+| waypointOrder    | No       | Danh sách thứ tự đi qua các điểm `points` đã được sắp xếp theo thứ tự tối ưu hóa. Số thứ tự được đếm từ 0 theo thứ tự các điểm `points` tại input.|
 
 [![Route](../resources/route.png)](https://map4d.vn)
 
