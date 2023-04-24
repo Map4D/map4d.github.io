@@ -121,7 +121,7 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
 | overviewPolyline | **Yes**  | Thông tin dạng mã hóa các điểm đi, dưới dạng tổng quát polyline.                                                                                  |
 | summary          | No       | Tóm lược đường đi (khoảng cách `distance` và thời gian di chuyển `duration`).                                                                     |
 | snappedWaypoints | No       | Danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc.                                                       |
-| waypointOrder    | No       | Danh sách thứ tự đi qua các điểm `points` đã được sắp xếp theo thứ tự tối ưu hóa. Số thứ tự được đếm từ 1 theo thứ tự các điểm `points` tại input.|
+| waypointOrder    | No       | Danh sách thứ tự đi qua các điểm `points` đã được sắp xếp theo thứ tự tối ưu hóa. Số thứ tự được đếm từ 0 theo thứ tự các điểm `points` tại input.|
 
 [![Route](../resources/route.png)](https://map4d.vn)
 
