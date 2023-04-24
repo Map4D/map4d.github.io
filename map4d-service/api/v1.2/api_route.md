@@ -91,8 +91,8 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
           }
         ],
         "waypointOrder":[
-          1,
-          2
+          0,
+          1
         ]
       }
     ]
