@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 2.5.1
+
+#### Added
+
+- Thêm hàm `calculateProjectMatrixForWebGL`, `getCanvas()` và `requestRender()` cho Map
+- Hỗ trợ class `WebGLOverlayView` để hỗ trợ vẽ thêm đối tượng vào Map bằng các thư viện đồ họa phổ biến như Three.js
+
 ## Version 2.5.0
 
 ### Changed
@@ -9,7 +16,7 @@
 
 ### Fixed
 
-- Sửa lỗi không thay đổi title, type của POI ngay lập tức sau khi set.
+- Sửa lỗi thay đổi title, type của POI không được áp dụng ngay lập tức
 - Sửa lỗi hàm setOptions của Directions Renderer không có tác dụng
 - Sửa lỗi không kéo được marker của Directions Renderer khi không set callback onMarkerDragEnd
 

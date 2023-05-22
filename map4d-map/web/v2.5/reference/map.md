@@ -69,6 +69,9 @@ Map(container, options)
 | **setMapType**      | [IMapType](/reference/map?id=imaptype) | `none`                                | Thay đổi [kiểu bản đồ](guides/map-types.md)                 |
 | **getMapType**      | `none`                                 | [MapType](/reference/map?id=maptype)  | Lấy [kiểu bản đồ](guides/map-types.md) hiện tại của map     |
 | **setMapId**        | string                                 | `none`                                | Thay đổi map ID                                             |
+| **calculateProjectMatrixForWebGL**|[WebGLPositionData](/reference/webgl-overlay?id=webglpositiondata-interface)|`Float32Array`| Tính toán project matrix cho đối tượng WebGL với dữ liệu position |
+| **getCanvas**       | `none` | `HTMLCanvasElement` | Lấy đối tượng HTMLCanvasElement hiện tại Map đang sử dụng để render                                           |
+| **requestRender**   | `none` | `none` | Request Map render lại tất cả các đối tượng trên Map.                                                                      |
 | **destroy**         | `none` | `none` | Dọn dẹp và giải phóng tất cả các tài nguyên nội bộ được liên kết với bản đồ.<br>Sử dụng phương thức này khi bạn đã sử dụng xong bản đồ và muốn đảm bảo rằng nó không còn sử dụng tài nguyên của trình duyệt nữa. |
 
 ## MapOptions interface
