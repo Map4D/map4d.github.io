@@ -20,6 +20,7 @@
   - [Building](guides/building.md)
   - [Marker Cluster](guides/marker-cluster.md)
   - [Directions Renderer](guides/directions-renderer.md)
+  - [Info Windows](guides/info-window.md)
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
@@ -47,6 +48,7 @@
     - [POI](reference/poi.md)
     - [Building](reference/building.md)
     - [Marker Cluster](reference/marker-cluster.md)
+    - [Info Windows](reference/info-window.md)
 	- [Directions Renderer](reference/directions-renderer.md)
   - Layers
     - [Tile Overlay](reference/tile-overlay.md)
