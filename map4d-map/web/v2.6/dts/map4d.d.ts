@@ -1034,4 +1034,34 @@ declare module 'map4d' {
   class IconPattern extends PatternItem {
     constructor(options: IconPatternOptions)
   }
+
+  
+  interface InfoWindowOptions {
+    ariaLabel?: string
+    content?: string
+    maxWidth?: number
+    minWidth?: number
+    position?: ILatLng
+    zIndex?: number
+  }
+
+  type IInfoWindowOpenOptions = InfoWindowOpenOptions | Map
+
+  interface InfoWindowOpenOptions {
+    map?: Map
+    anchor?: Marker
+  }
+
+  class InfoWindow {
+    constructor(options?: InfoWindowOptions)
+    close(): void
+    getContent(): string
+    getPosition(): LatLng
+    getZIndex(): number
+    open(options?: IInfoWindowOpenOptions, anchor?: Marker): void
+    setContent(content?: string | Node): void
+    setOptions(options?: InfoWindowOptions | null): void
+    setPosition(position?: ILatLng)
+    setZIndex(zIndex: number): void
+  }
 }
