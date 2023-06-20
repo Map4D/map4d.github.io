@@ -27,6 +27,7 @@
   - [Image Overlay](guides/image-overlay.md)
   - [POI Overlay](guides/poi-overlay.md)
   - [Building Overlay](guides/building-overlay.md)
+  - [WebGL Overlay View](guides/webgl-overlay.md)
   - [Data Layer](guides/data-layer.md)
 
 - Utils
@@ -53,4 +54,5 @@
     - [Image Overlay](reference/image-overlay.md)
     - [POI Overlay](reference/poi-overlay.md)
     - [Building Overlay](reference/building-overlay.md)
+    - [WebGL Overlay View](reference/webgl-overlay.md)
     - [Data Layer](reference/data-layer.md)
