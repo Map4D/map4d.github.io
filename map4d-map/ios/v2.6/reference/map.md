@@ -60,6 +60,7 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier
 | **getBounds**              | none         | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds)                 | Lấy khu vực hiển thị của map hiện tại.                               |
 | **metersForPoints**        | double                  | double               | Convert giá trị từ point sang mét |
 | **pointsForMeters**        | double                  | double               | Convert giá trị từ mét sang point |
+| **setMapID**               | [MFMapID](/reference/map?id=MFMapID) | void    | Set Map ID |
 
 ### MFCameraPosition
 
