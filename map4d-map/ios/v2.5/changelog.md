@@ -1,5 +1,36 @@
 # Changelog
 
+## Version 2.5.5
+
+#### Changed
+
+- Cải tiến việc điều khiển bản đồ bằng cử chỉ
+- Tăng thời gian giới hạn cho việc khởi tạo map
+
+#### Fixed
+
+- Sử lỗi không hiển thị POI nếu không có text
+
+## Version 2.5.4
+
+#### Added
+
+- Hỗ trợ chuyển đổi giá trị giữa point và mét
+
+#### Fixed
+
+- Sửa lỗi crash ở một số trường hợp mở lại app sau một thời gian dài
+
+## Version 2.5.3
+
+#### Fixed
+
+- Sửa lỗi bị mất line trong một số trường hợp ở mức zoom nhỏ
+
+#### Changed
+
+- Loại bỏ các điểm trùng nhau khi tạo MFDirectionsRenderer
+
 ## Version 2.5.2
 
 #### Fixed
@@ -8,6 +39,7 @@
 - Sửa lỗi không reload tile nếu request bị lỗi
 - Sửa lỗi crash khi sử dụng hình ảnh không đúng kích thước
 - Sửa lỗi các giá trị `bearing`, `scale`, `elevation` của `MFBuilding` không được áp dụng nếu thiết lập trước khi thêm vào bản đồ
+- Sửa lỗi mất icon khi set thay đổi liên tục
 
 #### Changed
 
