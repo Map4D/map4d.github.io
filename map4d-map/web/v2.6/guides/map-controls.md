@@ -30,6 +30,21 @@
 - Thu phóng map
   - *Dùng 2 ngón tay di chuyển trái chiều để di chuyển map.*
 
+### Thao tác bằng bàn phím (keyboard)
+- Di chuyển map
+  - *Sử dụng các phím mũi tên để di chuyển map.*
+- Xoay map
+  - *Shift+⇢: Xoay map sang trái.*
+  - *Shift+⇠: Xoay map sang phải.*
+- Nghiêng map
+  - *Shift+⇡: Tăng độ nghiêng của map thêm 10 độ.*
+  - *Shift+⇣: Giảm độ nghiêng của map xuống 10 độ.*
+- Thu phóng map
+  - *= / +: Tăng mức thu phóng map lên 1 mức.*
+  - *Shift-= / Shift-+: Tăng mức thu phóng map lên 2 mức.*
+  - *-: Giảm mức thu phóng map xuống 1 mức.*
+  - *Shift--: Giảm mức thu phóng map xuống 2 mức.*
+
 ## Các phần tử điều khiển trên bản đồ
 
 Bản đồ được hiển thị thông qua Map4D Web SDK có chứa các phần tử cho phép người dùng tương tác với bản đồ.  

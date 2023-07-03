@@ -19,4 +19,5 @@ Bao gồm:
 | ~~12~~ | ~~shouldChangeMapMode~~ *(removed)* | ~~function~~ | ~~null~~              | ~~Hàm mà sẽ được gọi khi mức zoom chuyển từ mức hiển thị 2D sang mức có thể hiển thị 3D và ngược lại~~             |
 | 12 | mapType             | [IMapType](/reference/map?id=imaptype)                   | "roadmap"     | Xác định [kiểu của bản đồ](guides/map-types.md)                                                    |
 | 13 | cooperativeGestures | boolean                                                  | false         | Hỗ trợ cử chỉ hợp tác, `true` thì chỉ cho phép zoom map khi dùng ctrl + cuộn hoặc kéo map bằng 2 ngón tay  |
+| 14 | keyboardShortcuts | boolean                                                  | true         | Hỗ trợ điều khiển bằng bàn phím (keyboard), `false` ngăn điều khiển bản đồ bằng bàn phím. Phím tắt được bật theo mặc định  |
 
