@@ -5,6 +5,7 @@ mà Map4D Map SDK sử dụng để render base map. Việc sử dụng chung We
 hiệu ứng chiều sâu và che lấp của hình học không gian, và khả năng đồng bộ các đối tượng 2D/3D với base map. Các đối tượng được render WebGL Overlay View cũng có thể được gắn với tạo độ kinh
 độ / vĩ độ, vì vậy chúng sẽ di chuyển khi chúng ta kéo, phóng to, xoay hoặc nghiêng map.
 
+<iframe src="./html/webgl-overlay-threejs-animation/index.html" class="is-fullwidth" height="600px"></iframe>
 
 ## Add WebGL Overlay View
 
@@ -164,3 +165,6 @@ let webGLOverlay = new map4d.WebGLOverlayView({
 webGLOverlay.setMap(this.map)
 ```
 
+### Samples
+
+Xem thêm các ví dụ sử dụng WebGL Overlay View tại: https://github.com/map4d/js-samples

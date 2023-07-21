@@ -5,7 +5,7 @@ Documentation website được tạo bằng [docsify](https://docsify.js.org/)
 ## Setup
 
 ```bash
-npm i docsify-cli -g
+npm install --global serve
 ```
 
 ## Preview
@@ -13,7 +13,7 @@ npm i docsify-cli -g
 Tại thư mục gốc của map4d.github.io, chạy lệnh sau:
 
 ```bash
-docsify serve .
+serve .
 ```
 
 ### Map4dMap SDK
