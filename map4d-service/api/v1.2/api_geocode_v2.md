@@ -13,7 +13,8 @@ https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={addre
 | address   | No       | Địa chỉ của địa điểm tương ứng và độ dài tối đa là 1024 ký tự. Ví dụ: 271 Trần Hưng Đạo, An Hải Bắc, Sơn Trà, Đà Nẵng, Việt Nam                                                                                                                      |
 | viewbox   | No       | Khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm nằm trong box này sẽ được ưu tiên hơn (không ràng buộc). Ví dụ: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375 |
 
-**Note:** Yêu cầu phải có `location` hoặc `address`
+**Note:** Yêu cầu phải có `location` hoặc `address`.
+ Nếu truyền cả `location` và `address` thì sẽ ưu tiên trả về kết quả theo `address`.
 ## 2. Output (Đầu ra)
 ```json
 {
