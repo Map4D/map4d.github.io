@@ -14,7 +14,7 @@ Tạo API SDK dành cho map:
 
 Tạo API SDK Route
   - Thêm tính năng Ma trận khoảng cách [API Get Matrix](api_matrix.md)
-  - Thêm tính năng Ma trận khoảng cách graph [API Get Graph](api_graph.md)
+  - Thêm tính năng Ma trận khoảng cách graph
 
 Update các API theo logic hiện tại.
 
