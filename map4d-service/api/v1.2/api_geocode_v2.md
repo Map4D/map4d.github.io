@@ -1,7 +1,7 @@
 #  Geocodev2 (Phân giải địa chỉ phiên bản 2)
 Chuyển đổi từ tọa độ vị trí (vĩ độ, kinh độ) sang địa chỉ và ngược lại.
 
-Phương thức: GET
+Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
 https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
