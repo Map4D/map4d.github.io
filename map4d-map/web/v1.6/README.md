@@ -38,7 +38,7 @@ Map4D Web SDK có thể được tải bằng thẻ script được thêm bên t
 
 Trong đó:
 - **SDK_VERSION**: phiên bản Map4D Web SDK, phiên bản mới nhất hiện tại là: `1.6.0`
-- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, liên hệ [map4d.vn](https://map4d.vn/) để nhận API key
+- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tạo API key tại đây: <https://map.map4d.vn/developer/key/>
 - **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải Map4D Web SDK
 
 
