@@ -33,9 +33,9 @@ dependencies {
 }
 ```
 
-## Using
+> **Chú ý:** <span style="color:red">Phiên bản chính xác có thể thay đổi dựa trên phiên bản hiện tại của Maps SDK dành cho Android.</span>
 
-1. Provide access key
+## Provide access key
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -51,10 +51,11 @@ dependencies {
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>
-
 ```
 
-2. Create layout sử dụng MFMapView
+## Add a map with MFMapView
+
+1. Create layout sử dụng MFMapView
 
 ```xml
 <vn.map4d.map.core.MFMapView
@@ -63,7 +64,8 @@ dependencies {
   android:layout_height="wrap_content"
 />
 ```
-3. Working với map view
+
+2. Working với MFMapView
 
 > **Chú ý:** <span style="color:red">Khi dùng MFMapView thì chúng ta cần override các phương thức lifecycle sau của Activity hoặc Fragment chứa nó và gọi tới
 các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở bên dưới).</span>
@@ -127,9 +129,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 #### ** Kotlin **
 
 ```kotlin
-import vn.map4d.map.core.Map4D
-import vn.map4d.map.core.OnMapReadyCallback
-
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private var map4D: Map4D? = null
@@ -168,3 +167,74 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 }
 ```
 <!-- tabs:end -->
+
+### Ví dụ hoàn chỉnh sử dụng MFMapView
+
+https://github.com/map4d/android-samples/tree/main/simple-mapview-demo
+
+## Add a MFSupportMapFragment object
+
+Chúng ta có thể thêm đối tượng `MFSupportMapFragment` vào ứng dụng của mình bằng cách tĩnh hoặc động. Cách dơn giản nhất là thêm nó bằng cách tĩnh. Nếu chúng ta
+thêm Fragment một cách linh hoạt, chúng ta có thể thực hiện các hành động bổ sung trên Fragment đó, chẳng hạn như xóa và thay thế Fragment đó khi chạy.
+
+### Thêm fragment tĩnh
+
+Trong file layout của activity chúng ta sẽ:
+
+1. Thêm một `fragment` element.
+
+2. Thêm khai báo `xmlns:map="http://schemas.android.com/apk/res-auto`. Việc này cho phép sử dụng các thuộc tính XML tùy chỉnh của Map
+
+3. Trong `fragment` element, set thuộc tính `android:name` thành `vn.map4d.map.core.MFSupportMapFragment`
+
+4. Thêm thuộc tính `android:id` cho element `fragment`
+
+Ví dụ sau đây là file layout hoàn chỉnh bao gồm `fragment` element:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:map="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/map"
+  android:name="vn.map4d.map.core.MFSupportMapFragment"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity" />
+```
+
+### Thêm fragment động
+
+Trong activity:
+
+1. Tạo một instance `MFSupportMapFragment`
+
+2. Commit một transaction để thêm fragment vào activity. Chi tiết xem [Fragment Transactions](https://developer.android.com/guide/fragments/transactions).
+
+Ví dụ:
+
+<!-- tabs:start -->
+#### ** Java **
+
+```java
+MFSupportMapFragment mapFragment = MFSupportMapFragment.newInstance();
+getSupportFragmentManager()
+  .beginTransaction()
+  .add(R.id.my_container, mapFragment)
+  .commit();
+```
+
+#### ** Kotlin **
+
+```kotlin
+val mapFragment = MFSupportMapFragment.newInstance()
+supportFragmentManager
+  .beginTransaction()
+  .add(R.id.my_container, mapFragment)
+  .commit()
+```
+<!-- tabs:end -->
+
+### Ví dụ hoàn chỉnh sử dụng MFSupportMapFragment
+
+https://github.com/map4d/android-samples/tree/main/support-map-fragment-demo
