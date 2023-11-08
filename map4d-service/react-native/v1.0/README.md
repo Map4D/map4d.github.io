@@ -32,7 +32,7 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <meta-data
-            android:name="vn.map4d.map.ACCESS_KEY"
+            android:name="vn.map4d.services.ACCESS_KEY"
             android:value="YOUR_KEY_HERE"/>
     </application>
 </manifest>
