@@ -4,7 +4,7 @@ Tìm đường đi giữa 2 hoặc nhiều điểm đến theo các tùy chọn 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}&departureTime={departureTime}
+http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}&departureTime={departureTime}&optimize={optimize}
 ```
 | Parameter   | Required | Description                                                                                                                                                                                                                                                                                                    |
 |-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
