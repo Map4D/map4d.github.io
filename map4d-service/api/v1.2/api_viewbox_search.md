@@ -4,7 +4,7 @@ Tìm kiếm địa điểm trong vùng chỉ định. <br>Kết quả sẽ trả
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/viewbox-search?key={key}&viewbox={viewbox}&text={text}&types={types}&tags={tags}&datetime={datetime}
+https://api.map4d.vn/sdk/place/viewbox-search?key={key}&viewbox={viewbox}&text={text}&types={types}&tags={tags}&datetime={datetime}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

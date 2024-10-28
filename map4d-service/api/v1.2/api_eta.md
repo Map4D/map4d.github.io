@@ -4,7 +4,7 @@ Tính toán khoảng cách thời gian giữa các điểm xuất phát và mộ
 Phương thức: **POST**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route/eta?key={key}
+https://api.map4d.vn/sdk/route/eta?key={key}
 ```
 ```
 Content-Type: application/json

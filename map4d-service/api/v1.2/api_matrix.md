@@ -4,7 +4,7 @@ Cung cấp khoảng cách và thời gian di chuyển cho một ma trận gồm 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route/matrix?key={key}&origins={origins}&destinations={destinations}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}&departureTime={departureTime}
+https://api.map4d.vn/sdk/route/matrix?key={key}&origins={origins}&destinations={destinations}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}&departureTime={departureTime}
 ```
 | Parameter   | Required | Description                                                                                                                                                                                                                                                                                                    |
 |-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

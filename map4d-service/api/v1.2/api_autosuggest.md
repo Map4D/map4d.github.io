@@ -4,7 +4,7 @@ Gợi ý địa điểm thông qua một phần từ khóa và vị trí.
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
+https://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

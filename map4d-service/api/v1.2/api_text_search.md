@@ -4,7 +4,7 @@ Tìm kiếm địa điểm dựa theo các tiêu chí tìm kiếm như: tìm ki�
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={types}&datetime={datetime}&location={location}
+https://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={types}&datetime={datetime}&location={location}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

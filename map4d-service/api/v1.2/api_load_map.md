@@ -6,7 +6,7 @@ Cho phép nhà phát triển tích hợp Map4D SDK vào ứng dụng web với �
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/map/js?key={key}&version={version}&callback={callback}&mapId={mapId}
+https://api.map4d.vn/sdk/map/js?key={key}&version={version}&callback={callback}&mapId={mapId}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

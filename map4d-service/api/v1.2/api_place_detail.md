@@ -4,7 +4,7 @@ Thông tin chi tiết của 1 địa điểm về hình ảnh, số điện tho�
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/detail/{id}?key={key}
+https://api.map4d.vn/sdk/place/detail/{id}?key={key}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

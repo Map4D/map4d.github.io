@@ -4,7 +4,7 @@ Cung cấp khoảng cách và thời gian di chuyển cho một ma trận gồm 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route/graph?key={key}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
+https://api.map4d.vn/sdk/route/graph?key={key}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
 ```
 | Parameter  | Required | Description                                                                                                                                                                                                                                                                                                    |
 |------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
