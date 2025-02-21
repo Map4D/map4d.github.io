@@ -14,7 +14,7 @@
 
 ```yaml
 dependencies:
-  map4d_map: ^2.5.0
+  map4d_map: ^2.6.0
 ```
 
 Import `map4d_map` vào project
@@ -26,7 +26,7 @@ import 'package:map4d_map/map4d_map.dart';
 ### Phiên bản Android/iOS hỗ trợ
 
 * Android: yêu cầu Android SDK 21 trở lên
-* iOS: yêu cầu phiên bản iOS 9.0 trở lên
+* iOS: yêu cầu phiên bản iOS 11.0 trở lên
 
 ### API key
 
