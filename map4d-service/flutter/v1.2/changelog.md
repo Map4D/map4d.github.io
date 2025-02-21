@@ -9,10 +9,6 @@
 - [iOS] Hỗ trợ iOS 11 trở lên
 
 <!-- #### Deprecated -->
-#### Removed
-
-- Route ETA
-- Graph route
-
+<!-- #### Removed -->
 <!-- #### Fixed -->
 <!-- #### Security -->
