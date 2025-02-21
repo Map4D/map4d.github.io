@@ -28,7 +28,7 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'Map4dServices<br>React Native <span class="app-name-version">v1.0</span>',
+      name: 'Map4dServices<br>React Native <span class="app-name-version">v1.1</span>',
       repo: 'https://github.com/map4d/map4d-services-react-native',
       loadSidebar: true,
       alias: {
@@ -42,17 +42,17 @@
       plugins: [
         function(hook) {
           var header  = [
-            '<p class="tip">You’re browsing the documentation for v1.0.x. For latest version, <a href="/map4d-service/react-native/">click here</a>.</p>',
+            '<p class="tip">You’re browsing the documentation for v1.1.x. For latest version, <a href="/map4d-service/react-native/">click here</a>.</p>',
           ]
           var footer = [
             '<hr/>',
             '<footer>',
-              '<span>Copyright &copy; 2022 <a target="_blank" rel="noopener noreferrer" href="https://www.iotlink.com.vn/">IOT Link Ltd</a>. All Rights Reserved.</span>',
+              '<span>Copyright &copy; 2025 <a target="_blank" rel="noopener noreferrer" href="https://www.iotlink.com.vn/">IOT Link Ltd</a>. All Rights Reserved.</span>',
             '</footer>'
           ].join('');
 
           hook.afterEach(function(html) {
-            return header + html + footer;
+            return html + footer;
           });
         }
       ]
