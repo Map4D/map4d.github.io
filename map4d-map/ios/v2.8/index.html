@@ -42,17 +42,17 @@
       plugins: [
         function(hook) {
           var header  = [
-            '<p class="tip">You’re browsing the documentation for v2.6.x. For latest version, <a href="/map4d-map/ios/">click here</a>.</p>',
+            '<p class="tip">You’re browsing the documentation for v2.8.x. For latest version, <a href="/map4d-map/ios/">click here</a>.</p>',
           ]
           var footer = [
             '<hr/>',
             '<footer>',
-              '<span>Copyright &copy; 2022 <a target="_blank" rel="noopener noreferrer" href="https://www.iotlink.com.vn/">IOT Link Ltd</a>. All Rights Reserved.</span>',
+              '<span>Copyright &copy; 2025 <a target="_blank" rel="noopener noreferrer" href="https://www.iotlink.com.vn/">IOT Link Ltd</a>. All Rights Reserved.</span>',
             '</footer>'
           ].join('');
 
           hook.afterEach(function(html) {
-            return header + html + footer;
+            return html + footer;
           });
         }
       ]
