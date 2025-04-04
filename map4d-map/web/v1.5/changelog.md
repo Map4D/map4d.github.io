@@ -20,7 +20,7 @@ Những thay đổi kẻ từ version 1.4
   - Thay đổi tùy chọn của sự kiện trên map. Chi tiết [EventOptions](/reference/map?id=eventoptions)
   - Xóa deprecated methods
   - Xóa `SwitchMode` class, thay thế bằng `shouldChangeMapMode` function. Tham khảo [Map Options](/guides/map-options)
-  - Xóa `TileArea` feature. Có thể sử dụng [Ground Overlay](/guides/ground-overlay) để thay thế
+  - Xóa `TileArea` feature.
   - Đổi tên phương thức `setPlacesEnabled` thành `setPOIsEnabled`
   - Đổi tên phương thức`isPlacesEnabled` thành `isPOIsEnabled`
   - Đổi tên phương thức`setHiddenObject` thành `setHiddenBuilding`
@@ -35,7 +35,6 @@ Những thay đổi kẻ từ version 1.4
   - Đổi tên phương thức `getLocation`/`setLocation` của [Building](/reference/building) thành `getPosition`/`setPosition`
 
 - Layers
-  - Thêm mới [Ground Overlay](/guides/ground-overlay)
   - Hỗ trợ `visible` cho tất cả overlay
   - Hỗ trợ `zIndex` cho [Tile Overlay](/guides/tile-overlay)
   - Hỗ trợ `prefixId` cho [Building Overlay](/guides/building-overlay), [POI Overlay](/guides/poi-overlay)

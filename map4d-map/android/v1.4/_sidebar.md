@@ -14,6 +14,5 @@
 - [14. User POI](MFPOI.md)
 - [15. User Building](MFBuilding.md)
 - [16. Tile Overlay](MFTileOverlay.md)
-- [17. Ground Overlay](MFGroundOverlay.md)
 - [18. POI Overlay](MFPOIOverlay.md)
 - [19. Building Overlay](MFBuildingOverlay.md)

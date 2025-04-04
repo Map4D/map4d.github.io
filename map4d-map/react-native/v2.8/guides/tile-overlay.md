@@ -41,4 +41,4 @@ Sau đó add vào [MFMapView](guides/mapview.md) như 1 subview:
 |-------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | urlTemplate | string | Mẫu đường dẫn trỏ tới server tile, có dạng: https://example.com/{z}/{x}/{y}.png<br>Chuỗi {z}, {x}, {y} sẽ được thay thế trong quá trình request tile. |
 | visible     | bool   | Set `false` nếu không muốn hiển thị tile overlay lên bản đồ, mặc định là `true`.                                                                      |
-| zIndex      | number | Xác định thứ tự hiển thị giữa các tile overlay với nhau hoặc với ground overlay. Giá trị mặc định là `0`.                                             |
+| zIndex      | number | Xác định thứ tự hiển thị giữa các tile overlay với nhau. Giá trị mặc định là `0`.                                                                     |

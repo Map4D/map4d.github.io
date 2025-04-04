@@ -41,4 +41,4 @@ MFGroundOverlay *groundOverlay = [MFGroundOverlay groundOverlayWithBounds:bounds
 |--------------|-----------|----------------------------------------------------------------------------------------|
 | **map**      | [MFMapView](/reference/map?id=mfmapview-class) | Map view sẽ hiển thị ground overlay |
 | **isHidden** | bool                                           | Ẩn/hiện ground overlay trên map |
-| **zIndex**   | float                                          | Giá trị zIndex của ground overlay cao hơn sẽ hiển thị trên tile/ground overlay có giá trị zIndex nhỏ hơn |
+| **zIndex**   | float                                          | Giá trị zIndex của ground overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |

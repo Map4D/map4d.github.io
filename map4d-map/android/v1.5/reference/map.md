@@ -20,7 +20,6 @@ Các phương thức:
 | **addBuilding**         |[MFBuildingOptions](/reference/building?id=building-options)|[MFBuilding](/reference/building?id=building-class)| Add một Building vào Map |
 | **addTileOverlay**      |[MFTileOverlayOptions](/reference/tile-overlay?id=mftileoverlayoptions-class)|[MFTileOverlay](/reference/tile-overlay?id=mftileoverlay-class)| Add một Tile Overlay vào Map |
 | **addBuildingOverlay**  |[MFBuildingOverlayOptions](/reference/building-overlay?id=mfbuildingoverlayoptions-class)|[MFBuildingOverlay](/reference/building-overlay?id=buildingoverlay-class)| Add một Building Overlay vào Map |
-| **addGroundOverlay**    |[MFGroundOverlayOptions](/reference/ground-overlay?id=mfgroundoverlayoptions-class)|[MFGroundOverlay](/reference/ground-overlay?id=groundoverlay-class)| Add một Ground Overlay vào Map |
 | **addPOIOverlay**       |[MFPOIOverlayOptions](/reference/poi-overlay?id=mfpoioverlayoptions-class)|[MFPOIOverlay](/reference/poi-overlay?id=poioverlay-class)| Add một POI Overlay vào Map |
 | **moveCamera**          |[MFCameraUpdate](/reference/map?id=mfcameraupdate)|`none`| Di chuyển bản đồ tới một vị trí Camera ngay lập tức            |
 | **animateCamera**       |[MFCameraUpdate](/reference/map?id=mfcameraupdate)|`none`| Di chuyển bản đồ tới một vị trí Camera với hiệu ứng fly        |

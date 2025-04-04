@@ -50,7 +50,7 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier
 | **setMaxNativeZoom**       | Double                  | void                 | **Set** mức **zoom** lớn nhất mà **map** **request tile** từ **server**.                                                |
 | **setTileUrl**             | NSString                | void                 | **Set** một đường dẫn **url** để tải **tile** từ **server** thay thế cho **url** mặc định của SDK.                      |
 | **setMinZoom**             | Double, Double          | void                 | **Set** mức **zoom** nhỏ nhất và lớn nhất mà **map** có thể hiển thị.                                                   |
-| **clear**                  | BOOL                    | void                 | Xoá mọi thứ mà người dùng **add** vào như **Markers**, **Polylines**, **ground overlays**, **POI**, **Building**.       |
+| **clear**                  | BOOL                    | void                 | Xoá mọi thứ mà người dùng **add** vào như **Markers**, **Polylines**, **POI**, **Building**.       |
 | **setTime**                | Double, Double          | void                 | **Set** thời gian hiển thị cho **map**.                                                                                 |
 | **enableWaterEffect**      | BOOL                    | void                 | Bật hoặc tắt hiệu ứng nước khi set map type là 3D của **map**..                                                         |
 | **cameraForBounds**        | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds)                 | [MFCameraPosition](/reference/map?id=MFCameraPosition)   | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào. |

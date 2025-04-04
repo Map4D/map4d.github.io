@@ -19,7 +19,6 @@
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
-  - [Ground Overlay](guides/ground-overlay.md)
   - [POI Overlay](guides/poi-overlay.md)
   - [Building Overlay](guides/building-overlay.md)
 
@@ -40,6 +39,5 @@
     - [Directions Renderer](reference/directions-renderer.md)
   - Layers
     - [Tile Overlay](reference/tile-overlay.md)
-    - [Ground Overlay](reference/ground-overlay.md)
     - [POI Overlay](reference/poi-overlay.md)
     - [Building Overlay](reference/building-overlay.md)

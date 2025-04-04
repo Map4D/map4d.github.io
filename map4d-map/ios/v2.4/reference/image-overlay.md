@@ -34,4 +34,4 @@ MFImageOverlay *imageOverlay = [MFImageOverlay imageOverlayWithImage:image bound
 | **map**      | [MFMapView](/reference/map?id=mfmapview-class) | Map view sẽ hiển thị image overlay                 |
 | **isHidden** | bool                                           | Ẩn/hiện image overlay trên map                     |
 | **opacity**  | float                                          | Độ trong suốt của image (mặc đinh là: 1.0)   |
-| **zIndex**   | float                                          | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên tile/ground overlay có giá trị zIndex nhỏ hơn |
+| **zIndex**   | float                                          | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |

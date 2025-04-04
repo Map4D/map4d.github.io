@@ -40,5 +40,5 @@ TileOverlay(options)
 |------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **getUrl** *required*  | function | Hàm nhận vào 4 giá trị `x`, `y`, `zoom`, `is3dMode`và trả về đường dẫn đến map tile                                                                                                    |
 | **visible** *optional* | boolean  | Nếu là `true` thì tile overlay sẽ được hiển thị                                                                                                                                        |
-| **zIndex** *optional*  | number   | Tất cả các tile overlay được hiển thị trên bản đồ theo thứ tự zIndex của chúng,<br>với các giá trị cao hơn hiển thị phía trước các tile overlay và ground overlay có giá trị thấp hơn. |
+| **zIndex** *optional*  | number   | Tất cả các tile overlay được hiển thị trên bản đồ theo thứ tự zIndex của chúng,<br>với các giá trị cao hơn hiển thị phía trước các tile overlay có giá trị thấp hơn. |
 | **opacity** *optional* | number   | Độ trong suốt của tile overlay. Có giá trị từ 0 đến 1                                                                                                                                  |

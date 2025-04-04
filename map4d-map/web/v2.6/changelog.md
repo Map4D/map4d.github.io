@@ -112,7 +112,7 @@ Những thay đổi kể từ version 2.3.x
 #### Added
 
 - Thêm lớp Image Overlay
-- Hỗ trợ opacity cho Tile Overlay, Ground Overlay
+- Hỗ trợ opacity cho Tile Overlay
 - Thêm mới phương thức `fromLatLngToPoint` và `fromPointToLatLng` cho Projection class
 
 ### Changed

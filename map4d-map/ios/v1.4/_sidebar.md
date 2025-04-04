@@ -10,7 +10,6 @@
 - [10. User POI](MFPOI.md)
 - [11. User Building](MFBuilding.md)
 - [12. Tile Overlay](MFTileOverlay.md)
-- [13. Ground Overlay](MFGroundOverlay.md)
 - [14. POI Overlay](MFPOIOverlay.md)
 - [15. Building Overlay](MFBuildingOverlay.md)
 - [16. Effect map](10-effect-map.md)

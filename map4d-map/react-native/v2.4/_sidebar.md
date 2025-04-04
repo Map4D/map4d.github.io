@@ -14,4 +14,3 @@
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
-  - [Ground Overlay](guides/ground-overlay.md)

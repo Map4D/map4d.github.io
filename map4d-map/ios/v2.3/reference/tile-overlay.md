@@ -38,7 +38,7 @@ MFURLTileLayer * tileOverlay = [MFURLTileLayer tileLayerWithURLConstructor:urlCo
 |--------------|-----------|----------------------------------------------------------------------------------------|
 | **map**      | [MFMapView](/reference/map?id=mfmapview-class) | Map view sẽ hiển thị tile overlay |
 | **isHidden** | bool                                           | Ẩn/hiện tile overlay trên map |
-| **zIndex**   | float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile/ground overlay có giá trị zIndex nhỏ hơn |
+| **zIndex**   | float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
 
 ## MFTileURLConstructor protocol
 

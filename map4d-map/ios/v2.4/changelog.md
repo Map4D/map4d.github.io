@@ -27,7 +27,7 @@
 
 #### Fixed
 
-- Fixed lỗi không hiển thị tile overlay và ground overlay nếu không set opacity
+- Fixed lỗi không hiển thị tile overlay nếu không set opacity
 
 ## Version 2.4.1
 
