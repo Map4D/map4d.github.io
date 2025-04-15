@@ -22,6 +22,10 @@ pod repo update
 pod 'Map4dMap'
 ```
 
+### Nền tảng được hỗ trợ
+
+- Hỗ trợ thiết bị iOS 9.3 trở lên
+
 ## Using
 
 1. Provide access key from Info.plist
