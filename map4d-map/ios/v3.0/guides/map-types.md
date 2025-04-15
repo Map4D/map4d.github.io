@@ -12,9 +12,9 @@ Map4D Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh:
 |  3  | Satellite | Giá trị: `MFMapTypeSatellite`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh. Không có thông tin về đường sá.                                       |
 |  4  | Hybrid    | Giá trị: `MFMapTypeMap3D`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kết hợp thông tin về đường sá                                             |
 
-|                 ROADMAP                         | SATELLITE                                            |                 HYBRID                            |
-|:-----------------------------------------------:|:----------------------------------------------------:|:-------------------------------------------------:|
-| ![MapType](../../resources/maptype-roadmap.jpg) | ![MapType](../../resources/maptype-satellite-v3.jpg) | ![MapType](../../resources/maptype-satellite.jpg) |
+|                 ROADMAP                            | SATELLITE                                             |                 HYBRID                            |
+|:--------------------------------------------------:|:-----------------------------------------------------:|:-------------------------------------------------:|
+| ![MapType](../../resources/v3/maptype_roadmap.jpg) | ![MapType](../../resources/v3/maptype_satelllite.jpg) | ![MapType](../../resources/v3/maptype_hybrid.jpg) |
 
 ### Thay đổi loại bản đồ
 
