@@ -93,7 +93,7 @@ public final class MFBuilding extends Annotation {
      buildingOptions.location(new MFLocationCoordinate(16.088987, 108.227940))
          .name("Test Building")
          .model("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj")
-         .texture("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj");
+         .texture("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg");
      map4D.addBuilding(buildingOptions);
 ```
 
