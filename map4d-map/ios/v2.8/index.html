@@ -51,7 +51,7 @@
           ].join('');
 
           hook.afterEach(function(html) {
-            return html + footer;
+            return header + html + footer;
           });
         }
       ]
