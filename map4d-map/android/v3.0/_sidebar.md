@@ -6,6 +6,7 @@
   - [Events](guides/map-events.md)
   - [Effect](guides/map-effects.md)
   - [Map Types](guides/map-types.md)
+  - [3D](guides/3d.md)
 
 - Drawing on the Map
   - [Marker](guides/marker.md)

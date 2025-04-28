@@ -27,8 +27,6 @@ Các phương thức:
 | **isMyLocationEnabled** | `none`           | boolean      | Kiểm tra xem My Location marker có được hiển thị hay không                             |
 | **setMyLocationEnabled**| boolean          | `none`       | Set giá trị enable cho My Location marker                                              |
 | **setTime**             | Date             | `none`       | Set giá trị thời gian cho Map                                                          |
-| **setOnMapModeChange**  |`Map4D.OnMapModeChangeListener`  |`none`| Set một callback khi mode của Map chuyển sang 2D hoặc 3D                        |
-| **setOnMapModeHandler** |`Map4D.OnMapModeHandler`|`none`  | Set một callback để xác định Map có thể thay đổi Mode khi mức zoom đi qua mức zoom 17 hay không|
 | **setOnMyLocationButtonClickListener**|`Map4D.OnMyLocationButtonClickListener`|`none`| Set một callback để bắt sự kiện nút My Location được ấn     |
 | **setOnMarkerClickListener**|`Map4D.OnMarkerClickListener`|`none`| Set một callback để bắt sự kiện touch lên Marker                                |
 | **setOnMarkerDragListener**|`Map4D.OnMarkerDragListener`|`none`| Set một callback để bắt sự kiện kéo Marker trên Map                               |
