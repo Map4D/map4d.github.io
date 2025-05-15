@@ -4,9 +4,9 @@
 - Interacting with the Map
   - [Controls](guides/map-controls.md)
   - [Events](guides/map-events.md)
+  - [Hiển thị 3D](guides/3d.md)
   - [Effect](guides/map-effects.md)
   - [Map Types](guides/map-types.md)
-  - [3D](guides/3d.md)
 
 - Drawing on the Map
   - [Marker](guides/marker.md)

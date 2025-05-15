@@ -1,3 +1,7 @@
+## Version 3.0.1
+
+- Hỗ trợ thiết lập màu mặc định của đối tượng 3D khi chưa tải được texture (hoặc không có texture) bằng phương thức `setBuildingsFallbackColor`
+
 ## Version 3.0.0
 
 Những thay đổi kể từ version 2.8
