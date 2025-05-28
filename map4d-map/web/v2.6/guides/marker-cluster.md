@@ -27,9 +27,8 @@ Các thuộc tính của **MarkerClusterOptions** :
 - **minZoom** (tùy chọn) : chỉ định mức zoom nhỏ nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **0** 
 - **maxZoom** (tùy chọn) : chỉ định mức zoom lớn nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **22**
 - **radius** (tùy chọn) : chỉ định bán kính của cluster theo đơn vị pixel. Giá trị mặc định là 100.
-- **zoomOnClick** (tùy chọn) : chỉ định bản đồ có thể zoom khi người dùng click vào đối tượng **MarkerClusterer** không.
+- **zoomOnClick** (tùy chọn) : chỉ định bản đồ có thể zoom khi người dùng click vào đối tượng **MarkerClusterer** không. Giá trị mặc định là **true**
 - **clusterIcon** (tùy chọn) : cho phép tùy chỉnh cluster icon.
-Giá trị mặc định là **true**
 
 Ví dụ sau đây thêm một MarkerClusterer vào bản đồ:
 

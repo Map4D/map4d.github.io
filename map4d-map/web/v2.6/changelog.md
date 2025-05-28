@@ -1,5 +1,34 @@
 # Changelog
 
+## Version 2.6.6
+
+- Hỗ trợ thiết lập marker cluster icon
+- Sửa lỗi load đối tượng 3D
+
+## Version 2.6.5
+
+- Hỗ trợ ThreeJS
+
+## Version 2.6.4
+
+- Hỗ trợ thiết lập độ trong suốt cho building
+- Sửa lỗi sự kiện bản đồ
+
+## Version 2.6.3
+
+- Hỗ trợ hiển thị infor window độc lập
+
+## Version 2.6.2
+
+- Cải tiến hiệu suất hiển thị và tương tác bản đồ
+- Sửa lỗi
+
+## Version 2.6.1
+
+- Hỗ trợ điều khiển bản đồ bằng bàn phím
+- Cải thiện tương tác bản đồ bằng cử chỉ
+- Sửa lỗi
+
 ## Version 2.6.0
 
 ### Changed
