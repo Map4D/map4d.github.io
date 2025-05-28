@@ -19,6 +19,7 @@ interface MarkerClusterOptions {
     maxZoom?: number
     radius?: number
     zoomOnClick?: boolean
+    clusterIcon?: Function | map4d.Icon | string
 }
 ```
 
@@ -27,11 +28,12 @@ Các thuộc tính của **MarkerClusterOptions** :
 - **maxZoom** (tùy chọn) : chỉ định mức zoom lớn nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **22**
 - **radius** (tùy chọn) : chỉ định bán kính của cluster theo đơn vị pixel. Giá trị mặc định là 100.
 - **zoomOnClick** (tùy chọn) : chỉ định bản đồ có thể zoom khi người dùng click vào đối tượng **MarkerClusterer** không.
+- **clusterIcon** (tùy chọn) : cho phép tùy chỉnh cluster icon.
 Giá trị mặc định là **true**
 
 Ví dụ sau đây thêm một MarkerClusterer vào bản đồ:
 
-<iframe src="//jsfiddle.net/duydung2007/b1d0x8nm/embedded/" style="min-width: 914px;" height="690px"></iframe>
+<iframe src="//jsfiddle.net/huydang/qjer6wx1/embedded/" style="min-width: 914px;" height="690px"></iframe>
 
 Ví dụ trên như một minh họa đơn giản cho MarkerClusterer. Trước tiên nó sẽ tạo một mảng các **markers** từ mảng **locations**,
 sau đó sẽ khởi tạo đối tượng **MarkerClusterer** từ mảng marker này.
