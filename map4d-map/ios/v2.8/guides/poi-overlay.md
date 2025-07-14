@@ -23,6 +23,21 @@ Trong đó:
 #### ** Swift **
 Implement **MFPOIURLConstructor**
 ```swift
+struct PositionJson : Codable {
+  var lat: Double = 0
+  var lng: Double = 0
+}
+
+struct POIJson : Codable {
+  var id: String?
+  var title: String?
+  var position: PositionJson?
+}
+
+struct POIsJson : Codable {
+  var pois: [POIJson]?
+}
+
 class POIURLConstructor : NSObject, MFPOIURLConstructor {
     func getPOIUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL? {
         let poiApiUrl = "https://poi-random.herokuapp.com/poi/\(zoom)/\(x)/\(y)"
