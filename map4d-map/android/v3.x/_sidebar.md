@@ -7,6 +7,7 @@
   - [Hiển thị 3D](guides/3d.md)
   - [Effect](guides/map-effects.md)
   - [Map Types](guides/map-types.md)
+  - [Layers Stacking](guides/layers-stacking-order.md)
 
 - Drawing on the Map
   - [Marker](guides/marker.md)
