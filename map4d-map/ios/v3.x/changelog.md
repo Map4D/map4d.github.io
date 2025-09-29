@@ -1,8 +1,18 @@
-## Version 3.0.1
+## Version 3.1
 
 - Hỗ trợ thiết lập màu mặc định của đối tượng 3D khi chưa tải được texture (hoặc không có texture) bằng phương thức `setBuildingsFallbackColor`
+- Hỗ trợ hiển thị ở CarPlay
+- Xử lý hiển thị đường mượt hơn, hạn chế răng cưa
+- Hỗ trợ thiết lập padding cho camera position
+- Cho phép thiết lập duration  khi move camera
+- Cho phép thiết lập zIndex đối với MFGeoJson
+- Hỗ trợ groundAnchor, rotation và flat đối với MFGeoJSON.PointStyle
+- Cho phép thiết lập zIndex đối với MFDirectionsRenderer
+- Bổ sung completion handler khi set mapID
+- Cải tiến xử lý tương tác với bản đồ
+- Sửa lỗi và cải thiện hiệu suất
 
-## Version 3.0.0
+## Version 3.0
 
 Những thay đổi kể từ version 2.8
 
