@@ -56,15 +56,6 @@ declare module 'map4d' {
     getUserData(): any
     setUserData(data: any)
 
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
-
     isClickable(): boolean
     setClickable(clickable: boolean): void
   }
@@ -518,14 +509,6 @@ declare module 'map4d' {
     setLabel(label: string | MarkerLabel): void
     setIconView(iconView: string | Node ): void
     getIconView():  string | Node
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
 
     isClickable(): boolean
     setClickable(clickable: boolean): void
@@ -599,15 +582,6 @@ declare module 'map4d' {
     getUserData(): any
     setUserData(data: any): void
 
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
-
     isClickable(): boolean
     setClickable(clickable: boolean): void
   }
@@ -655,14 +629,6 @@ declare module 'map4d' {
     setUserData(data: any): void
     isDraggable(): boolean
     setDraggable(value: boolean): void
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
     isClickable(): boolean
     setClickable(clickable: boolean): void
   }
@@ -734,10 +700,6 @@ declare module 'map4d' {
     position: ILatLng
     title?: string
     subtitle?: string
-    /**
-     * @deprecated This prop is no longer support, which is subject to removal in a future versions.
-     */
-    titleColor?: string
     color?: string
     type?: string
     icon?: string
@@ -758,14 +720,6 @@ declare module 'map4d' {
     setPosition(value: ILatLng): void
     getColor(): string
     setColor(value: string): void
-    /**
-     * @deprecated This prop is no longer support, which is subject to removal in a future versions.
-     */
-    getTitleColor(): string
-    /**
-     * @deprecated This prop is no longer support, which is subject to removal in a future versions.
-     */
-    setTitleColor(value: string): void
     getSubtitle(): string
     setSubtitle(value: string): void
     getType(): string
@@ -782,14 +736,6 @@ declare module 'map4d' {
     setElevation(elevation: number): void
     getUserData(): any
     setUserData(data: any): void
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
     isClickable(): boolean
     setClickable(clickable: boolean): void
   }
@@ -876,14 +822,6 @@ declare module 'map4d' {
     setZIndex(zIndex: number): void
     getUserData(): any
     setUserData(data: any): void
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    isUserInteractionEnabled(): boolean
-    /**
-     * @deprecated This method is no longer support, which is subject to removal in a future versions.
-     */
-    setUserInteraction(enable: boolean): void
     getTileCovers(zooms: number[], completion: Function): void
     getBoundsCoordinates(completion: Function): void
     isClickable(): boolean
@@ -1013,11 +951,6 @@ declare module 'map4d' {
   interface DirectionsRendererOptions {
     routes?: string | object | RouteOptions | ILatLng[][]
 
-    /**
-     * @deprecated The `directions` prop is no longer support, which is subject to removal in a future versions. Use
-     * the `routes` prop instead.
-     */
-    directions?: string
     activedIndex?: number
 
     activeStrokeWidth?: number
@@ -1046,10 +979,6 @@ declare module 'map4d' {
     getMap(): Map
     setRoutes(routes: string | object | RouteOptions | ILatLng[][]): void
     getRoutes(): LatLng[][]
-    /**
-     * @deprecated setDirections method is no longer support, which is subject to removal in a future versions.
-     */
-    setDirections(directions: string): void
     setActivedIndex(routeIndex: number): void
     getActivedIndex(): number
     setActiveStrokePattern(pattern: PatternItem): void

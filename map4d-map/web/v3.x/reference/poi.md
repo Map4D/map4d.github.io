@@ -25,8 +25,6 @@ POI(options)
 | **getTitle**                 | `none`                                  | string       | Get tiêu đề của POI                                                                    |
 | **setPosition**              |[ILatLng](/reference/coordinates?id=ilatlng)| `none`    | Set vị trí tọa độ trên bản đồ cho POI                                                  |
 | **getPosition**              | `none` | [LatLng](/reference/coordinates?id=latlng)    | Get vị trí tọa độ của POI                                                              |
-| ~**setTitleColor**~          | ~string~                                | ~`none`~     | ~Set màu cho tiêu đề của POI theo mã HEX (ví dụ: **"#0F4DA9"**)~                       |
-| ~**getTitleColor**~          | ~`none`~                                | ~string~     | ~Get màu tiêu đề của POI~                                                              |
 | **setColor**                 | string                                  | `none`       | Set màu cho icon (nếu sử dụng `type`) và tiêu đề của POI                               |
 | **getColor**                 | `none`                                  | string       | Get màu tiêu đề và icon (nếu sử dụng `type`) của POI                                   |
 | **setSubtitle**              | string                                  | `none`       | Set thông tin mô tả cho POI                                                            |
@@ -45,8 +43,8 @@ POI(options)
 | **getElevation**             | `none`                                  | number       | Get giá trị độ cao của POI theo đơn vị mét                                             |
 | **getUserData**              | `none`                                  | any          | Set dữ liệu riêng mà người dùng muốn cho POI                                           |
 | **setUserData**              | any                                     | `none`       | Get dữ liệu riêng mà người dùng đã set cho POI                                         |
-| **isUserInteractionEnabled** | `none`                                  | boolean      | Kiểm tra POI có thể tương tác bởi người dùng hay không                                 |
-| **setUserInteraction**       | boolean                                 | `none`       | Cho phép POI có thể tương tác bởi người dùng hay không                                 |
+| **isClickable**              | `none`                                  | boolean      | Kiểm tra POI có thể tương tác bởi người dùng hay không                                 |
+| **setClickable**             | boolean                                 | `none`       | Cho phép POI có thể tương tác bởi người dùng hay không                                 |
 
 ## POI Options
 
@@ -61,7 +59,6 @@ POI(options)
 | **position** *required*      |[ILatLng](/reference/coordinates?id=ilatlng)| chỉ định một **ILatLng** để xác định vị trí ban đầu của POI.                                                                                   |
 | **title** *optional*         | string              | chỉ định tiêu đề của POI. Tiêu đề sẽ hiển thị thông tin của POI mà bạn muốn hiển thị cho người dùng.                                                                  |
 | **subtitle** *optional*      | string              | chỉ định thông tin mô tả của POI.                                                                                                                                     |
-| ~**titleColor** *optional*~  | ~string~            | ~chỉ định màu tiêu đề của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**~                                                                   |
 | **color** *optional*         | string              | chỉ định màu tiêu đề và icon ((nếu sử dụng `type`)) của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**                                      |
 | **type** *optional*          | string              | chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map.map4d.vn/user/platform/map-style/list) |
 | **icon** *optional*          | string              | chỉ định một đường dẫn URL để lấy hình ảnh cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option **type**. Giá trị mặc định là **null**.|
@@ -69,4 +66,4 @@ POI(options)
 | **zIndex** *optional*        | number              | chỉ định thứ tự chồng nhau giữa các POI với nhau, nó không dùng để xác định thứ tự chồng nhau so với các đối tượng khác. Giá trị mặc định là **0**.                   |
 | **visible** *optional*       | boolean             | xác định POI có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                            |
 | **draggable** *optional*     | boolean             | cho phép người dùng có thể kéo POI trên bản đồ hay không. Giá trị mặc định là **false**.                                                                              |
-| **userInteractionEnabled** *optional*| boolean     | cho phép người dùng có thể tương tác được với POI hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với POI thì tất cả các sự kiện liên quan tới POI từ phía người dùng sẽ không có tác dụng.|
+| **clickable** *optional*| boolean     | cho phép người dùng có thể tương tác được với POI hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với POI thì tất cả các sự kiện liên quan tới POI từ phía người dùng sẽ không có tác dụng.|

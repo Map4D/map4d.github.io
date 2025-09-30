@@ -43,8 +43,8 @@ Circle(options)
 | **isDraggable**              | `none`                                  | boolean      | Kiểm tra xem circle có thể kéo trên bản đồ hay không                                   |
 | **getUserData**              | `none`                                  | any          | Set dữ liệu riêng mà người dùng muốn cho circle                                        |
 | **setUserData**              | any                                     | `none`       | Get dữ liệu riêng mà người dùng đã set cho circle                                      |
-| **isUserInteractionEnabled** | `none`                                  | boolean      | Kiểm tra circle có thể tương tác bởi người dùng hay không                              |
-| **setUserInteraction**       | boolean                                 | `none`       | Cho phép circle có thể tương tác bởi người dùng hay không                              |
+| **isClickable**              | `none`                                  | boolean      | Kiểm tra circle có thể tương tác bởi người dùng hay không                              |
+| **setClickable**             | boolean                                 | `none`       | Cho phép circle có thể tương tác bởi người dùng hay không                              |
 
 
 ## Circle Options
@@ -67,5 +67,5 @@ Circle(options)
 | **draggable** *optional*   | boolean             | cho phép người dùng có thể kéo Circle trên bản đồ hay không. Giá trị mặc định là **false**.                                                                           |
 | **zIndex** *optional*      | number              | chỉ định thứ tự chồng nhau giữa các Circle với nhau hoặc giữa Circle với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**.                                   |
 | **elevation** *optional*   | number              | chỉ định độ cao của Circle so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**                                                                             |
-| **userInteractionEnabled** *optional*| boolean   | cho phép người dùng có thể tương tác được với Circle hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với Circle thì tất cả các sự kiện liên quan tới Circle từ phía người dùng sẽ không có tác dụng.|
+| **clickable** *optional*| boolean   | cho phép người dùng có thể tương tác được với Circle hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với Circle thì tất cả các sự kiện liên quan tới Circle từ phía người dùng sẽ không có tác dụng.|
 

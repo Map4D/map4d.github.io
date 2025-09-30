@@ -24,7 +24,7 @@ interface POIOptions {
     zIndex?: number
     visible?: boolean
     draggable?: boolean
-    userInteractionEnabled?: boolean
+    clickable?: boolean
 }
 ```
 
@@ -32,7 +32,6 @@ Các thuộc tính của **POIOptions** :
 - **position** (bắt buộc): chỉ định một **ILatLng** để xác định vị trí ban đầu của POI.
 - **title** (tùy chọn): chỉ định tiêu đề của POI. Tiêu đề sẽ hiển thị thông tin của POI mà bạn muốn hiển thị cho người dùng.
 - **subtitle** (tùy chọn): chỉ định thông tin mô tả của POI.
-- ~**titleColor** (tùy chọn): chỉ định màu tiêu đề của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**~
 - **color** (tùy chọn): chỉ định màu cho tiêu đề và màu icon (nếu sử dụng thuộc tính `type`) của POI
 - **type** (tùy chọn): chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map.map4d.vn/user/platform/map-style/list)
 - **icon** (tùy chọn): chỉ định một đường dẫn URL để lấy hình ảnh cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option **type**. Giá trị mặc định là **null**
@@ -41,7 +40,7 @@ Các thuộc tính của **POIOptions** :
 so với các đối tượng khác. Giá trị mặc định là **0**.
 - **visible** (tùy chọn): xác định POI có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.
 - **draggable** (tùy chọn): cho phép người dùng có thể kéo POI trên bản đồ hay không. Giá trị mặc định là **false**
-- **userInteractionEnabled** (tùy chọn): cho phép người dùng có thể tương tác được với POI hay không. Giá trị mặc định
+- **clickable** (tùy chọn): cho phép người dùng có thể tương tác được với POI hay không. Giá trị mặc định
 là true. Khi không cho phép người dùng tương tác với POI thì tất cả các sự kiện liên quan tới POI từ phía người dùng
 sẽ không có tác dụng.
 

@@ -26,7 +26,7 @@ interface PolylineOptions {
     zIndex?: number
     elevation?: number
     strokePattern?: PatternItem
-    userInteractionEnabled?: boolean
+    clickable?: boolean
 }
 ```
 
@@ -48,7 +48,7 @@ trên bản đồ. Giá trị mặc định là **0**.
 - **strokePattern** (tùy chọn): chỉ định kiểu vẽ của Polyline ([SolidPattern](/reference/map?id=solidpattern-class),
 [DashPattern](/reference/map?id=dashpattern-class), [DotPattern](/reference/map?id=dotpattern-class) hay
 [IconPattern](/reference/map?id=iconpattern-class)). Giá trị mặc định là `SolidPattern`
-- **userInteractionEnabled** (tùy chọn): cho phép người dùng có thể tương tác được với Polyline hay không. Giá trị mặc định
+- **clickable** (tùy chọn): cho phép người dùng có thể tương tác được với Polyline hay không. Giá trị mặc định
 là **true**. Khi không cho phép người dùng tương tác với Polyline thì tất cả các sự kiện liên quan tới Polyline từ phía người dùng
 sẽ không có tác dụng.
 

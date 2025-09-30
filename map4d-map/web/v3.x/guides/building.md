@@ -26,7 +26,7 @@ interface BuildingOptions {
     coordinates?: ILatLng[]
     visible?: boolean
     draggable?: boolean
-    userInteractionEnabled?: boolean
+    clickable?: boolean
     selected?: boolean
     growUp?: boolean
 }
@@ -54,7 +54,7 @@ Building). Trường hợp dùng **coordinates** thì sẽ không dùng đến t
 và cả **model** đồng thời thì sẽ ưu tiên lấy giá trị của **model**để tạo Building.
 - **visible** (tùy chọn): xác định Building có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.
 - **draggable** (tùy chọn): cho phép người dùng có thể kéo Building trên bản đồ hay không. Giá trị mặc định là **false**
-- **userInteractionEnabled** (tùy chọn): cho phép người dùng có thể tương tác được với Building hay không. Giá trị mặc định
+- **clickable** (tùy chọn): cho phép người dùng có thể tương tác được với Building hay không. Giá trị mặc định
 là true. Khi không cho phép người dùng tương tác với Building thì tất cả các sự kiện liên quan tới Building từ phía người dùng
 sẽ không có tác dụng.
 - **selected** (tùy chọn): chỉ định Building có được hightlight hay không. Khi nó được set là **true** thì Building sẽ được

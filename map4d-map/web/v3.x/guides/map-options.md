@@ -16,7 +16,6 @@ Bao gồm:
 |  9 | maxZoom             | number                                                   | 22            | Thiết lập mức zoom cao nhất mà map được hiển thị                                                   |
 | 10 | maxNativeZoom       | number                                                   | 19            | Giới hạn mức zoom cao nhất của Tile mà map request từ server                                       |
 | 11 | restrictionBounds   | [ILatLngBounds](/reference/coordinates?id=ilatlngbounds) | null          | Giới hạn vùng hiển thị, di chuyển của map                                                          |
-| ~~12~~ | ~~shouldChangeMapMode~~ *(removed)* | ~~function~~ | ~~null~~              | ~~Hàm mà sẽ được gọi khi mức zoom chuyển từ mức hiển thị 2D sang mức có thể hiển thị 3D và ngược lại~~             |
 | 12 | mapType             | [IMapType](/reference/map?id=imaptype)                   | "roadmap"     | Xác định [kiểu của bản đồ](guides/map-types.md)                                                    |
 | 13 | cooperativeGestures | boolean                                                  | false         | Hỗ trợ cử chỉ hợp tác, `true` thì chỉ cho phép zoom map khi dùng ctrl + cuộn hoặc kéo map bằng 2 ngón tay  |
 | 14 | keyboardShortcuts | boolean                                                  | true         | Hỗ trợ điều khiển bằng bàn phím (keyboard), `false` ngăn điều khiển bản đồ bằng bàn phím. Phím tắt được bật theo mặc định  |
